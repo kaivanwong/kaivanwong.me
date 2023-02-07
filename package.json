@@ -1,0 +1,38 @@
+{
+  "name": "@kaivanwong/kaivanwong.me",
+  "description": "Personal website, including introduction, blog, demo and other content",
+  "private": true,
+  "packageManager": "pnpm@7.25.0",
+  "author": "Kaivan Wong <kaivanwong@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/kaivanwong/kaivanwong.me#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaivanwong/kaivanwong.me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaivanwong/kaivanwong.me/issues"
+  },
+  "keywords": [
+    "kaivanwong",
+    "kaivanwong.me",
+    "blog"
+  ],
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@kaivanwong/eslint-config": "^0.10.0",
+    "eslint": "^8.33.0",
+    "nuxt": "^3.1.2"
+  },
+  "eslintConfig": {
+    "extends": "@kaivanwong"
+  }
+}
