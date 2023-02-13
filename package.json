@@ -1,6 +1,6 @@
 {
   "name": "@kaivanwong/kaivanwong.me",
-  "private": true,
+  "version": "0.0.0",
   "packageManager": "pnpm@7.25.0",
   "description": "Personal website, including introduction, blog, demo and other content",
   "author": "Kaivan Wong <kaivanwong@outlook.com>",
@@ -27,9 +27,14 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@kaivanwong/eslint-config": "^0.11.4",
+    "@kaivanwong/eslint-config": "0.13.0-beta.13",
     "@unocss/nuxt": "^0.49.4",
-    "eslint": "^8.33.0",
-    "nuxt": "^3.1.2"
+    "eslint": "^8.34.0",
+    "nuxt": "^3.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@kaivanwong"
+    ]
   }
 }
