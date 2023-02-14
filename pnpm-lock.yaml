@@ -1,13 +1,15 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@kaivanwong/eslint-config': 0.13.0-beta.13
+  '@iconify-json/carbon': ^1.1.15
+  '@kaivanwong/eslint-config': 0.13.0-beta.22
   '@unocss/nuxt': ^0.49.4
   eslint: ^8.34.0
   nuxt: ^3.2.0
 
 devDependencies:
-  '@kaivanwong/eslint-config': 0.13.0-beta.13_7kw3g6rralp5ps6mg3uyzz6azm
+  '@iconify-json/carbon': 1.1.15
+  '@kaivanwong/eslint-config': 0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm
   '@unocss/nuxt': 0.49.4_vite@4.1.1+webpack@5.75.0
   eslint: 8.34.0
   nuxt: 3.2.0_7kw3g6rralp5ps6mg3uyzz6azm
@@ -785,6 +787,12 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/carbon/1.1.15:
+    resolution: {integrity: sha512-O1JtNFRIFVCJwS0YpU9XmWmZIvZzvGBi+CL7dI2ofAU7b5XV6PNH2IVnwEGKCCxEyAPaok23lR5qpgC7AWbgkQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
@@ -851,8 +859,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@kaivanwong/eslint-config-base/0.13.0-beta.13_6ike4423xm2xnh233ikrbff5m4:
-    resolution: {integrity: sha512-3dKF67c3cF9P8x0qqXOM0mhSnpleRQvo8UniCcvFbMN++0FRvBo3aDbxlIlvFLP8lrrJQEwdMgSu2hh/Dh0qrQ==}
+  /@kaivanwong/eslint-config-base/0.13.0-beta.22_6ike4423xm2xnh233ikrbff5m4:
+    resolution: {integrity: sha512-BTT0E5ZZ5Z72GkTi1POOYsf0hUGVP2MNGp5FdoeNe6uOILNC8MkT1MU/Oad8x8ZUnH95eG/At8oYtf1DhQK3Cw==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
@@ -880,13 +888,13 @@ packages:
       - typescript
     dev: true
 
-  /@kaivanwong/eslint-config-react/0.13.0-beta.13_6ike4423xm2xnh233ikrbff5m4:
-    resolution: {integrity: sha512-LSiiWf7DipbSZsuqzuzbV8AZEtyKsuPdbpJe/CnjP3u+0xqjTaf64esBWD/HU4YfQ39KzHGMkxwOIi2osjLslw==}
+  /@kaivanwong/eslint-config-react/0.13.0-beta.22_6ike4423xm2xnh233ikrbff5m4:
+    resolution: {integrity: sha512-lcb8NKEi+9jKtRkLzwErJQ/crwKE7jIXy7WLT+Dz0D0sLIv68y5jZAX4k7wq9GRKAmhLZo7u0D2TS0m5lNrhkQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@kaivanwong/eslint-config-base': 0.13.0-beta.13_6ike4423xm2xnh233ikrbff5m4
-      '@kaivanwong/eslint-config-ts': 0.13.0-beta.13_7kw3g6rralp5ps6mg3uyzz6azm
+      '@kaivanwong/eslint-config-base': 0.13.0-beta.22_6ike4423xm2xnh233ikrbff5m4
+      '@kaivanwong/eslint-config-ts': 0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm
       eslint: 8.34.0
       eslint-plugin-react: 7.32.2_eslint@8.34.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.34.0
@@ -900,13 +908,13 @@ packages:
       - typescript
     dev: true
 
-  /@kaivanwong/eslint-config-ts/0.13.0-beta.13_7kw3g6rralp5ps6mg3uyzz6azm:
-    resolution: {integrity: sha512-8ib3MoBuQ3e7OjhzlgidTNBObH8uqOJqYvqpbTIc5zxyEC8sPu60JcxAE8ikcKiMYkm2zO6WMJrBqGg07ZUPOQ==}
+  /@kaivanwong/eslint-config-ts/0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm:
+    resolution: {integrity: sha512-f1ljKlMznODlbvxytB8owzAzPorA59tbGRVV7Nzylpm8537yzVmye7H2TBrhUcwmGvDDJp8aIb+ZSVEqG3CAhw==}
     peerDependencies:
       eslint: '>=7.4.0'
       typescript: '>=3.9'
     dependencies:
-      '@kaivanwong/eslint-config-base': 0.13.0-beta.13_6ike4423xm2xnh233ikrbff5m4
+      '@kaivanwong/eslint-config-base': 0.13.0-beta.22_6ike4423xm2xnh233ikrbff5m4
       '@typescript-eslint/eslint-plugin': 5.51.0_z4swst3wuuqk4hlme4ajzslgh4
       '@typescript-eslint/parser': 5.51.0_7kw3g6rralp5ps6mg3uyzz6azm
       eslint: 8.34.0
@@ -919,13 +927,13 @@ packages:
       - supports-color
     dev: true
 
-  /@kaivanwong/eslint-config-vue/0.13.0-beta.13_6ike4423xm2xnh233ikrbff5m4:
-    resolution: {integrity: sha512-HPJdR5cWSvilUs7uWEuny5tndNR4ZY823RW8AJUBtVY2jkk24Y2ogVOZaWie32ZvAovGkYL84e9WAH7MvDXK8A==}
+  /@kaivanwong/eslint-config-vue/0.13.0-beta.22_6ike4423xm2xnh233ikrbff5m4:
+    resolution: {integrity: sha512-O4fvE6+Ae8RvzZQKYuSNMgk5Dnf2gO6nlIi8r/9ZjdCPOaeu+Zq1m6vfZL9pZMe782MEHFkpLiP5xRYhy7ETfQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@kaivanwong/eslint-config-base': 0.13.0-beta.13_6ike4423xm2xnh233ikrbff5m4
-      '@kaivanwong/eslint-config-ts': 0.13.0-beta.13_7kw3g6rralp5ps6mg3uyzz6azm
+      '@kaivanwong/eslint-config-base': 0.13.0-beta.22_6ike4423xm2xnh233ikrbff5m4
+      '@kaivanwong/eslint-config-ts': 0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm
       eslint: 8.34.0
       eslint-plugin-vue: 9.9.0_eslint@8.34.0
       local-pkg: 0.4.3
@@ -939,13 +947,13 @@ packages:
       - typescript
     dev: true
 
-  /@kaivanwong/eslint-config/0.13.0-beta.13_7kw3g6rralp5ps6mg3uyzz6azm:
-    resolution: {integrity: sha512-i9LJRzRIyAx/+SlCMZSmV0wiY7Kv3EE+2eCLrKeBvcgjCjUKQLqUGFy0iuwgpWpCAz4ssOhRt/UaMhdGLw0KqA==}
+  /@kaivanwong/eslint-config/0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm:
+    resolution: {integrity: sha512-zMB3Zzh9nhhqzZnec5egVdHNFiLVpoBsds0glk5XlMPfI5gtWYjXP/CO/qjJ8Myz020iRPMtom618UI8dI1M3g==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@kaivanwong/eslint-config-react': 0.13.0-beta.13_6ike4423xm2xnh233ikrbff5m4
-      '@kaivanwong/eslint-config-vue': 0.13.0-beta.13_6ike4423xm2xnh233ikrbff5m4
+      '@kaivanwong/eslint-config-react': 0.13.0-beta.22_6ike4423xm2xnh233ikrbff5m4
+      '@kaivanwong/eslint-config-vue': 0.13.0-beta.22_6ike4423xm2xnh233ikrbff5m4
       '@typescript-eslint/eslint-plugin': 5.51.0_z4swst3wuuqk4hlme4ajzslgh4
       '@typescript-eslint/parser': 5.51.0_7kw3g6rralp5ps6mg3uyzz6azm
       eslint: 8.34.0
@@ -1382,13 +1390,13 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.21.0
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: true
 
   /@types/eslint/8.21.0:
     resolution: {integrity: sha512-35EhHNOXgxnUgh4XCJsGhE7zdlDhYDN/aMG6UbkByCFFNgQ7b3U+uVoqBpicFydR8JEfgdjCF7SJ7MiJfzuiTA==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
     dev: true
 
