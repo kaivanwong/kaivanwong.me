@@ -24,7 +24,7 @@
       <router-link icon-text to="/demos" lt-md:hidden title="Demos">
         Demos
       </router-link>
-      <a title="Twitter" href="https://twitter.com/kaivanwong1" target="_blank" icon-link i-ri-twitter-line />
+      <a title="Twitter" href="https://twitter.com/kaivan_wong" target="_blank" icon-link i-ri-twitter-line />
       <a title="Github" href="https://github.com/kaivanwong" target="_blank" icon-link i-ri-github-line />
       <dark />
     </nav>
