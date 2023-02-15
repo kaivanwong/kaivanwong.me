@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Blog | Kaivan Wong',
+  title: 'Blog - Kaivan Wong',
 })
 </script>
 

@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Demos | Kaivan Wong',
+  title: 'Demos - Kaivan Wong',
 })
 </script>
 
