@@ -5,4 +5,7 @@ export default defineNuxtConfig({
   unocss: {
     preflight: true,
   },
+  css: [
+    '~/styles/main.scss',
+  ],
 })

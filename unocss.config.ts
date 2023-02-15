@@ -9,7 +9,7 @@ export const createConfig = () => {
       colors: {
         bg: {
           default: '#fefefe',
-          dark: '#1c1f24',
+          dark: '#050505',
         },
         text: {
           default: '#6f6f6f',
@@ -28,6 +28,12 @@ export const createConfig = () => {
     transformers: [
       transformerDirectives(),
       transformerVariantGroup(),
+    ],
+    shortcuts: [
+      ['text', 'text-text-default dark:text-text-dark'],
+      ['icon', 'w-5.5 h-5.5 cursor-pointer select-none transition-opacity-300 ease-in-out text'],
+      ['icon-link', 'icon color-inherit op64 hover-op100 hover-color-teal-500 hover-decoration-inherit color-inherit'],
+      ['icon-btn', 'icon color-inherit op64 hover-op100 hover-color-red-300 hover-decoration-inherit  color-inherit'],
     ],
   })
 }

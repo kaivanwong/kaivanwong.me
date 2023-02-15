@@ -9,6 +9,6 @@ const toggleDark = () => {
     :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'" icon-btn class="!outline-none"
     @click="toggleDark"
   >
-    <div class="dark:i-akar-icons:moon-fill i-carbon:light-filled" />
+    <div class="dark:i-ri-moon-line i-ri-sun-line" />
   </button>
 </template>

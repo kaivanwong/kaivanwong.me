@@ -15,7 +15,11 @@
   },
   "keywords": [
     "kaivanwong",
-    "kaivanwong.me"
+    "kaivanwong.me",
+    "blog",
+    "vue3",
+    "nuxt3",
+    "unocss"
   ],
   "scripts": {
     "build": "nuxt build",
@@ -27,13 +31,17 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@iconify-json/akar-icons": "^1.1.13",
     "@iconify-json/carbon": "^1.1.15",
+    "@iconify-json/logos": "^1.1.23",
+    "@iconify-json/ri": "^1.1.5",
     "@kaivanwong/eslint-config": "0.13.0-beta.22",
     "@unocss/nuxt": "^0.49.4",
     "@vueuse/core": "^9.12.0",
     "@vueuse/nuxt": "^9.12.0",
     "eslint": "^8.34.0",
-    "nuxt": "^3.2.0"
+    "nuxt": "^3.2.0",
+    "sass": "^1.58.1"
   },
   "eslintConfig": {
     "extends": [
