@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   modules: [
-    '@unocss/nuxt', '@vueuse/nuxt',
+    '@nuxt/content', '@unocss/nuxt', '@vueuse/nuxt',
   ],
   unocss: {
     preflight: true,
@@ -8,6 +8,16 @@ export default defineNuxtConfig({
   css: [
     '~/styles/main.scss',
     '~/styles/prose.scss',
-    '@unocss/reset/tailwind.css',
   ],
+  content: {
+    highlight: {
+      theme: 'vitesse-dark',
+    },
+    markdown: {
+      toc: {
+        depth: 3,
+      },
+    },
+    documentDriven: true,
+  },
 })

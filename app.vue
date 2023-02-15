@@ -13,10 +13,6 @@ useHead({
 
 <template>
   <NuxtLayout>
-    <NuxtLayout name="header" />
-    <NuxtLayout name="main">
-      <NuxtPage />
-      <NuxtLayout name="footer" />
-    </NuxtLayout>
+    <NuxtPage />
   </NuxtLayout>
 </template>
