@@ -14,10 +14,17 @@
       </router-link>
     </nav>
     <nav grid gap-5 auto-flow-col items-center>
-      <a
-        title="Twitter" hidden lg:block href="https://twitter.com/kaivanwong1" target="_blank" icon-link
-        i-ri-twitter-line
-      />
+      <router-link to="/blog" title="Blog">
+        <span icon-text lt-md:hidden>Blog</span>
+        <div icon-link i-ri-article-line md:hidden />
+      </router-link>
+      <router-link icon-text to="/projects" lt-md:hidden title="Projects">
+        Projects
+      </router-link>
+      <router-link icon-text to="/demos" lt-md:hidden title="Demos">
+        Demos
+      </router-link>
+      <a title="Twitter" href="https://twitter.com/kaivanwong1" target="_blank" icon-link i-ri-twitter-line />
       <a title="Github" href="https://github.com/kaivanwong" target="_blank" icon-link i-ri-github-line />
       <dark />
     </nav>

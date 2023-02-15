@@ -1,16 +1,42 @@
 html,
 body {
   --at-apply: h-full base;
+  --at-apply: font-sans;
 }
 
 html {
-  background: #fefefe;
+  --at-apply: bg-bg-default;
+  --at-apply: text-gray-700;
 }
 
 html.dark {
-  background: #050505;
+  --at-apply: bg-bg-dark;
+  --at-apply: text-gray-200;
 }
 
 body::-webkit-scrollbar {
   --at-apply: w0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: var(--c-bg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-scrollbar);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-scrollbar-hover);
 }

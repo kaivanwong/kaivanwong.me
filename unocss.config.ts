@@ -1,11 +1,8 @@
-import { defineConfig, presetAttributify, presetIcons, presetTypography, presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, presetTypography, presetUno, presetWebFonts, transformerDirectives, transformerVariantGroup } from 'unocss'
 
 export const createConfig = () => {
   return defineConfig({
     theme: {
-      fontFamily: {
-        mono: 'dm,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
-      },
       colors: {
         bg: {
           default: '#fefefe',
@@ -24,6 +21,12 @@ export const createConfig = () => {
       }),
       presetAttributify(),
       presetTypography(),
+      presetWebFonts({
+        fonts: {
+          sans: 'Inter:400,600,800',
+          mono: 'DM Mono',
+        },
+      }),
     ],
     transformers: [
       transformerDirectives(),
@@ -31,9 +34,11 @@ export const createConfig = () => {
     ],
     shortcuts: [
       ['text', 'text-text-default dark:text-text-dark'],
-      ['icon', 'w-5.5 h-5.5 cursor-pointer select-none transition-opacity-300 ease-in-out text'],
-      ['icon-link', 'icon color-inherit op64 hover-op100 hover-color-teal-500 hover-decoration-inherit color-inherit'],
-      ['icon-btn', 'icon color-inherit op64 hover-op100 hover-color-red-300 hover-decoration-inherit  color-inherit'],
+      ['icon', 'w-5.5 h-5.5 cursor-pointer select-none text'],
+      ['icon-transition', 'transition-opacity-300 ease-in-out '],
+      ['icon-link', 'icon icon-transition color-inherit op64 hover-op100 hover-color-teal-500 hover-decoration-inherit'],
+      ['icon-btn', 'icon icon-transition color-inherit op64 hover-op100 hover-color-red-300 hover-decoration-inherit '],
+      ['icon-text', 'text icon-transition op64 hover-op100 hover-color-inherit'],
     ],
   })
 }
