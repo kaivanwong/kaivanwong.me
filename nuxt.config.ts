@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   },
   css: [
     '~/styles/main.scss',
+    '~/styles/prose.scss',
     '@unocss/reset/tailwind.css',
   ],
 })

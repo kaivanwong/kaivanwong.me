@@ -4,8 +4,8 @@
 
 <template>
   <header
-    fixed z-9999 top-0 inset-x-0 backdrop-blur b="b-0 dashed gray-300 dark:b-gray-500" flex justify-between
-    items-center p-x-8 p-y-6
+    fixed z-9999 box-border top-0 inset-x-0 backdrop-blur b="b-0 dashed gray-300 dark:b-gray-500" flex justify-between
+    items-center p-x-8 h-22
   >
     <nav>
       <router-link select-none outline-none to="/" focusable="false">
@@ -29,4 +29,5 @@
       <dark />
     </nav>
   </header>
+  <div h-22 />
 </template>
