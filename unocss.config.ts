@@ -18,6 +18,10 @@ export const createConfig = () => {
       presetUno(),
       presetIcons({
         scale: 1.2,
+        prefix: 'i-',
+        extraProperties: {
+          display: 'inline-block',
+        },
       }),
       presetAttributify(),
       presetTypography(),

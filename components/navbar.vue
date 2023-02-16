@@ -14,7 +14,7 @@
       </router-link>
     </nav>
     <nav grid gap-5 auto-flow-col items-center>
-      <router-link to="/blog" title="Blog">
+      <router-link to="/blog" title="Blog" flex items-center justify-center>
         <span icon-text lt-md:hidden>Blog</span>
         <div icon-link i-ri-article-line md:hidden />
       </router-link>

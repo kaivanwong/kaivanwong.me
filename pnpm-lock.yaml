@@ -1,10 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@iconify-json/akar-icons': ^1.1.13
-  '@iconify-json/carbon': ^1.1.15
-  '@iconify-json/logos': ^1.1.23
-  '@iconify-json/ri': ^1.1.5
+  '@iconify/json': ^2.2.22
   '@kaivanwong/eslint-config': 0.13.0-beta.22
   '@nuxt/content': ^2.4.3
   '@unocss/nuxt': ^0.49.4
@@ -15,10 +12,7 @@ specifiers:
   sass: ^1.58.1
 
 devDependencies:
-  '@iconify-json/akar-icons': 1.1.13
-  '@iconify-json/carbon': 1.1.15
-  '@iconify-json/logos': 1.1.23
-  '@iconify-json/ri': 1.1.5
+  '@iconify/json': 2.2.22
   '@kaivanwong/eslint-config': 0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm
   '@nuxt/content': 2.4.3
   '@unocss/nuxt': 0.49.4_vite@4.1.1+webpack@5.75.0
@@ -801,28 +795,11 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify-json/akar-icons/1.1.13:
-    resolution: {integrity: sha512-PyQwbPEp52/Wik0b6IzfmjaJ8C6fD5fa0BgX6dNEL8oiSpkhoMTnI2adWu+EFcDoenrPMz64LJSnGRfFpLK8Og==}
+  /@iconify/json/2.2.22:
+    resolution: {integrity: sha512-vmFQ2r4uMH0ql+3NBnCwI1onoNqto2ddX6KCmmUVmk755q35jFLIAplIFnynUNf3fyRsoIzqS1w52VYm9WUDXg==}
     dependencies:
       '@iconify/types': 2.0.0
-    dev: true
-
-  /@iconify-json/carbon/1.1.15:
-    resolution: {integrity: sha512-O1JtNFRIFVCJwS0YpU9XmWmZIvZzvGBi+CL7dI2ofAU7b5XV6PNH2IVnwEGKCCxEyAPaok23lR5qpgC7AWbgkQ==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
-
-  /@iconify-json/logos/1.1.23:
-    resolution: {integrity: sha512-bV1w4OQaHy6YZH/RhpxRc/BrzgF+7mW8HZ+ZltHbeokriwCf7gAKx6HWVOcLT0gZbO7MMM8HxnzvS7vlzhwNyw==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
-
-  /@iconify-json/ri/1.1.5:
-    resolution: {integrity: sha512-OrxKcKFHanTSPmU5esvSn5YfpNgjwJJ+6rkK1I1pIRCPXfuvmlTJGUjf+L5ZQHUiMWLQz+M2bqXx8iBUtW35Gg==}
-    dependencies:
-      '@iconify/types': 2.0.0
+      pathe: 1.1.0
     dev: true
 
   /@iconify/types/2.0.0:
@@ -1526,13 +1503,13 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.21.1
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: true
 
   /@types/eslint/8.21.1:
     resolution: {integrity: sha512-rc9K8ZpVjNcLs8Fp0dkozd5Pt2Apk1glO4Vgz8ix1u6yFByxfqo5Yavpy65o+93TAe24jr7v+eSBtFLvOQtCRQ==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
     dev: true
 
