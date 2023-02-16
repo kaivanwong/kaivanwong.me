@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <header
     fixed z-9999 box-border top-0 inset-x-0 backdrop-blur b="b-0 dashed gray-300 dark:b-gray-500" flex justify-between
@@ -9,8 +5,8 @@
   >
     <nav>
       <router-link select-none outline-none to="/" focusable="false">
-        <img v-show="isDark" h-10 rounded src="/logo-dark.svg?url" alt="logo">
-        <img v-show="!isDark" h-10 rounded src="/logo.svg?url" alt="logo">
+        <img v-show="isDark" h-14 rounded src="/logo-dark.svg?url" alt="logo">
+        <img v-show="!isDark" h-14 rounded src="/logo.svg?url" alt="logo">
       </router-link>
     </nav>
     <nav grid gap-5 auto-flow-col items-center>
