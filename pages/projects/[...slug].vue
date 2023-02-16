@@ -5,7 +5,7 @@ useHead({
 </script>
 
 <template>
-  <article prose m-auto>
+  <article class="prose m-auto">
     <ContentDoc>
       <template #not-found>
         <h2>Ooops!</h2>

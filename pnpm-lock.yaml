@@ -5,6 +5,7 @@ specifiers:
   '@kaivanwong/eslint-config': 0.13.0-beta.22
   '@nuxt/content': ^2.4.3
   '@unocss/nuxt': ^0.49.4
+  '@unocss/reset': ^0.49.4
   '@vueuse/core': ^9.12.0
   '@vueuse/nuxt': ^9.12.0
   eslint: ^8.34.0
@@ -16,6 +17,7 @@ devDependencies:
   '@kaivanwong/eslint-config': 0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm
   '@nuxt/content': 2.4.3
   '@unocss/nuxt': 0.49.4_vite@4.1.1+webpack@5.75.0
+  '@unocss/reset': 0.49.4
   '@vueuse/core': 9.12.0_vue@3.2.47
   '@vueuse/nuxt': 9.12.0_nuxt@3.2.0+vue@3.2.47
   eslint: 8.34.0

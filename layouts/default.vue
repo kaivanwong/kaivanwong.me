@@ -3,7 +3,7 @@
     <navbar />
     <main px-7 py-10>
       <slot />
+      <copyright />
     </main>
-    <copyright />
   </div>
 </template>

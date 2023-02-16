@@ -2,18 +2,6 @@ import { defineConfig, presetAttributify, presetIcons, presetTypography, presetU
 
 export const createConfig = () => {
   return defineConfig({
-    theme: {
-      colors: {
-        bg: {
-          default: '#fefefe',
-          dark: '#050505',
-        },
-        text: {
-          default: '#6f6f6f',
-          dark: '#C8CCD0',
-        },
-      },
-    },
     presets: [
       presetUno(),
       presetIcons({

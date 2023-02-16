@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   css: [
     '~/styles/main.scss',
     '~/styles/prose.scss',
+    '~/styles/markdown.scss',
   ],
   content: {
     highlight: {

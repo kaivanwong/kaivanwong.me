@@ -1,5 +1,5 @@
 .prose {
-  color: var(--fg);
+  color: var(--prose-color);
   max-width: 65ch;
   font-size: 1rem;
   line-height: 1.75;
@@ -14,13 +14,13 @@
 }
 
 .prose a {
-  color: var(--fg-deeper);
+  color: var(--prose-color-deeper);
   text-decoration: none;
   font-weight: 500;
 }
 
 .prose strong {
-  color: var(--fg-deep);
+  color: var(--prose-color-deep);
   font-weight: 600;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .prose h1 {
-  color: var(--fg-deeper);
+  color: var(--prose-color-deeper);
   font-weight: 800;
   font-size: 2.25em;
   margin-top: 0;
@@ -125,7 +125,7 @@
 }
 
 .prose h2 {
-  color: var(--fg-deep);
+  color: var(--prose-color-deep);
   font-weight: 700;
   font-size: 1.5em;
   margin-top: 2em;
@@ -159,7 +159,7 @@
 }
 
 .prose code {
-  color: var(--fg-deep);
+  color: var(--prose-color-deep);
   font-weight: 600;
   font-size: 0.875em;
 }
@@ -372,7 +372,7 @@
 }
 
 .prose b {
-  color: var(--fg-deep);
+  color: var(--prose-color-deep);
 }
 
 .prose em {

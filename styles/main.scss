@@ -1,21 +1,31 @@
+:root {
+  --text-color: #6f6f6f;
+  --bg-color: #fefefe;
+  --scrollbar-color: #eee;
+  --scrollbar-hover-color: #bbb;
+}
+
+html.dark {
+  --text-color: #C8CCD0;
+  --bg-color: #050505;
+  --scrollbar: #111;
+  --scrollbar-hover: #222;
+}
+
 html,
 body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
   --at-apply: h-full base;
   --at-apply: font-sans;
 }
 
-html {
-  --at-apply: bg-bg-default;
-  --at-apply: text-gray-700;
-}
-
-html.dark {
-  --at-apply: bg-bg-dark;
-  --at-apply: text-gray-200;
-}
-
 body::-webkit-scrollbar {
   --at-apply: w0;
+}
+
+* {
+  scrollbar-color: var(--scrollbar-color) var(--bg-color);
 }
 
 ::-webkit-scrollbar {
@@ -28,15 +38,30 @@ body::-webkit-scrollbar {
 
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-corner {
-  background: var(--c-bg);
+  background: var(--bg-color);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--c-scrollbar);
+  background: var(--scrollbar-color);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--c-scrollbar-hover);
+  background: var(--scrollbar-hover-color);
+}
+
+h2+p>em:first-child {
+  opacity: 0.5;
+  display: block;
+  margin-top: -20px;
+  font-size: 0.9em;
+}
+
+.dark [img-light] {
+  display: none;
+}
+
+html:not(.dark) [img-dark] {
+  display: none;
 }

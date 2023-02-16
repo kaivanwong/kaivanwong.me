@@ -6,7 +6,7 @@ useHead({
     { hid: 'description', name: 'description', content: 'Personal website, including introduction, blog, demo and other content' },
     { hid: 'keywords', name: 'keywords', content: 'Kaivan, Kaivan Wong, Blog' },
     { name: 'twitter:card', content: 'summary' },
-    { name: 'twitter:site', content: '@kaivanwong1' },
+    { name: 'twitter:site', content: '@kaivan_wong' },
   ],
 })
 </script>

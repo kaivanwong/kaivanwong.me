@@ -5,7 +5,7 @@ useHead({
 </script>
 
 <template>
-  <div prose m-auto>
-    <ContentDoc />
-  </div>
+  <article>
+    <ContentDoc class="prose m-auto" />
+  </article>
 </template>
