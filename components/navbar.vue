@@ -1,7 +1,7 @@
 <template>
   <header
     fixed z-9999 box-border top-0 inset-x-0 backdrop-blur b="b-0 dashed gray-300 dark:b-gray-500" flex justify-between
-    items-center p-x-8 h-22
+    items-center p-x-7 h-22
   >
     <nav>
       <router-link select-none outline-none to="/" focusable="false">

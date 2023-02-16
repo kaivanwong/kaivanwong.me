@@ -4,7 +4,7 @@ Personal website, including introduction, blog, demo and other content
 
 ## Thanks
 
-Site inspiration and part of the code from [Anthony Fu](https://antfu.me/)、[Chris](https://zyob.top/).
+Website inspiration and part of the code from [Anthony Fu](https://antfu.me/).
 
 ## License
 
