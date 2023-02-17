@@ -12,7 +12,7 @@ const projects = computed(() => props.projects || [])
 <template>
   <ul>
     <template v-if="!projects.length">
-      <div py2 op50>
+      <div pt-2 pb-10 op50>
         nothing here yet
       </div>
     </template>
