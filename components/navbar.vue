@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const appConfig = useAppConfig()
+</script>
+
 <template>
   <header
-    fixed z-9999 box-border top-0 inset-x-0 backdrop-blur b="b-0 dashed gray-300 dark:b-gray-500" flex justify-between
-    items-center p-x-7 h-22
+    fixed z-9999 box-border top-0 inset-x-0 backdrop-blur b="b-0 dashed gray-300 dark:b-gray-500" flex
+    justify-between items-center p-x-7 h-22
   >
     <nav>
       <router-link select-none outline-none to="/" focusable="false">
@@ -10,15 +14,12 @@
       </router-link>
     </nav>
     <nav grid gap-5 auto-flow-col items-center>
-      <router-link to="/blog" title="Blog" flex items-center justify-center>
-        <span icon-text lt-md:hidden>Blog</span>
-        <div icon-link i-ri-article-line md:hidden />
-      </router-link>
-      <router-link icon-text to="/projects" lt-md:hidden title="Projects">
-        Projects
-      </router-link>
-      <router-link icon-text to="/demos" lt-md:hidden title="Demos">
-        Demos
+      <div icon-link i-ri-article-line md:hidden />
+      <router-link
+        v-for="(item, index) in appConfig.nav" :key="index" icon-text :to="item.path" lt-md:hidden
+        :title="item.label"
+      >
+        {{ item.label }}
       </router-link>
       <a title="Twitter" href="https://twitter.com/kaivan_wong" target="_blank" icon-link i-ri-twitter-line />
       <a title="Github" href="https://github.com/kaivanwong" target="_blank" icon-link i-ri-github-line />

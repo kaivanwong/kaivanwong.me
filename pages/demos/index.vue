@@ -6,6 +6,6 @@ useHead({
 
 <template>
   <div class="prose m-auto">
-    <h1>Demos page</h1>
+    <tab />
   </div>
 </template>
