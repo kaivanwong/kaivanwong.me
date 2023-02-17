@@ -1,6 +1,6 @@
 {
   "name": "@kaivanwong/kaivanwong.me",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.25.0",
   "description": "Personal website, including introduction, blog, demo and other content",
   "author": "Kaivan Wong <kaivanwong@outlook.com>",
