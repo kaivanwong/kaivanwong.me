@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     preflight: true,
   },
   css: [
+    '@unocss/reset/tailwind.css',
     '~/styles/main.scss',
     '~/styles/prose.scss',
     '~/styles/markdown.scss',

@@ -25,12 +25,11 @@ export const createConfig = () => {
       transformerVariantGroup(),
     ],
     shortcuts: [
-      ['text', 'text-text-default dark:text-text-dark'],
-      ['icon', 'w-5.5 h-5.5 cursor-pointer select-none text'],
+      ['icon', 'w-5.5 h-5.5 cursor-pointer select-none'],
       ['icon-transition', 'transition-opacity-300 ease-in-out '],
       ['icon-link', 'icon icon-transition color-inherit op64 hover-op100 hover-color-teal-500 hover-decoration-inherit'],
       ['icon-btn', 'icon icon-transition color-inherit op64 hover-op100 hover-color-red-300 hover-decoration-inherit '],
-      ['icon-text', 'text icon-transition op64 hover-op100 hover-color-inherit'],
+      ['icon-text', 'icon-transition op64 hover-op100 hover-color-inherit'],
     ],
   })
 }

@@ -5,7 +5,10 @@ useHead({
 </script>
 
 <template>
-  <div class="prose m-auto">
-    <tab />
-  </div>
+  <article>
+    <div class="prose m-auto">
+      <tab />
+      <card-blog />
+    </div>
+  </article>
 </template>
