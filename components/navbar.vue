@@ -14,7 +14,7 @@ const appConfig = useAppConfig()
       </router-link>
     </nav>
     <nav grid gap-5 auto-flow-col items-center>
-      <div icon-link i-ri-article-line md:hidden />
+      <router-link icon-link i-ri-article-line md:hidden :to="appConfig.nav[0].path" />
       <router-link
         v-for="(item, index) in appConfig.nav" :key="index" icon-text :to="item.path" lt-md:hidden
         :title="item.label"
