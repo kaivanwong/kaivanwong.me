@@ -16,5 +16,8 @@ const projects = computed(() => props.projects || [])
         nothing here yet
       </div>
     </template>
+    <template v-for="(item, index) in projects" :key="index">
+      <li />
+    </template>
   </ul>
 </template>
