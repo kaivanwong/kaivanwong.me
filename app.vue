@@ -7,13 +7,17 @@ useHead({
     { hid: 'keywords', name: 'keywords', content: 'Kaivan, Kaivan Wong, Blog' },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:site', content: '@kaivan_wong' },
+    { property: 'og:title', content: 'Kaivan Wong' },
+    { 'http-equiv': 'pragma', 'content': 'no-cache' },
+    { 'http-equiv': 'cache-control', 'content': 'no-cache' },
+    { 'http-equiv': 'expires', 'content': '0' },
   ],
 })
 </script>
 
 <template>
-  <NuxtLoadingIndicator />
   <NuxtLayout>
+    <NuxtLoadingIndicator />
     <NuxtPage />
   </NuxtLayout>
 </template>
