@@ -12,6 +12,5 @@ useHead({
         <p>Sorry, the page you are looking for could not be found.</p>
       </template>
     </ContentDoc>
-    <Back />
   </article>
 </template>
