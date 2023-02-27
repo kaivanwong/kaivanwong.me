@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@iconify/json': ^2.2.22
-  '@kaivanwong/eslint-config': 0.13.0-beta.22
+  '@kaivanwong/eslint-config': 0.13.11
   '@nuxt/content': ^2.4.3
   '@unocss/nuxt': ^0.49.4
   '@unocss/reset': ^0.49.4
@@ -14,7 +14,7 @@ specifiers:
 
 devDependencies:
   '@iconify/json': 2.2.22
-  '@kaivanwong/eslint-config': 0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm
+  '@kaivanwong/eslint-config': 0.13.11_7kw3g6rralp5ps6mg3uyzz6azm
   '@nuxt/content': 2.4.3
   '@unocss/nuxt': 0.49.4_vite@4.1.1+webpack@5.75.0
   '@unocss/reset': 0.49.4
@@ -870,8 +870,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@kaivanwong/eslint-config-base/0.13.0-beta.22_khyrr7my4aaa3ssgqabkfgcc24:
-    resolution: {integrity: sha512-BTT0E5ZZ5Z72GkTi1POOYsf0hUGVP2MNGp5FdoeNe6uOILNC8MkT1MU/Oad8x8ZUnH95eG/At8oYtf1DhQK3Cw==}
+  /@kaivanwong/eslint-config-base/0.13.11_khyrr7my4aaa3ssgqabkfgcc24:
+    resolution: {integrity: sha512-HkxqWoPWLtTcw+RHqynqO7u7wz2TxU7GCf4qQFYUWbt8OkGR0uODreVJYl64aiBXEm7TYxdfJh5mpFIcnCo+PQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
@@ -899,16 +899,15 @@ packages:
       - typescript
     dev: true
 
-  /@kaivanwong/eslint-config-react/0.13.0-beta.22_khyrr7my4aaa3ssgqabkfgcc24:
-    resolution: {integrity: sha512-lcb8NKEi+9jKtRkLzwErJQ/crwKE7jIXy7WLT+Dz0D0sLIv68y5jZAX4k7wq9GRKAmhLZo7u0D2TS0m5lNrhkQ==}
+  /@kaivanwong/eslint-config-nest/0.13.11_khyrr7my4aaa3ssgqabkfgcc24:
+    resolution: {integrity: sha512-b76cg//9xvqtD7k3QvCvtxHVdDLHwaEX5qsR2JJqRhKoKZsEvhsXywTQ9kn5RiLKfuV2WOoU/xHc5MWhV5Sufw==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@kaivanwong/eslint-config-base': 0.13.0-beta.22_khyrr7my4aaa3ssgqabkfgcc24
-      '@kaivanwong/eslint-config-ts': 0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm
+      '@kaivanwong/eslint-config-base': 0.13.11_khyrr7my4aaa3ssgqabkfgcc24
+      '@kaivanwong/eslint-config-ts': 0.13.11_7kw3g6rralp5ps6mg3uyzz6azm
       eslint: 8.34.0
-      eslint-plugin-react: 7.32.2_eslint@8.34.0
-      eslint-plugin-react-hooks: 4.6.0_eslint@8.34.0
+      local-pkg: 0.4.3
     transitivePeerDependencies:
       - '@typescript-eslint/eslint-plugin'
       - '@typescript-eslint/parser'
@@ -919,13 +918,34 @@ packages:
       - typescript
     dev: true
 
-  /@kaivanwong/eslint-config-ts/0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm:
-    resolution: {integrity: sha512-f1ljKlMznODlbvxytB8owzAzPorA59tbGRVV7Nzylpm8537yzVmye7H2TBrhUcwmGvDDJp8aIb+ZSVEqG3CAhw==}
+  /@kaivanwong/eslint-config-react/0.13.11_khyrr7my4aaa3ssgqabkfgcc24:
+    resolution: {integrity: sha512-9QinvJUTvclP7kXYTCczURuA3/AJSyQ6YNfn6dchxT4xo73WqEkcZ30idjmLHLDO8Y3Dch9DNk9k9hPDC08QFA==}
+    peerDependencies:
+      eslint: '>=7.4.0'
+    dependencies:
+      '@kaivanwong/eslint-config-base': 0.13.11_khyrr7my4aaa3ssgqabkfgcc24
+      '@kaivanwong/eslint-config-ts': 0.13.11_7kw3g6rralp5ps6mg3uyzz6azm
+      eslint: 8.34.0
+      eslint-plugin-react: 7.32.2_eslint@8.34.0
+      eslint-plugin-react-hooks: 4.6.0_eslint@8.34.0
+      local-pkg: 0.4.3
+    transitivePeerDependencies:
+      - '@typescript-eslint/eslint-plugin'
+      - '@typescript-eslint/parser'
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - jest
+      - supports-color
+      - typescript
+    dev: true
+
+  /@kaivanwong/eslint-config-ts/0.13.11_7kw3g6rralp5ps6mg3uyzz6azm:
+    resolution: {integrity: sha512-vySrw3bDXuZGBbqIjtmIR8tVwPfswAU6jaUWcz1FNhDY0F7VAVYCvGaZLBbUowadObzQJQrnCxyBAVzSh1gE7g==}
     peerDependencies:
       eslint: '>=7.4.0'
       typescript: '>=3.9'
     dependencies:
-      '@kaivanwong/eslint-config-base': 0.13.0-beta.22_khyrr7my4aaa3ssgqabkfgcc24
+      '@kaivanwong/eslint-config-base': 0.13.11_khyrr7my4aaa3ssgqabkfgcc24
       '@typescript-eslint/eslint-plugin': 5.52.0_6cfvjsbua5ptj65675bqcn6oza
       '@typescript-eslint/parser': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
       eslint: 8.34.0
@@ -938,13 +958,13 @@ packages:
       - supports-color
     dev: true
 
-  /@kaivanwong/eslint-config-vue/0.13.0-beta.22_khyrr7my4aaa3ssgqabkfgcc24:
-    resolution: {integrity: sha512-O4fvE6+Ae8RvzZQKYuSNMgk5Dnf2gO6nlIi8r/9ZjdCPOaeu+Zq1m6vfZL9pZMe782MEHFkpLiP5xRYhy7ETfQ==}
+  /@kaivanwong/eslint-config-vue/0.13.11_khyrr7my4aaa3ssgqabkfgcc24:
+    resolution: {integrity: sha512-o/sEoA6oMWEqjB4qj3PWZYsLrtJhtUID6l11qQXgkjr02Wa+PEOMWOk9s2t+4cl0DovsYu/poOuvCRLE6hTALQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@kaivanwong/eslint-config-base': 0.13.0-beta.22_khyrr7my4aaa3ssgqabkfgcc24
-      '@kaivanwong/eslint-config-ts': 0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm
+      '@kaivanwong/eslint-config-base': 0.13.11_khyrr7my4aaa3ssgqabkfgcc24
+      '@kaivanwong/eslint-config-ts': 0.13.11_7kw3g6rralp5ps6mg3uyzz6azm
       eslint: 8.34.0
       eslint-plugin-vue: 9.9.0_eslint@8.34.0
       local-pkg: 0.4.3
@@ -958,13 +978,16 @@ packages:
       - typescript
     dev: true
 
-  /@kaivanwong/eslint-config/0.13.0-beta.22_7kw3g6rralp5ps6mg3uyzz6azm:
-    resolution: {integrity: sha512-zMB3Zzh9nhhqzZnec5egVdHNFiLVpoBsds0glk5XlMPfI5gtWYjXP/CO/qjJ8Myz020iRPMtom618UI8dI1M3g==}
+  /@kaivanwong/eslint-config/0.13.11_7kw3g6rralp5ps6mg3uyzz6azm:
+    resolution: {integrity: sha512-g+tBtgOku0FK5N+1VFVGuv2U4htdIWRdrZKId0wx9W5yBDbKADkJ8B63ZQNKJ20dyjy4W5Kqs9X7zqxw8QIWlQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@kaivanwong/eslint-config-react': 0.13.0-beta.22_khyrr7my4aaa3ssgqabkfgcc24
-      '@kaivanwong/eslint-config-vue': 0.13.0-beta.22_khyrr7my4aaa3ssgqabkfgcc24
+      '@kaivanwong/eslint-config-base': 0.13.11_khyrr7my4aaa3ssgqabkfgcc24
+      '@kaivanwong/eslint-config-nest': 0.13.11_khyrr7my4aaa3ssgqabkfgcc24
+      '@kaivanwong/eslint-config-react': 0.13.11_khyrr7my4aaa3ssgqabkfgcc24
+      '@kaivanwong/eslint-config-ts': 0.13.11_7kw3g6rralp5ps6mg3uyzz6azm
+      '@kaivanwong/eslint-config-vue': 0.13.11_khyrr7my4aaa3ssgqabkfgcc24
       '@typescript-eslint/eslint-plugin': 5.52.0_6cfvjsbua5ptj65675bqcn6oza
       '@typescript-eslint/parser': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
       eslint: 8.34.0
