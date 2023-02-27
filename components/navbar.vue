@@ -19,6 +19,12 @@ const appConfig = useAppConfig()
 
         <span icon-text lt-md:hidden>Blog</span>
       </nuxt-link>
+      <nuxt-link to="blog" lt-md:hidden flex items-center>
+        <span icon-text>Notes</span>
+      </nuxt-link>
+      <nuxt-link to="blog" lt-md:hidden flex items-center>
+        <span icon-text>Reading</span>
+      </nuxt-link>
       <nuxt-link to="projects" flex items-center>
         <div icon-link md:hidden i-ri:bookmark-3-line />
 
@@ -29,6 +35,7 @@ const appConfig = useAppConfig()
 
         <span icon-text lt-md:hidden>Demos</span>
       </nuxt-link>
+
       <a
         title="Twitter" href="https://twitter.com/kaivan_wong" target="_blank" lt-md:hidden icon-link
         i-ri-twitter-line
