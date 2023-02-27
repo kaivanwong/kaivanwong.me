@@ -6,7 +6,7 @@ title: 'Kaivan Wong'
 
 Hi, I am Kaivan Wong, a Front-end Engineer. Focus on Vue, Vite, Nuxt & etc.
 
-This is mine [Eslint Config](https://github.com/kaivanwong/eslint-config), [VS Code Settings](https://github.com/kaivanwong/vscode-settings). This is long-term maintenance that you can apply to your projects. You can find my [projects list](/projects) here, and I hope they will help you.
+I provided my [Eslint Config](https://github.com/kaivanwong/eslint-config), [VS Code Settings](https://github.com/kaivanwong/vscode-settings).  They are long-term maintenance, and you can apply them to your projects. You can find my [projects list](/projects) here, and I hope they will help you.
 
 I really like Elon's saying: "If something is theoretically true and can be done best, then we should strive to achieve it". So I want to try my best to accomplish something.
 
