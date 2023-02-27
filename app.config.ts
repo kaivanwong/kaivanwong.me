@@ -26,18 +26,9 @@ export default defineAppConfig({
       icon: 'i-ri-lightbulb-line',
     },
   ],
-  blogType: [
-    {
-      label: 'Blog',
-      value: 'blog',
-    },
-    {
-      label: 'Notes',
-      value: 'note',
-    },
-    {
-      label: 'Reading',
-      value: 'book',
-    },
-  ],
+  blogType: {
+    blog: 'Blog',
+    note: 'Notes',
+    book: 'Reading',
+  },
 })

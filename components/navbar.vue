@@ -14,15 +14,15 @@ const appConfig = useAppConfig()
       </nuxt-link>
     </nav>
     <nav grid gap-5 auto-flow-col items-center>
-      <nuxt-link to="blog" flex items-center>
+      <nuxt-link to="/posts" flex items-center>
         <div icon-link md:hidden i-ri-article-line />
 
         <span icon-text lt-md:hidden>Blog</span>
       </nuxt-link>
-      <nuxt-link to="blog" lt-md:hidden flex items-center>
+      <nuxt-link to="/posts?tag=note" lt-md:hidden flex items-center>
         <span icon-text>Notes</span>
       </nuxt-link>
-      <nuxt-link to="blog" lt-md:hidden flex items-center>
+      <nuxt-link to="/posts?tag=book" lt-md:hidden flex items-center>
         <span icon-text>Reading</span>
       </nuxt-link>
       <nuxt-link to="projects" flex items-center>

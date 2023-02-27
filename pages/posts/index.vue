@@ -3,32 +3,30 @@ import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
 
 const appConfig = useAppConfig()
 
-useHead({
-  title: `${appConfig.blogType[0].label} - Kaivan Wong`,
-})
+const route = useRoute()
 
-const active = ref(appConfig.blogType[0].value)
+const active = ref(route.query.tag as string || 'blog')
 
 const query: QueryBuilderParams = { path: '/posts', where: [{ tag: active.value }] }
 
-const blogTypeChange = (e: any) => {
-  active.value = e.value
+watch(route, (newVal) => {
+  active.value = newVal.query.tag as string || 'blog'
   useHead({
-    title: `${e.label} - Kaivan Wong`,
+    title: `${appConfig.blogType[active.value as keyof typeof appConfig.blogType]} - Kaivan Wong`,
   })
-}
+})
 </script>
 
 <template>
   <article class="prose m-auto">
     <div class="prose m-auto mb-8 select-none">
       <div mb-0 flex="~ gap2 sm:gap3 wrap" text-xl sm:text-3xl>
-        <a
-          v-for="(item, index) in appConfig.blogType" :key="index" class="!border-none !font-400 cursor-pointer"
-          :class="active === item.value ? '' : 'opacity-20 hover:opacity-50'" @click="blogTypeChange(item)"
+        <nuxt-link
+          v-for="(value, key) in appConfig.blogType" :key="key" class="!border-none !font-400 cursor-pointer"
+          :class="active === key ? '' : 'opacity-20 hover:opacity-50'" :to="`/posts?tag=${key}`"
         >
-          {{ item.label }}
-        </a>
+          {{ value }}
+        </nuxt-link>
       </div>
     </div>
     <ContentList :query="query">
