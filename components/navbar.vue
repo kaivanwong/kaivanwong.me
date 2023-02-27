@@ -14,12 +14,20 @@ const appConfig = useAppConfig()
       </nuxt-link>
     </nav>
     <nav grid gap-5 auto-flow-col items-center>
-      <nuxt-link v-for="(item, index) in appConfig.nav" :key="index" :to="item.path" flex items-center>
-        <div v-if="item.icon === 'i-ri-article-line'" icon-link md:hidden i-ri-article-line />
-        <div v-if="item.icon === 'i-ri:bookmark-3-line'" icon-link md:hidden i-ri:bookmark-3-line />
-        <div v-if="item.icon === 'i-ri-lightbulb-line'" icon-link md:hidden i-ri-lightbulb-line />
+      <nuxt-link to="blog" flex items-center>
+        <div icon-link md:hidden i-ri-article-line />
 
-        <span v-if="item.icon" icon-text lt-md:hidden> {{ item.label }}</span>
+        <span icon-text lt-md:hidden>Blog</span>
+      </nuxt-link>
+      <nuxt-link to="projects" flex items-center>
+        <div icon-link md:hidden i-ri:bookmark-3-line />
+
+        <span icon-text lt-md:hidden>Projects</span>
+      </nuxt-link>
+      <nuxt-link to="demos" flex items-center>
+        <div icon-link md:hidden i-ri-lightbulb-line />
+
+        <span icon-text lt-md:hidden>Demos</span>
       </nuxt-link>
       <a
         title="Twitter" href="https://twitter.com/kaivan_wong" target="_blank" lt-md:hidden icon-link
