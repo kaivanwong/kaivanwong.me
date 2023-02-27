@@ -5,17 +5,12 @@ useHead({
 </script>
 
 <template>
-  <article>
+  <article class="prose m-auto">
     <div style="display: none;">
       <span i-simple-icons-github />
       <span i-simple-icons-twitter />
       <span i-simple-icons-microsoftoutlook />
     </div>
-    <ContentDoc class="prose m-auto">
-      <template #not-found>
-        <h2>Ooops!</h2>
-        <p>Sorry, the page you are looking for could not be found.</p>
-      </template>
-    </ContentDoc>
+    <ContentDoc />
   </article>
 </template>

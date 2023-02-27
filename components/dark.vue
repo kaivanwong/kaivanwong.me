@@ -5,10 +5,10 @@ const toggleDark = () => {
 </script>
 
 <template>
-  <button
-    :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'" icon-btn class="!outline-none"
+  <a
+    :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'" class="icon-btn !outline-none flex items-center"
     @click="toggleDark"
   >
-    <div class="dark:i-ri-moon-line i-ri-sun-line" />
-  </button>
+    <i class="!w-full !h-full dark:i-ri-moon-line i-ri-sun-line" />
+  </a>
 </template>
