@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/content', '@unocss/nuxt', '@vueuse/nuxt',
+    '@nuxt/content', '@unocss/nuxt', '@vueuse/nuxt', '@nuxt/devtools',
   ],
   unocss: {
     preflight: true,
@@ -21,5 +21,9 @@ export default defineNuxtConfig({
       },
     },
     documentDriven: true,
+  },
+  devtools: {
+    enabled: true,
+    vscode: {},
   },
 })
