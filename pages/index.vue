@@ -12,6 +12,7 @@ useHead({
       <span i-simple-icons-microsoftoutlook />
       <span i-simple-icons-zhihu />
       <span i-simple-icons-bilibili />
+      <span i-simple-icons-red />
     </div>
     <ContentDoc />
   </article>
