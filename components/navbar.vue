@@ -1,7 +1,3 @@
-<script setup lang="ts">
-const appConfig = useAppConfig()
-</script>
-
 <template>
   <header
     fixed z-9999 box-border top-0 inset-x-0 backdrop-blur b="b-0 dashed gray-300 dark:b-gray-500" flex
