@@ -10,6 +10,8 @@ useHead({
       <span i-simple-icons-github />
       <span i-simple-icons-twitter />
       <span i-simple-icons-microsoftoutlook />
+      <span i-simple-icons-zhihu />
+      <span i-simple-icons-bilibili />
     </div>
     <ContentDoc />
   </article>

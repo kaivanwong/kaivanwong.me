@@ -4,14 +4,14 @@ title: 'Kaivan Wong'
 
 # Kaivan Wong
 
-Hi, I am Kaivan Wong, a Front-end Engineer. Focus on Vue, Vite, Nuxt & etc.
+Hey, I am Kaivan Wong, a Front-end Engineer. Focus on Vue, Vite, Nuxt & etc.
 
-I provided my [Eslint Config](https://github.com/kaivanwong/eslint-config), [VS Code Settings](https://github.com/kaivanwong/vscode-settings).  They are long-term maintenance, and you can apply them to your projects. You can find my [projects list](/projects) here, and I hope they will help you.
+Here is my [Eslint Config](https://github.com/kaivanwong/eslint-config), [VS Code Settings](https://github.com/kaivanwong/vscode-settings).  They are long-term maintenance, and you can apply them to your projects. 
 
-I really like Elon's saying: "If something is theoretically true and can be done best, then we should strive to achieve it". So I want to try my best to accomplish something.
+Creator of [Wings Cloud](https://github.com/wingscloud). This is a Lightweight Web Solution based on JS / TS. Built with [Vuejs](https://vuejs.org), [Nestjs](https://nestjs.com), [MongoDB](https://www.mongodb.com). It's used to solve Front-end Engineers full stack, low cost, rapid development in the admin system and server applications.
 
-Right now I'm working on an open source project - [Wings Cloud](https://github.com/wingscloud). This is a Lightweight Web Solution based on JS / TS. Built with [Vuejs](https://vuejs.org), [Nestjs](https://nestjs.com), [MongoDB](https://www.mongodb.com). It's used to solve Front-end Engineers full stack, low cost, rapid development in the admin system and server applications.
+Find me on [<span i-simple-icons-github ></span> GitHub](https://github.com/kaivanwong), [<span  i-simple-icons-twitter ></span> Twitter](https://twitter.com/kaivan_wong), [<span i-simple-icons-zhihu></span> 知乎](https://www.zhihu.com/people/kaivanwong) or [<span i-simple-icons-bilibili></span> 哔哩哔哩](https://space.bilibili.com/190014206) .
 
-Find me on [<span i-simple-icons-github ></span> GitHub](https://github.com/kaivanwong), [<span  i-simple-icons-twitter ></span> Twitter](https://twitter.com/kaivan_wong). Mail me at [<span i-simple-icons-microsoftoutlook></span> kaivanwong@outlook.com](mailto:kaivanwong@outlook.com).
+Mail me at [<span i-simple-icons-microsoftoutlook></span> kaivanwong@outlook.com](mailto:kaivanwong@outlook.com).
 
-The personal website and some repositories was inspired by [Anthony Fu](https://antfu.me/), thanks.
+The website was inspired by [Anthony Fu](https://antfu.me/), thanks.
