@@ -16,10 +16,8 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <NuxtLoadingIndicator :height="1" />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
+  <NuxtLoadingIndicator :height="1" />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
