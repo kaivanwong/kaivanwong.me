@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <footer mt-10 mb-6 prose m-auto opacity-50>
     <p text-sm>
@@ -13,7 +9,7 @@
     </p>
     <p text-sm>
       <span mr-2>MIT Licensed</span>
-      <span>© 2021-PRESENT Kaivan Wong</span>
+      <span>© 2022-PRESENT Kaivan Wong</span>
     </p>
   </footer>
 </template>

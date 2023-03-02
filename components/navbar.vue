@@ -10,26 +10,19 @@
       </nuxt-link>
     </nav>
     <nav grid gap-5 auto-flow-col items-center>
-      <nuxt-link to="/posts" flex items-center>
+      <nuxt-link to="/blog" flex items-center>
         <div icon-link md:hidden i-ri-article-line />
 
         <span icon-text lt-md:hidden>Blog</span>
       </nuxt-link>
-      <nuxt-link to="/posts?tag=note" lt-md:hidden flex items-center>
-        <span icon-text>Notes</span>
+      <nuxt-link to="/reading" flex items-center>
+        <div icon-link md:hidden i-ri:book-2-line />
+        <span icon-text lt-md:hidden>Reading</span>
       </nuxt-link>
-      <nuxt-link to="/posts?tag=book" lt-md:hidden flex items-center>
-        <span icon-text>Reading</span>
-      </nuxt-link>
-      <nuxt-link to="projects" flex items-center>
+      <nuxt-link to="/projects" flex items-center>
         <div icon-link md:hidden i-ri:bookmark-3-line />
 
         <span icon-text lt-md:hidden>Projects</span>
-      </nuxt-link>
-      <nuxt-link to="demos" flex items-center>
-        <div icon-link md:hidden i-ri-lightbulb-line />
-
-        <span icon-text lt-md:hidden>Demos</span>
       </nuxt-link>
 
       <a

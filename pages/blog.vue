@@ -1,18 +1,18 @@
 <script setup>
 useHead({
-  title: 'Projects - Kaivan Wong',
+  title: 'Blog - Kaivan Wong',
 })
 </script>
 
 <template>
   <article class="prose m-auto">
     <h1 mb-0>
-      Projects
+      Blog
     </h1>
     <p class="opacity-50 !-mt-6 italic">
-      List of projects I've worked on.
+      Here is a list of my blogs, including work and life :)
     </p>
-    <ContentList path="/projects">
+    <ContentList path="/blog">
       <template #default="{ list }">
         <ul>
           <template v-for="article in list" :key="article._path">
