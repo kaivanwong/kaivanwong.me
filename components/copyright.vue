@@ -8,7 +8,7 @@
       <a title="Netlify" link-text href="https://www.netlify.com" target="_blank">Netlify</a>
     </p>
     <p text-sm>
-      <span mr-2>MIT Licensed</span>
+      <span mr-2>CC BY-NC-SA 4.0</span>
       <span>© 2022-PRESENT Kaivan Wong</span>
     </p>
   </footer>

@@ -1,6 +1,18 @@
 <script setup lang="ts">
 useHead({
   title: 'Blog - Kaivan Wong',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: 'Here is a list of my blogs, including work and life :)',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: 'posts, articles, blog',
+    },
+  ],
 })
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
@@ -20,7 +32,7 @@ const isSameYear = (a: Date | string | number, b: Date | string | number) => a &
         <ul>
           <template v-for="article, index in list" :key="article._path">
             <div v-if="!isSameYear(article.date, list[index - 1]?.date)" relative h20 pointer-events-none>
-              <span style="color:var(--prose-color);" text-8em op10 absolute left--3rem top--2rem font-bold>{{
+              <span style="color:var(--prose-color);" text-8em op10 absolute top--2rem font-bold>{{
                 getYear(article.date) }}</span>
             </div>
             <router-link class="item block font-normal mb-6 mt-2 no-underline" :to="article._path">

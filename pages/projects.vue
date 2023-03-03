@@ -1,6 +1,18 @@
 <script setup>
 useHead({
   title: 'Projects - Kaivan Wong',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: 'List of projects I\'ve worked on.',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: 'projects, github, open source, vue, nuxt, vite, node, javascript, typescript',
+    },
+  ],
 })
 </script>
 
