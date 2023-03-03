@@ -1,6 +1,6 @@
 {
   "name": "@kaivanwong/kaivanwong.me",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "packageManager": "pnpm@7.25.0",
   "description": "Personal website, including introduction, blog, demo and other content",
   "author": "Kaivan Wong <kaivanwong@outlook.com>",
@@ -17,8 +17,13 @@
     "kaivanwong",
     "kaivanwong.me",
     "blog",
-    "vue3",
-    "nuxt3",
+    "reading",
+    "projects",
+    "wingscloud",
+    "nunts",
+    "vue",
+    "vite",
+    "nuxt",
     "unocss"
   ],
   "scripts": {
