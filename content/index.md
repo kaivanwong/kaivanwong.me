@@ -2,9 +2,11 @@
 title: 'Kaivan Wong'
 ---
 
-Hey, I am Kaivan Wong, a Front-end Engineer. Focus on [Vue](https://vuejs.org/), [Vite](https://vitejs.dev/), [Nuxt](https://nuxt.com/) & etc.
+Hey, I am Kaivan Wong, a Front-end Engineer. Creator of [Wings Cloud](https://github.com/wingscloud), [Nunts](https://github.com/nunts). Focus on [Vue](https://vuejs.org/), [Vite](https://vitejs.dev/), [Nuxt](https://nuxt.com/) & etc. 
 
-Creator of [Wings Cloud](https://github.com/wingscloud). It provides some project templates that are free for commercial use and are constantly updated and maintained. You can read more about the [Projects](/projects) I worked on in Projects.
+Here is my personal website, you can visit my [blog](/blog), [project list](/projects).
+
+[Wings Cloud](https://github.com/wingscloud) provides a set of lightweight, flexible and extensible Web and server-side application solutions for scenarios where front-end engineers independently develop applications. 
 
 Now I'm designing a web application called [Nunts](https://github.com/nunts) that can be used for full-stack development by front-end engineers. It is capable of providing both Nuxt-based website rendering and the service application required by the website.
 
