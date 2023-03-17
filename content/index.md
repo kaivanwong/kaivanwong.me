@@ -2,7 +2,7 @@
 title: 'Kaivan Wong'
 ---
 
-Hey, I am Kaivan Wong, a Front-end Engineer. Creator of [Wings Cloud](https://github.com/wingscloud), [Nunts](https://github.com/nunts). Focus on [Vue](https://vuejs.org/), [Vite](https://vitejs.dev/), [Nuxt](https://nuxt.com/), [Nestjs](https://nestjs.com/) & etc. 
+Hey, I am Kaivan Wong, a Front-end Engineer. Creator of [Wings Cloud](https://github.com/wingscloud). Focus on [Vue](https://vuejs.org/), [Vite](https://vitejs.dev/), [Nuxt](https://nuxt.com/), [Nestjs](https://nestjs.com/) & etc. 
 
 Here is my personal website, you can visit my [blog](/blog), [project list](/projects), and where I share the books I'm [reading](/reading).
 
