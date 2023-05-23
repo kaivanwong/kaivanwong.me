@@ -1,17 +1,6 @@
 {
-  "name": "@kaivanwong/kaivanwong.me",
-  "version": "0.1.0",
-  "description": "Personal website, including introduction, blog, demo and other content",
-  "author": "Kaivan Wong <kaivanwong@outlook.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/kaivanwong/kaivanwong.me#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kaivanwong/kaivanwong.me.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kaivanwong/kaivanwong.me/issues"
-  },
+  "private": true,
+  "packageManager": "pnpm@8.5.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
