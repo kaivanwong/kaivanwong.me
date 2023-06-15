@@ -1,10 +1,10 @@
-# @kaivanwong/kaivanwong.me
+# [kaivanwong.me]
 
-Personal website, including introduction, blog, demo and other content
+My personal website.
 
-## Thanks
+## CC BY-NC-SA 4.0
 
-Website inspiration and part of the code from [Anthony Fu](https://antfu.me/).
+words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>.
 
 ## License
 
