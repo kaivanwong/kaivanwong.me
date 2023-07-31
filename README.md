@@ -4,7 +4,7 @@ My personal website.
 
 ## CC BY-NC-SA 4.0
 
-words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>.
+Words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>.
 
 ## License
 
