@@ -1,6 +1,9 @@
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/content', '@unocss/nuxt', '@vueuse/nuxt', '@nuxt/devtools',
+    '@nuxt/content',
+    '@unocss/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/devtools',
   ],
   unocss: {
     preflight: true,
@@ -26,4 +29,10 @@ export default defineNuxtConfig({
     enabled: true,
     vscode: {},
   },
+  components: [
+    {
+      path: '~/components',
+      extensions: ['.vue'],
+    },
+  ],
 })

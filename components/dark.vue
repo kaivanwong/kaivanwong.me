@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const toggleDark = () => {
+function toggleDark() {
   isDark.value = !isDark.value
 }
 </script>
@@ -9,6 +9,6 @@ const toggleDark = () => {
     :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'" class="icon-link !outline-none flex items-center"
     @click="toggleDark"
   >
-    <i class="!w-full !h-full dark:i-ri-moon-line i-ri-sun-line" />
+    <i class="!w-full !h-full dark:i-uil-moon i-uil-sun" />
   </a>
 </template>

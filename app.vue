@@ -17,9 +17,12 @@ useHead({
 
 <template>
   <NuxtLoadingIndicator :height="1" />
-  <NuxtLayout>
+  <Navbar />
+  <main px-7 lt-md:py-10 md:py-24>
     <NuxtPage />
-  </NuxtLayout>
+    <Back />
+    <Copyright />
+  </main>
   <div style="display: none;">
     <span i-simple-icons-github />
     <span i-simple-icons-twitter />

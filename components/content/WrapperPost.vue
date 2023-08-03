@@ -1,18 +1,9 @@
 <script setup lang="ts">
-useHead({
-  title: 'Blog - Kaivan Wong',
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content: 'Here is a list of my blogs, including work and life :)',
-    },
-    {
-      hid: 'keywords',
-      name: 'keywords',
-      content: 'posts, articles, blog',
-    },
-  ],
+defineProps({
+  path: {
+    type: String,
+    default: '',
+  },
 })
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
@@ -21,13 +12,7 @@ const isSameYear = (a: Date | string | number, b: Date | string | number) => a &
 
 <template>
   <article class="prose m-auto">
-    <h1 mb-0>
-      Blog
-    </h1>
-    <p class="opacity-50 !-mt-6 italic">
-      Here is a list of my blogs, including work and life :)
-    </p>
-    <ContentList path="/blog">
+    <ContentList :path="path">
       <template #default="{ list }">
         <ul>
           <template v-for="article, index in list" :key="article._path">
@@ -35,7 +20,7 @@ const isSameYear = (a: Date | string | number, b: Date | string | number) => a &
               <span style="color:var(--prose-color);" text-8em op10 absolute top--2rem font-bold>{{
                 getYear(article.date) }}</span>
             </div>
-            <router-link class="item block font-normal mb-6 mt-2 no-underline" :to="article._path">
+            <NuxtLink class="item block font-normal mb-6 mt-2 no-underline" :to="article._path">
               <li class="no-underline">
                 <div text-lg leading-1.2em>
                   <span align-middle>{{ article.title }}</span>
@@ -45,7 +30,7 @@ const isSameYear = (a: Date | string | number, b: Date | string | number) => a &
                   <span v-if="article.duration" op80>· {{ article.duration }}</span>
                 </div>
               </li>
-            </router-link>
+            </NuxtLink>
           </template>
         </ul>
       </template>
