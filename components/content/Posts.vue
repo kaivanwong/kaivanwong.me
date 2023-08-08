@@ -8,6 +8,10 @@ defineProps({
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
 const isSameYear = (a: Date | string | number, b: Date | string | number) => a && b && getYear(a) === getYear(b)
+
+const router = useRouter()
+const routes = router.getRoutes()
+console.log(routes)
 </script>
 
 <template>
@@ -35,7 +39,7 @@ const isSameYear = (a: Date | string | number, b: Date | string | number) => a &
         </ul>
       </template>
       <template #not-found>
-        <nothing />
+        <Nothing />
       </template>
     </ContentList>
   </article>
