@@ -1,3 +1,3 @@
 <template>
-  <div />
+  <div>projects</div>
 </template>

@@ -1,9 +1,2 @@
----
-title: Notes - Kaivan Wong
-plum: true
-display: ''
----
+<Posts type="note" />
 
-<SubNav />
-
-<ListPosts type="note" />

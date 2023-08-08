@@ -1,9 +1,2 @@
----
-title: Blog - Kaivan Wong
-display: ''
-plum: true
----
+<Posts type="blog" />
 
-<SubNav />
-
-<Posts path="blog" />

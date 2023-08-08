@@ -9,7 +9,7 @@
           <img lt-md="h-9 rounded-24" md="h-12 rounded-2" src="/logo.svg?url" alt="logo">
         </nuxt-link>
       </nav>
-      <nav grid gap-8 auto-flow-col items-center>
+      <nav grid lt-md:gap-4 md:gap-8 auto-flow-col items-center>
         <nuxt-link to="/posts" flex items-center>
           <div icon-link md:hidden i-ri-article-line />
           <span icon-text lt-md:hidden>Blog</span>

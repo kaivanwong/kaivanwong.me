@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps({
-  path: {
+  type: {
     type: String,
     default: '',
   },
@@ -9,14 +9,13 @@ defineProps({
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
 const isSameYear = (a: Date | string | number, b: Date | string | number) => a && b && getYear(a) === getYear(b)
 
-const router = useRouter()
-const routes = router.getRoutes()
-console.log(routes)
+console.log(await queryContent('/').find())
 </script>
 
 <template>
+  <SubNav />
   <article class="prose m-auto">
-    <ContentList :path="path">
+    <ContentList path="/posts">
       <template #default="{ list }">
         <ul>
           <template v-for="article, index in list" :key="article._path">
