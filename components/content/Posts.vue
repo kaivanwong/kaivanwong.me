@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   type: {
     type: String,
     default: '',
@@ -9,7 +9,13 @@ defineProps({
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
 const isSameYear = (a: Date | string | number, b: Date | string | number) => a && b && getYear(a) === getYear(b)
 
-console.log(await queryContent('/').find())
+const pages = await queryContent('/').find()
+
+const posts = computed(() => {
+  return pages.filter(i => i._file?.startsWith('posts') && i.date)
+    .filter(i => !i._file?.endsWith('.md') && i.type === props.type)
+    .sort((a, b) => +new Date(b.date) - +new Date(a.date))
+})
 </script>
 
 <template>

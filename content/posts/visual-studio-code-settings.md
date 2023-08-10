@@ -1,6 +1,6 @@
 ---
 title: Visual Studio Code Settings
-tag: blog
+type: blog
 lang: en
 duration: 1min
 date: 2023-03-03
