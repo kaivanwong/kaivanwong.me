@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxt/devtools',
+    '@nuxtjs/algolia',
   ],
   unocss: {
     preflight: true,
@@ -35,4 +36,11 @@ export default defineNuxtConfig({
       extensions: ['.vue'],
     },
   ],
+  algolia: {
+    apiKey: '49a6122e7bc75c3bf8d51c4d1994cdb6',
+    applicationId: 'OJKQO9GOGZ',
+    docSearch: {
+      indexName: 'kaivanwong.me',
+    },
+  },
 })
