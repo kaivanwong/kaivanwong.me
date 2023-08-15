@@ -31,9 +31,9 @@
           <span icon-text lt-md:hidden>Notes</span>
         </NuxtLink>
         <AlgoliaDocSearch />
-        <Dark />
         <a title="Twitter" href="https://twitter.com/kaivan_wong" target="_blank" lt-md:hidden icon-link i-uil-twitter />
         <a title="Github" href="https://github.com/kaivanwong" target="_blank" lt-md:hidden icon-link i-uil-github />
+        <Dark />
       </nav>
     </div>
   </header>

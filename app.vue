@@ -20,8 +20,6 @@ useHead({
   <Navbar />
   <main px-7 lt-md:py-10 md:py-24>
     <NuxtPage />
-    <Back />
-    <Copyright />
   </main>
   <div style="display: none;">
     <span i-simple-icons-github />
