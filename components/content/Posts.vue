@@ -22,7 +22,6 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <SubNav />
   <article>
     <ul>
       <template v-for="article, index in posts" :key="article._path">

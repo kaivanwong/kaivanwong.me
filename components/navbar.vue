@@ -30,7 +30,7 @@
           <div icon-link md:hidden i-ri:book-2-line />
           <span icon-text lt-md:hidden>Notes</span>
         </NuxtLink>
-        <AlgoliaDocSearch />
+        <Search />
         <Dark />
       </nav>
     </div>

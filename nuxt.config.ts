@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     apiKey: '49a6122e7bc75c3bf8d51c4d1994cdb6',
     applicationId: 'OJKQO9GOGZ',
     docSearch: {
-      indexName: 'kaivanwong.me',
+      indexName: 'posts',
     },
   },
 })
