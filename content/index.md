@@ -1,5 +1,5 @@
 ---
-title: 'Hey, look at this'
+title: 'Kaivan Wong'
 description: Kaivan Wong's Portfolio
 ---
 
