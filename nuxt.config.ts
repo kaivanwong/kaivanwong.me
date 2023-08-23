@@ -37,10 +37,10 @@ export default defineNuxtConfig({
     },
   ],
   algolia: {
-    apiKey: '49a6122e7bc75c3bf8d51c4d1994cdb6',
-    applicationId: 'OJKQO9GOGZ',
+    apiKey: '0ae88ba99e560340ef46e1f3b499b18f',
+    applicationId: '7YB0BY4ENZ',
     docSearch: {
-      indexName: 'posts',
+      indexName: 'kaivanwong',
     },
   },
 })
