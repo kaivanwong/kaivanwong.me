@@ -1,14 +1,16 @@
 {
-  "name": "astro-template-portfolio",
+  "name": "kaivanwong.me",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.0",
@@ -20,11 +22,7 @@
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "5.59.7",
-    "eslint": "8.41.0",
-    "eslint-plugin-astro": "0.27.1",
-    "prettier": "2.8.8",
-    "prettier-plugin-astro": "0.9.0",
-    "prettier-plugin-tailwindcss": "0.3.0"
+    "@antfu/eslint-config": "1.0.0-beta.10",
+    "eslint": "8.50.0"
   }
 }

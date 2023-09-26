@@ -9,6 +9,9 @@ import { SITE_URL } from "./src/data/config";
 export default defineConfig({
   integrations: [tailwind(), sitemap(), robotsTxt()],
   site: SITE_URL,
+  server:{
+    host:true
+  },
   markdown: {
     syntaxHighlight: "shiki",
     shikiConfig: {

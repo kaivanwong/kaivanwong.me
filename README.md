@@ -1,5 +1,7 @@
 # [kaivanwong.me](https://kaivanwong.me)
 
+![Screenshot](https://github.com/kaivanwong/kaivanwong.me/blob/main/public/opengraph-image.jpg)
+
 My personal website.
 
 ## CC BY-NC-SA 4.0
