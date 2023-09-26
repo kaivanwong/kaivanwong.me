@@ -1,8 +1,10 @@
 # [kaivanwong.me](https://kaivanwong.me)
 
-![Screenshot](https://github.com/kaivanwong/kaivanwong.me/blob/main/public/opengraph-image.jpg)
+Kaivan Wong's Portfolio. (Personal website, including blos, projects & etc)
 
-My personal website.
+## Preview
+
+![Screenshot](https://github.com/kaivanwong/kaivanwong.me/blob/main/public/opengraph-image.jpg)
 
 ## CC BY-NC-SA 4.0
 
