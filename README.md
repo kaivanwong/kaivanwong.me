@@ -4,7 +4,7 @@ Kaivan Wong's Portfolio. (Personal website, including blos, projects & etc)
 
 ## Preview
 
-![Screenshot](https://github.com/kaivanwong/kaivanwong.me/blob/main/public/opengraph-image.pnh)
+![Screenshot](https://github.com/kaivanwong/kaivanwong.me/blob/main/public/opengraph-image.png)
 
 ## CC BY-NC-SA 4.0
 
