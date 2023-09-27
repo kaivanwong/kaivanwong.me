@@ -1,0 +1,21 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  check-astro:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.14.1
+          cache: "pnpm"
+      - name: Install
+        run: pnpm install
+        
+      - name: Check
+        run: pnpm install
+      - run: npm run check
