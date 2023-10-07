@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Page.astro";
+import AuthorList from "../../components/AuthorList.astro";
+---
+
+<Layout
+  title="Authors"
+  description="All the people who contributed to our blog"
+>
+  <h1>Authors</h1>
+  <AuthorList
+    class="author-list grid list-none grid-cols-1 gap-4 pl-0 md:grid-cols-2"
+    authors="all"
+    headingLevel={2}
+    showPosts
+  />
+</Layout>
+
+<style is:global>
+  .author-list > li {
+    @apply rounded-3xl border-2 border-gray-600;
+  }
+</style>

@@ -1,6 +1,6 @@
 # [kaivanwong.me](https://kaivanwong.me)
 
-Kaivan Wong's Portfolio. (Personal website, including blos, projects & etc)
+Kaivan's Portfolio. (Personal website, including blogs, projects & etc)
 
 ## Preview
 

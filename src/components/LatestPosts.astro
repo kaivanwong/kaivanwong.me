@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import PostList from "./PostList.astro";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => post.data.draft === false)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<div>
+  <h2>Latest</h2>
+  <div class="not-prose flex flex-col items-start gap-8">
+    {posts.length > 0 && <PostList posts={posts} />}
+    <a class="btn" href="/blog">See all posts</a>
+  </div>
+</div>

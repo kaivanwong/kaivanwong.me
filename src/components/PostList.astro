@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Post from "./Post.astro";
+
+type Props = {
+  posts: CollectionEntry<"blog">[];
+};
+
+const { posts } = Astro.props;
+---
+
+<ul class="not-prose grid list-none gap-8 pl-0">
+  {
+    posts.map((post) => {
+      return (
+        <li class="flex flex-col gap-2">
+          <Post post={post} />
+        </li>
+      );
+    })
+  }
+</ul>

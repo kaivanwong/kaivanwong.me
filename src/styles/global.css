@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-block cursor-pointer rounded-md border-none bg-primary-500 px-5 py-2.5 text-base text-primary-foreground no-underline transition hover:bg-primary-600;
+  }
+}
+
+@layer utilities {
+  .dot-separated>*:nth-child(n + 2)::before {
+    font-size: 0.9rem;
+    content: "•";
+    margin: 0 0.5rem;
+  }
+
+  .container {
+    @apply mx-auto max-w-[728px] p-5;
+  }
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: auto;
+  @apply dark:bg-slate-950
+}
+
+a {
+  @apply text-link;
+}
+
+main {
+  @apply mt-8;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  padding: 2px 5px;
+  background-color: #f2f2f2;
+  @apply dark:bg-slate-800
+}
+
+pre {
+  padding: 1rem;
+}
+
+pre>code {
+  all: unset;
+}
+
+blockquote {
+  border: 1px solid #999;
+  color: #222;
+  padding: 2px 0px 2px 20px;
+  margin: 0px;
+  font-style: italic;
+}
+
+@keyframes animateStagger {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-8px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-stagger {
+  animation-name: animateStagger;
+  animation-duration: 350ms;
+  animation-delay: calc(var(--animation-order) * 100ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+@media (prefers-reduced-motion) {
+  .animate-stagger {
+    animation: none;
+  }
+}

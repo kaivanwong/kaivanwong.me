@@ -1,0 +1,32 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import { PostListItem } from "./PostListItem";
+
+type Props = {
+  post: CollectionEntry<"blog">;
+};
+
+const { post } = Astro.props;
+const { data } = post;
+const { authors: authorIds } = data;
+
+const authorData = await getCollection("author");
+const authors = authorData
+  .filter((author) => authorIds.includes(author.slug))
+  .map(
+    (author) =>
+      `${author.data.firstname}${
+        author.data.lastname ? ` ${author.data.lastname}` : ""
+      }`
+  );
+
+const finalPost: CollectionEntry<"blog"> = {
+  ...post,
+  data: {
+    ...data,
+    authors,
+  },
+};
+---
+
+<PostListItem post={finalPost} />

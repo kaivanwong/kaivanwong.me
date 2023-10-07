@@ -1,0 +1,81 @@
+---
+import { getEntryBySlug, getCollection } from "astro:content";
+import Heading from "./Heading.astro";
+import { Image } from "astro:assets";
+
+export interface Props {
+  authorId: string;
+  showPosts?: boolean;
+  headingLevel: 1 | 2 | 3 | 4 | 5 | 6;
+}
+
+const { authorId, showPosts, headingLevel = 2 } = Astro.props;
+
+const entry = await getEntryBySlug("author", authorId);
+if (!entry) {
+  throw new Error(`Author with id ${authorId} not found`);
+}
+
+const { Content } = await entry.render();
+const { firstname, lastname, avatar, github, linkedin, twitter } = entry.data;
+const socials = [
+  { name: "Github", url: github },
+  { name: "LinkedIn", url: linkedin },
+  { name: "Twitter", url: twitter },
+].filter((social) => social.url);
+
+const posts = await getCollection("blog");
+const authorPosts = posts
+  .filter((post) => post.data.draft === false)
+  .filter((post) => post.data.authors.includes(authorId))
+  .map((post) => ({
+    url: `/blog/${post.slug}`,
+    data: post.data,
+  }));
+---
+
+<div class="not-prose flex flex-col items-start gap-4 rounded-2xl p-4">
+  <Heading headingLevel={headingLevel} class="text-xl">
+    {firstname}&nbsp;{lastname}
+  </Heading>
+  <Image
+    class="h-24 w-24 rounded-full"
+    src={avatar}
+    width={96}
+    height={96}
+    alt={`${firstname} ${lastname}`}
+  />
+  <div><Content /></div>
+
+  <div class="flex flex-col gap-2">
+    {
+      showPosts && authorPosts.length > 0 && (
+        <>
+          <p class="mb-0">My posts ({authorPosts.length})</p>
+          <ul class="list-outside list-disc pl-4">
+            {authorPosts.map((post) => (
+              <li>
+                <a href={post.url}>{post.data.title}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+
+    {
+      socials.length > 0 && (
+        <>
+          <p class="mb-0">My links</p>
+          <ul class="m-0 flex list-none gap-4 p-0">
+            {socials.map((social) => (
+              <li>
+                <a href={social.url}>{social.name}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+  </div>
+</div>

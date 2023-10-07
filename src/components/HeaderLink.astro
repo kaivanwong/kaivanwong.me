@@ -1,0 +1,25 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"a">;
+
+const { href, class: className, ...props } = Astro.props;
+
+const { pathname } = Astro.url;
+const isActive = href === pathname || href === pathname.replace(/\/$/, "");
+---
+
+<li class="group relative">
+  <a
+    href={href}
+    class:list={[
+      "inline-block hover:underline text-header-foreground flex items-center",
+      className,
+      { underline: isActive },
+    ]}
+    {...props}
+  >
+    <slot />
+  </a>
+  <slot name="dropdown" />
+</li>

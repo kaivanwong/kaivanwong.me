@@ -1,0 +1,42 @@
+---
+import PostList from "../../components/PostList.astro";
+import Layout from "../../layouts/Page.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const topics = await getCollection("topic");
+  return topics.map((topic) => ({
+    params: { slug: topic.slug },
+    props: topic,
+  }));
+}
+type Props = CollectionEntry<"topic">;
+
+const topic = Astro.props;
+const { Content } = await topic.render();
+
+const posts = await getCollection("blog");
+const topicPosts = posts
+  .filter((post) => post.data.draft === false)
+  .filter((post) => post.data.topics.includes(topic.slug))
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+
+const title = topic.data.title;
+const description = `All posts about ${title}`;
+---
+
+<Layout title={title} description={description}>
+  <section>
+    <h1>{topic.data.title}</h1>
+    <Content />
+    {topicPosts.length === 0 && <p>No posts yet.</p>}
+    {
+      topicPosts.length > 0 && (
+        <>
+          <h2>Posts about {topic.data.title.toLowerCase()}</h2>
+          <PostList posts={topicPosts} />
+        </>
+      )
+    }
+  </section>
+</Layout>
