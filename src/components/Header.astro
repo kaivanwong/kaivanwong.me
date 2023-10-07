@@ -1,21 +1,17 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
-import HeaderDropdownLink from "./HeaderDropdownLink.astro";
-import { SITE_TITLE } from "../consts";
-import HeaderDropdown from "./HeaderDropdown.astro";
-import { getCollection } from "astro:content";
-import DarkModeToggle from "./DarkModeToggle.astro";
+import HeaderLink from './HeaderLink.astro'
+import HeaderDropdownLink from './HeaderDropdownLink.astro'
+import { SITE_TITLE } from '../consts'
+import HeaderDropdown from './HeaderDropdown.astro'
+import { getCollection } from 'astro:content'
+import DarkModeToggle from './DarkModeToggle.astro'
 
-const topics = await getCollection("topic");
+const topics = await getCollection('topic')
 ---
 
-<header
-  class="sticky left-0 top-0 z-50 flex w-full flex-col bg-header py-4 text-header-foreground"
->
+<header class="sticky left-0 top-0 z-50 flex w-full flex-col bg-header py-4 text-header-foreground">
   <div class="z-1 relative px-2">
-    <div
-      class="mx-auto flex w-full max-w-6xl items-center justify-between px-4"
-    >
+    <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4">
       <div class="title-container flex w-full justify-between py-3">
         <h2 class="m-0 text-xl font-medium">
           <a href="/" class="text-header-foreground no-underline">
@@ -26,79 +22,39 @@ const topics = await getCollection("topic");
         <button
           class="hamburger flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border-2 border-header-foreground bg-transparent p-1 text-header-foreground active:bg-white active:text-black md:hidden"
         >
-          <svg
-            class="open h-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="h-6 w-6"
-          >
+          <svg class="open h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
             <title>Open</title>
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
           </svg>
-          <svg
-            class="close h-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="h-6 w-6"
-          >
+          <svg class="close h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
             <title>Close</title>
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
 
-      <nav
-        class="absolute left-0 top-full hidden w-full bg-header px-5 md:static md:block md:p-0"
-      >
-        <ul
-          class="m-0 flex list-none flex-col items-start gap-2 px-2 py-4 pb-8 md:flex-row md:items-center md:justify-between md:p-0 md:py-2"
-        >
+      <nav class="absolute left-0 top-full hidden w-full bg-header px-5 md:static md:block md:p-0">
+        <ul class="m-0 flex list-none flex-col items-start gap-2 px-2 py-4 pb-8 md:flex-row md:items-center md:justify-between md:p-0 md:py-2">
           <HeaderLink href="/blog">Blog</HeaderLink>
-          <HeaderLink href="/authors">Authors</HeaderLink>
-          <HeaderDropdown href="/topics" linkText="Topics">
-            {
-              topics.map((topic) => (
-                <HeaderDropdownLink href={`/topics/${topic.slug}`}>
-                  {topic.data.title}
-                </HeaderDropdownLink>
-              ))
-            }
+          <HeaderLink href="/projects">Projects</HeaderLink>
+          <HeaderDropdown href="/notes" linkText="Notes">
+            {topics.map((topic) => <HeaderDropdownLink href={`/topics/${topic.slug}`}>{topic.data.title}</HeaderDropdownLink>)}
           </HeaderDropdown>
           <HeaderLink href="/about">About</HeaderLink>
-          <HeaderLink
-            href="https://github.com/EddyVinck/astro-engineering-blog"
-            target="_blank"
-          >
-            GitHub
+          <HeaderLink href="/rss.xml">
+            <span class="mr-2 md:sr-only">RSS</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-5 w-5">
+              <title>RSS</title>
+              <path fill="currentColor" d="M8 18c-3.3 0-6 2.7-6 6s2.7 6 6 6s6-2.7 6-6s-2.7-6-6-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4s4 1.8 4 4s-1.8 4-4 4zm22-4h-2C28 13 19 4 8 4V2c12.1 0 22 9.9 22 22z"
+              ></path>
+              <path fill="currentColor" d="M22 24h-2c0-6.6-5.4-12-12-12v-2c7.7 0 14 6.3 14 14z"></path>
+            </svg>
           </HeaderLink>
           <HeaderLink href="/search">
             <span class="mr-2 md:sr-only">Search</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
               <title>Search</title>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              ></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
             </svg>
           </HeaderLink>
           <DarkModeToggle />
@@ -122,22 +78,22 @@ const topics = await getCollection("topic");
 
 <script>
   function setupHamburgerMenuToggle() {
-    const hamburger = document.querySelector(".hamburger");
-    const nav = document.querySelector("header nav");
+    const hamburger = document.querySelector('.hamburger')
+    const nav = document.querySelector('header nav')
 
     if (!hamburger || !nav) {
-      throw new Error("Could not find hamburger or nav");
+      throw new Error('Could not find hamburger or nav')
     }
 
-    hamburger.addEventListener("click", () => {
-      nav.classList.toggle("hidden");
-      hamburger.classList.toggle("open");
-    });
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('hidden')
+      hamburger.classList.toggle('open')
+    })
   }
 
   // When Astro navigates pages using <ViewTransitions /> the click event needs to be added again
   // See: https://docs.astro.build/en/guides/view-transitions/#astropage-load
-  document.addEventListener("astro:page-load", () => {
-    setupHamburgerMenuToggle();
-  });
+  document.addEventListener('astro:page-load', () => {
+    setupHamburgerMenuToggle()
+  })
 </script>
