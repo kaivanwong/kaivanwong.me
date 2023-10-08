@@ -1,31 +1,32 @@
 ---
-import PostList from "../../components/PostList.astro";
-import Layout from "../../layouts/Page.astro";
-import { type CollectionEntry, getCollection } from "astro:content";
+import PostList from '../../components/PostList.astro'
+import Layout from '../../layouts/Page.astro'
+import { SITE_TITLE } from '../../consts'
+import { type CollectionEntry, getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
-  const topics = await getCollection("topic");
+  const topics = await getCollection('topic')
   return topics.map((topic) => ({
     params: { slug: topic.slug },
     props: topic,
-  }));
+  }))
 }
-type Props = CollectionEntry<"topic">;
+type Props = CollectionEntry<'topic'>
 
-const topic = Astro.props;
-const { Content } = await topic.render();
+const topic = Astro.props
+const { Content } = await topic.render()
 
-const posts = await getCollection("blog");
+const posts = await getCollection('blog')
 const topicPosts = posts
   .filter((post) => post.data.draft === false)
   .filter((post) => post.data.topics.includes(topic.slug))
-  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
 
-const title = topic.data.title;
-const description = `All posts about ${title}`;
+const title = topic.data.title
+const description = `All posts about ${title}`
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title + ' - ' + SITE_TITLE} description={description}>
   <section>
     <h1>{topic.data.title}</h1>
     <Content />
