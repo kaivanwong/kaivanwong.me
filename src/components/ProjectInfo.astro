@@ -1,0 +1,48 @@
+---
+import { getEntryBySlug } from 'astro:content'
+import Heading from './Heading.astro'
+import { Image } from 'astro:assets'
+
+export interface Props {
+  projectId: string
+  headingLevel: 1 | 2 | 3 | 4 | 5 | 6
+}
+
+const { projectId, headingLevel = 2 } = Astro.props
+
+const entry = await getEntryBySlug('projects', projectId)
+if (!entry) {
+  throw new Error(`Project with id ${projectId} not found`)
+}
+
+const { Content } = await entry.render()
+const { name, logo, github, website } = entry.data
+const socials = [
+  { name: 'Github', url: github },
+  { name: 'Website', url: website },
+].filter((social) => social.url)
+---
+
+<div class="not-prose flex flex-col items-start gap-4 rounded-2xl p-4">
+  <Heading headingLevel={headingLevel} class="text-xl">
+    {name}
+  </Heading>
+  <Image class="h-24 w-24 rounded-full" src={logo} width={96} height={96} alt={`${name}`} />
+  <div><Content /></div>
+  <div class="flex flex-col gap-2">
+    {
+      socials.length > 0 && (
+        <>
+          <p class="mb-0">Project's links</p>
+          <ul class="m-0 flex list-none gap-4 p-0">
+            {socials.map((social) => (
+              <li>
+                <a href={social.url}>{social.name}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+  </div>
+</div>

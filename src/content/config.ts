@@ -1,29 +1,25 @@
 import { defineCollection, z } from "astro:content";
 
-const author = defineCollection({
+const project = defineCollection({
   schema: ({ image }) =>
     z.object({
-      firstname: z.string(),
-      lastname: z.string(),
-      avatar: image().refine((img: ImageMetadata) => img.width >= 96, {
-        message: "Author avatar image must be at least 96 pixels wide!",
+      name: z.string(),
+      logo: image().refine((img: ImageMetadata) => img.width >= 96, {
+        message: "Project logo image must be at least 96 pixels wide!",
       }),
-      // socials
-      twitter: z.string().optional(),
+      website: z.string().optional(),
       github: z.string().optional(),
-      linkedin: z.string().optional(),
     }),
 });
 
 const blog = defineCollection({
-  // Type-check frontmatter using a schema
   schema: z.object({
-    authors: z.array(z.string()).default(["anonymous"]), // the same as the filename without the extension
-    topics: z.array(z.string()).default([]), // the same as the filename without the extension
+    authors: z.array(z.string()).default(["Kaivan"]),
+    topics: z.array(z.string()).default([]),
     title: z.string(),
     draft: z.boolean().default(false),
     description: z.string(),
-    // Transform string to Date object
+    lang: z.string().optional().default('en-us'),
     pubDate: z
       .string()
       .or(z.date())
@@ -42,4 +38,4 @@ const topic = defineCollection({
   }),
 });
 
-export const collections = { blog, author, topic };
+export const collections = { blog, project, topic };
