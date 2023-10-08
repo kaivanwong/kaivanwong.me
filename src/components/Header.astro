@@ -37,7 +37,7 @@ const topics = await getCollection('topic')
         <ul class="m-0 flex list-none flex-col items-start gap-2 px-2 py-4 pb-8 md:flex-row md:items-center md:justify-between md:p-0 md:py-2">
           <HeaderLink href="/blog">Blog</HeaderLink>
           <HeaderLink href="/projects">Projects</HeaderLink>
-          <HeaderDropdown href="/notes" linkText="Notes">
+          <HeaderDropdown href="/topics" linkText="Topics">
             {topics.map((topic) => <HeaderDropdownLink href={`/topics/${topic.slug}`}>{topic.data.title}</HeaderDropdownLink>)}
           </HeaderDropdown>
           <HeaderLink href="/about">About</HeaderLink>
