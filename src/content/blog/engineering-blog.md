@@ -1,6 +1,6 @@
 ---
 title: "README: What's included in this Engineering Blog template?"
-topics: ["docs"]
+topics: ["notes"]
 authors:
   - eddy-vinck
 description: "How to get started with your new engineering blog"
