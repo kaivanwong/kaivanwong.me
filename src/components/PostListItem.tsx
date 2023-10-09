@@ -1,8 +1,9 @@
-import type { CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
 
 export const PostListItem = ({ post }: { post: CollectionEntry<"blog"> }) => {
   const { data, slug } = post;
   const { title, description, pubDate, authors, topics, lang } = data;
+
   return (
     <div class="post flex flex-col gap-1">
       <h2 class="m-0 text-lg">
