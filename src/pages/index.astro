@@ -3,11 +3,11 @@ import Layout from '../layouts/Page.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 import LatestPosts from '../components/LatestPosts.astro'
 import { Image } from 'astro:assets'
-import heroImage from '../../public/placeholder-social.jpg'
+import bannerImage from '../../public/banner.jpg'
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <Image width={668} height={310} src={heroImage} alt="Kaivan's Picture" />
+  <Image width={668} height={310} src={bannerImage} alt="Banner Picture" />
   <h1>Hi there 👋</h1>
   <p>
     My name is Kaivan Wong. I'm a front-end engineer with perfectionism (it's not always good :p). I'm working on an open source project called <a href="https://astro.build/">Stack Nax 💚</a>, and
