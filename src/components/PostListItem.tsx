@@ -2,7 +2,7 @@ import type { CollectionEntry } from "astro:content";
 
 export const PostListItem = ({ post }: { post: CollectionEntry<"blog"> }) => {
   const { data, slug } = post;
-  const { title, description, pubDate, authors, topics, language } = data;
+  const { title, description, pubDate, authors, topics, lang } = data;
   return (
     <div class="post flex flex-col gap-1">
       <h2 class="m-0 text-lg">
@@ -12,6 +12,15 @@ export const PostListItem = ({ post }: { post: CollectionEntry<"blog"> }) => {
         >
           {title}
         </a>
+        {
+          lang === 'zh-cn' && (
+            <>
+              <span class="ml-2 text-xs border px-2 py-1 rounded-md">
+                中文
+              </span>
+            </>
+          )
+        }
       </h2>
       <p class="text-sm italic">{description}</p>
       <div class="info dot-separated flex items-center text-sm text-gray-600 dark:text-white/50">

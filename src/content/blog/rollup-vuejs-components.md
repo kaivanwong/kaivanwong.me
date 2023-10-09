@@ -1,6 +1,6 @@
 ---
 title: "Rollup 构建 Vue.js SFC 组件库"
-topics: ["Front-end"]
+topics: ["front-end"]
 authors:
   - Kaivan
 description: ""
