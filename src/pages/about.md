@@ -7,6 +7,13 @@ heroImage: "/hero.jpg"
 
 # About
 
-Hey, let me introduce myself in detail here. My name is Kaivan Wong (it's derived from Cantonese pronunciation). I'm a front-end engineer with perfectionism (it's not always good, so I try to find a balance between perfectionism and realism).
+Hey, let me introduce myself in detail here. My name is <b>Kaivan Wong</b> (it's derived from Cantonese pronunciation). I'm a <b>front-end engineer</b> with perfectionism (it's not always good, so I try to find a balance between perfectionism and realism).
 
-As a software developer and tech industry practitioner, I strive to keep myself focused and constantly learning to cope with a changing world. Now, I often using the JavaScript / TypeScript, Rust, and other tools to develop software. For example, Vue.js, React.js, Nuxt.js, Next.js, etc.
+As a software developer and tech industry practitioner, I strive to <b>keep myself focused and constantly learning</b> to cope with a changing world. Now, I often using the JavaScript / TypeScript, Rust, and other tools to develop software. 
+
+Here is a list of my technology stack:
+
+- JavaScript / TypeScript, Rust<i><sup>(be studying)</sup></i>, SQL;
+- Vue.js, React.js, Nuxt.js, Nest.js, Next.js, Astro<i><sup>(this website is built on it)</sup></i>;
+- TailwindCSS, UnoCSS, Less, Sass;
+- Vite, Webpack, Eslint, Rollup, ESBuild;
