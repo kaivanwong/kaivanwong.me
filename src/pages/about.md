@@ -13,9 +13,12 @@ As a software developer and tech industry practitioner, I strive to <b>keep myse
 
 Here is a list of my technology stack:
 
-- JavaScript / TypeScript, Rust<i class="text-black/50 dark:text-white/50"><sup>(be studying)</sup></i>, SQL;
-- Vue.js, React.js, Nuxt.js, Nest.js, Next.js, Astro<i  class="text-black/50 dark:text-white/50"><sup>(this website is built on it)</sup></i>;
+- JavaScript / TypeScript, Rust<i class="text-black/75 dark:text-white/70"><sup>(be studying)</sup></i>, SQL;
+- Vue.js, React.js, Nuxt.js, Nest.js, Next.js, Astro<i  class="text-black/75 dark:text-white/70"><sup>(this website is built on it)</sup></i>;
 - TailwindCSS, UnoCSS, Less, Sass;
 - Vite, Webpack, Eslint, Rollup, ESBuild;
 
 Now, I'm working on an open source project called <a target="_blank"  href="https://stacknax.com">Stack Nax 💚</a>. It's a modern full-stack development platform for rapidly developing and deploying web applications. I really hope that I can realize the project, and it's an opportunity to help me start my own business.
+
+In addition to constantly learning new coding techniques, I'm also learning English and reading technical documents in English. I try to write some English blogs to share my life on this site and social media. Here are some links to help you find me on social media: <a target="_blank" href="https://github.com/kaivanwong">Github</a>, <a target="_blank" href="https://twitter.com/kaivanwong">X (Twitter)</a>, <a target="_blank" href="https://www.instagram.com/hikaivanwong">Instagram</a>, <a target="_blank" href="https://www.zhihu.com/people/kaivanwong">知乎</a>, <a target="_blank" href="https://space.bilibili.com/190014206">哔哩哔哩 (Live streaming)</a>, <a target="_blank" href="https://weibo.com/u/5605059021">微博</a>.
+
