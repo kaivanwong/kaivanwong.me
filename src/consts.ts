@@ -4,5 +4,5 @@
 export const BRAND = "Kaivan Wong";
 export const SITE_TITLE = "Kaivan's Portfolio";
 export const SITE_URL = "https://kaivanwong.me";
-export const SITE_DESCRIPTION = "Kaivan's Portfolio. (Personal website, including blogs, projects & etc)";
+export const SITE_DESCRIPTION = "Kaivan's Portfolio. (Personal website, including blog, projects & etc)";
 export const PAGINATION_POSTS_PER_PAGE = 5;
