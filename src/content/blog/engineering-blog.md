@@ -34,7 +34,7 @@ export const PAGINATION_POSTS_PER_PAGE = 5
 Change any lines or add more in the `<head>` tags in `src/components/BaseHead.astro`, like the favicon:
 
 ```html
-<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 ```
 
 You can also update the colors in `tailwind.config.css`:

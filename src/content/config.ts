@@ -1,12 +1,10 @@
 import { defineCollection, z } from "astro:content";
 
-const project = defineCollection({
+const projects = defineCollection({
   schema: ({ image }) =>
     z.object({
       name: z.string(),
-      logo: image().refine((img: ImageMetadata) => img.width >= 96, {
-        message: "Project logo image must be at least 96 pixels wide!",
-      }),
+      logo: z.string().optional(),
       website: z.string().optional(),
       github: z.string().optional(),
     }),
@@ -32,10 +30,10 @@ const blog = defineCollection({
   }),
 });
 
-const topic = defineCollection({
+const topics = defineCollection({
   schema: z.object({
     title: z.string(),
   }),
 });
 
-export const collections = { blog, project, topic };
+export const collections = { blog, projects, topics };
