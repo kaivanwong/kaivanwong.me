@@ -6,7 +6,7 @@ import HeaderDropdown from './HeaderDropdown.astro'
 import { getCollection } from 'astro:content'
 import DarkModeToggle from './DarkModeToggle.astro'
 
-const topics = await getCollection('topic')
+const topics = await getCollection('topics')
 ---
 
 <header class="sticky left-0 top-0 z-50 flex w-full flex-col bg-header py-4 text-header-foreground">

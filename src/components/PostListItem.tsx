@@ -1,4 +1,9 @@
-import { type CollectionEntry } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
+
+const topicsEnums: Record<string, string> = {};
+(await getCollection("topics")).forEach(topic => {
+  topicsEnums[topic.slug] = topic.data.title
+});
 
 export const PostListItem = ({ post }: { post: CollectionEntry<"blog"> }) => {
   const { data, slug } = post;
@@ -33,7 +38,7 @@ export const PostListItem = ({ post }: { post: CollectionEntry<"blog"> }) => {
           })}
         </time>
         <p class="m-0 text-sm italic">written by {authors.join(" & ")}</p>
-        <p class="m-0 text-sm">topics: {topics.join(", ")}</p>
+        <p class="m-0 text-sm">topics: {topics && topics.length > 0 ? topics.map((topic: string) => topicsEnums[topic]).join(", ") : ''}</p>
       </div>
     </div>
   );

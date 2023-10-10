@@ -18,11 +18,11 @@ const { class: className = "", topics = [] } = Astro.props;
 let topicsFromProps = undefined;
 if (topics !== "all") {
   topicsFromProps = await Promise.all(
-    topics.map((topic) => getEntryBySlug("topic", topic))
+    topics.map((topic) => getEntryBySlug("topics", topic))
   );
 }
 
-const allTopics = (await getCollection("topic")).sort((a, b) => {
+const allTopics = (await getCollection("topics")).sort((a, b) => {
   if (a.data.title < b.data.title) {
     return -1;
   }

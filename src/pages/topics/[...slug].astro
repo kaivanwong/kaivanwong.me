@@ -5,13 +5,13 @@ import { SITE_TITLE } from '../../consts'
 import { type CollectionEntry, getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
-  const topics = await getCollection('topic')
+  const topics = await getCollection('topics')
   return topics.map((topic) => ({
     params: { slug: topic.slug },
     props: topic,
   }))
 }
-type Props = CollectionEntry<'topic'>
+type Props = CollectionEntry<'topics'>
 
 const topic = Astro.props
 const { Content } = await topic.render()
