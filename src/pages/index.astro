@@ -3,20 +3,20 @@ import Layout from '../layouts/Page.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 import LatestPosts from '../components/LatestPosts.astro'
 import { Image } from 'astro:assets'
-import bannerImage from '../../public/banner.jpg'
+import bannerImage from '../../public/hero.jpg'
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <Image width={668} height={310} src={bannerImage} alt="Banner Picture" />
   <h1>Hi there 👋</h1>
   <p>
-    My name is Kaivan Wong. I'm a front-end engineer with perfectionism (it's not always good :p). I'm working on an open source project called <a href="https://stacknax.com">Stack Nax 💚</a>, and
+    My name is Kaivan Wong. I'm a front-end engineer with perfectionism (it's not always good :p). I'm working on an open source project called <a target="_blank"  href="https://stacknax.com">Stack Nax 💚</a>, and
     often using the JavaScript / TypeScript, Rust to develop software.
   </p>
   <p>
-    Find me on <a href="https://github.com/kaivanwong">Github</a>, <a href="https://twitter.com/kaivanwong">X (Twitter)</a>,
-    <a href="https://www.instagram.com/hikaivanwong">Instagram</a>, <a href="https://www.zhihu.com/people/kaivanwong">知乎</a>,
-    <a href="https://space.bilibili.com/190014206">哔哩哔哩 (Live streaming)</a>, <a href="https://weibo.com/u/5605059021">微博</a>.
+    Find me on <a target="_blank" href="https://github.com/kaivanwong">Github</a>, <a target="_blank" href="https://twitter.com/kaivanwong">X (Twitter)</a>,
+    <a target="_blank" href="https://www.instagram.com/hikaivanwong">Instagram</a>, <a target="_blank" href="https://www.zhihu.com/people/kaivanwong">知乎</a>,
+    <a target="_blank" href="https://space.bilibili.com/190014206">哔哩哔哩 (Live streaming)</a>, <a target="_blank" href="https://weibo.com/u/5605059021">微博</a>.
   </p>
   <p>
     If you have any questions, please email me at <a href="mailto:kaivanwong@outlook.com">kaivanwong@outlook.com</a>.
