@@ -11,7 +11,7 @@ import { ViewTransitions } from 'astro:transitions'
 
 type Props = CollectionEntry<'blog'>['data']
 
-const { title, description, pubDate, updatedDate, heroImage, topics } = Astro.props
+const { title, description, pubDate, updatedDate, duration, heroImage, topics } = Astro.props
 ---
 
 <html lang="en">
@@ -26,14 +26,20 @@ const { title, description, pubDate, updatedDate, heroImage, topics } = Astro.pr
       <article class="prose mx-auto dark:prose-invert">
         {heroImage && <Image width={661.17} height={330.5} src={heroImage} alt="" />}
         <h1 class="title">{title}</h1>
-        <FormattedDate date={pubDate} />
-        {
-          updatedDate && (
-            <div class="last-updated-on">
-              Last updated on <FormattedDate date={updatedDate} />
-            </div>
-          )
-        }
+        <p>
+          <span>{duration}</span>
+          <b> · </b>
+          <FormattedDate date={pubDate} />
+          {
+            updatedDate && (
+              <i class="text-black/50 dark:text-white/50">
+                <span>
+                  (Last updated on <FormattedDate date={updatedDate} />)
+                </span>
+              </i>
+            )
+          }
+        </p>
         <hr />
         <slot />
         <footer>
