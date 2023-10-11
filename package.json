@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -26,6 +25,7 @@
     "@antfu/eslint-config": "1.0.0-beta.21",
     "@tailwindcss/typography": "^0.5.9",
     "eslint": "8.51.0",
-    "prettier-plugin-tailwindcss": "^0.2.7"
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "sharp": "^0.32.6"
   }
 }
