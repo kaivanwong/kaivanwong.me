@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "https://vueuse.netlify.app/*"
-  to = "https://vueuse.org/:splat"
+  from = "https://kaivanwong.netlify.app/*"
+  to = "https://kaivanwong.me/:splat"
   status = 301
   force = true
