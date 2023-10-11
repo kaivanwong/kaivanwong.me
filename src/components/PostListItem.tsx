@@ -7,7 +7,7 @@ const topicsEnums: Record<string, string> = {};
 
 export const PostListItem = ({ post }: { post: CollectionEntry<"blog"> }) => {
   const { data, slug } = post;
-  const { title, description, pubDate, authors, topics, lang } = data;
+  const { title, description, pubDate, duration, topics, lang } = data;
 
   return (
     <div class="post flex flex-col gap-1">
@@ -28,7 +28,7 @@ export const PostListItem = ({ post }: { post: CollectionEntry<"blog"> }) => {
           )
         }
       </h2>
-      <p class="text-sm italic">{description}</p>
+      <p class="text-sm italic py-1">{description}</p>
       <div class="info dot-separated flex items-center text-sm text-gray-600 dark:text-white/50">
         <time datetime={pubDate.toISOString()}>
           {pubDate.toLocaleDateString("en-us", {
@@ -37,7 +37,7 @@ export const PostListItem = ({ post }: { post: CollectionEntry<"blog"> }) => {
             day: "numeric",
           })}
         </time>
-        <p class="m-0 text-sm italic">written by {authors.join(" & ")}</p>
+        <p class="m-0 text-sm">{duration}</p>
         <p class="m-0 text-sm">topics: {topics && topics.length > 0 ? topics.map((topic: string) => topicsEnums[topic]).join(", ") : ''}</p>
       </div>
     </div>

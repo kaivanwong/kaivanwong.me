@@ -1,8 +1,7 @@
 ---
 title: "README: What's included in this Engineering Blog template?"
 topics: ["notes"]
-authors:
-  - eddy-vinck
+duration: '10min'
 description: "How to get started with your new engineering blog"
 pubDate: "April 24 2023"
 ---
