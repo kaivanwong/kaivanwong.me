@@ -4,7 +4,7 @@ Kaivan's Portfolio. (Personal website, including blog, projects, etc.)
 
 ## Preview
 
-![Screenshot](https://github.com/kaivanwong/kaivanwong.me/blob/main/public/opengraph-image.jpg)
+![Screenshot](./public/preview.png)
 
 ## CC BY-NC-SA 4.0
 
