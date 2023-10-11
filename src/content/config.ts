@@ -15,7 +15,7 @@ const blog = defineCollection({
     topics: z.array(z.string()).default([]),
     title: z.string(),
     draft: z.boolean().default(false),
-    description: z.string(),
+    description: z.string().optional(),
     lang: z.string().optional().default('en-us'),
     pubDate: z
       .string()
