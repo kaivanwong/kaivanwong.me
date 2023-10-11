@@ -12,10 +12,10 @@ As a software developer and tech industry practitioner, I strive to <b>keep myse
 
 Here is a list of my technology stack:
 
-- JavaScript / TypeScript, Rust<i class="text-black/75 dark:text-white/70"><sup>(be studying)</sup></i>, SQL;
-- Vue.js, React.js, Nuxt.js, Nest.js, Next.js, Astro<i  class="text-black/75 dark:text-white/70"><sup>(this website is built on it)</sup></i>;
-- TailwindCSS, UnoCSS, Less, Sass;
-- Vite, Webpack, Eslint, Rollup, ESBuild;
+- JavaScript, TypeScript, HTML, CSS, Rust<i class="text-black/75 dark:text-white/70"><sup>(be studying)</sup></i>;
+- Vue, React, Nuxt, Next, Nest, Astro<i  class="text-black/75 dark:text-white/70"><sup>(this website is built on it)</sup></i>;
+- TailwindCSS, UnoCSS, Sass, Ant Design, Element UI, MUI, etc;
+- Vite, Webpack, Eslint, Rollup, ESBuild, Pnpm;
 
 Now, I'm working on an open source project called <a target="_blank"  href="https://stacknax.com">Stack Nax 💚</a>. It's a modern full-stack development platform for rapidly developing and deploying web applications. I really hope that I can realize the project, and it's an opportunity to help me start my own business.
 
