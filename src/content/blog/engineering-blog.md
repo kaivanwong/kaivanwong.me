@@ -2,6 +2,7 @@
 title: "README: What's included in this Engineering Blog template?"
 topics: ["notes"]
 duration: '10min'
+draft: true
 description: "How to get started with your new engineering blog"
 pubDate: "April 24 2023"
 ---
