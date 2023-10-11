@@ -2,7 +2,6 @@
 layout: ../layouts/Page.astro
 title: "About - Kaivan's Portfolio"
 description: "My personal introduction page, including work, life, interests and hobbies."
-heroImage: "/hero.jpg"
 ---
 
 # About
