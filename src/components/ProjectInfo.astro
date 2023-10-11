@@ -24,11 +24,11 @@ const socials = [
 ---
 
 <div class="not-prose flex flex-col items-start gap-4 rounded-2xl p-4">
-  <Heading headingLevel={headingLevel} class="text-xl">
+  <Heading headingLevel={headingLevel} class="text-2xl flex items-end">
+    {logo && <Image class="mr-2" src={logo} width={32} height={32} alt={`${name}`} />}
     {name}
   </Heading>
-  <Image src={logo} width={96} height={96} alt={`${name}`} />
-  <div><Content /></div>
+  <Content />
   <div class="flex flex-col gap-2">
     {
       socials.length > 0 && (

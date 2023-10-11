@@ -5,4 +5,4 @@ github: https://github.com/stacknax/vest
 website: https://vest.stacknax.com
 ---
 
-The web application development template for Vuejs, it's fast.
+The web application development template for Vue, it's fast.
