@@ -7,22 +7,25 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check",
     "astro": "astro",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@astrojs/mdx": "^1.1.0",
+    "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/solid-js": "^3.0.1",
     "@astrojs/tailwind": "^5.0.0",
-    "@fontsource/open-sans": "^5.0.12",
-    "astro": "^3.1.0",
-    "astro-robots-txt": "^1.0.0",
-    "astro-seo": "0.8.0",
-    "tailwindcss": "^3.3.3"
+    "astro": "^3.2.0",
+    "fuse.js": "^6.6.2",
+    "solid-js": "^1.7.3",
+    "tailwindcss": "^3.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "1.0.0-beta.10",
-    "eslint": "8.50.0"
+    "@antfu/eslint-config": "1.0.0-beta.21",
+    "@tailwindcss/typography": "^0.5.9",
+    "eslint": "8.51.0",
+    "prettier-plugin-tailwindcss": "^0.2.7"
   }
 }

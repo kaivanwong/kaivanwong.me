@@ -1,10 +1,12 @@
 # [kaivanwong.me](https://kaivanwong.me)
 
-Kaivan Wong's Portfolio. (Personal website, including blos, projects & etc)
+Kaivan's Portfolio. (Personal website, including blog, projects, etc.)
 
 ## Preview
 
-![Screenshot](https://github.com/kaivanwong/kaivanwong.me/blob/main/public/opengraph-image.png)
+![Screenshot](./public/preview.png)
+
+> Thanks to [EddyVinck/astro-engineering-blog](https://github.com/EddyVinck/astro-engineering-blog) for the inspiration and reference.
 
 ## CC BY-NC-SA 4.0
 

@@ -1,0 +1,18 @@
+---
+import { type CollectionEntry } from 'astro:content'
+import { PostListItem } from './PostListItem'
+
+type Props = {
+  post: CollectionEntry<'blog'>
+}
+
+const { post } = Astro.props
+const { data } = post
+
+const finalPost: CollectionEntry<'blog'> = {
+  ...post,
+  data,
+}
+---
+
+<PostListItem post={finalPost} />
