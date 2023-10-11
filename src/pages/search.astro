@@ -1,10 +1,13 @@
 ---
 import Layout from "../layouts/Page.astro";
 import Searchbar from "../components/Searchbar.astro";
+
+const title = 'Search'
+const description = 'Search for any title, description or post content.'
 ---
 
-<Layout title="Search" description="Lorem ipsum dolor sit amet">
-  <h1>Search</h1>
-  <p>Search for any title, description or post content.</p>
+<Layout title={title} description={description}>
+  <h1>{title}</h1>
+  <p>{description}</p>
   <Searchbar />
 </Layout>
