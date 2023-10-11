@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://vueuse.netlify.app/*"
+  to = "https://vueuse.org/:splat"
+  status = 301
+  force = true
