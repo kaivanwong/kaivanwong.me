@@ -6,11 +6,6 @@ type Props = HTMLAttributes<'a'>
 const { href, target, class: className, ...props } = Astro.props
 ---
 
-<a
-  target={target}
-  href={href}
-  class:list={['cursor-pointer text-black/50 dark:text-white/50 inline-block hover:text-link hover:underline w-auto flex justify-center items-center', className]}
-  {...props}
->
+<a target={target} href={href} class:list={['cursor-pointer text-black/50 dark:text-white/50 inline-block hover:underline w-auto flex justify-center items-center', className]} {...props}>
   <slot />
 </a>
