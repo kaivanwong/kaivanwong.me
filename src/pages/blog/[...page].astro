@@ -17,10 +17,13 @@ export type Props = {
 }
 
 const { page } = Astro.props
+
+const title = 'Blog'
+const description = 'Here is a list of my blogs, which you can filter by topic.'
 ---
 
-<Layout title={'Blog - ' + SITE_TITLE} description="Our engineers write about the technical challanges they have faced.">
-  <h1>Blog</h1>
+<Layout title={title + ' - ' + SITE_TITLE} description={description}>
+  <h1>{title}</h1>
   <div class="grid gap-8">
     <PostList posts={page.data} />
     <div class="grid w-full grid-cols-3 justify-between">
