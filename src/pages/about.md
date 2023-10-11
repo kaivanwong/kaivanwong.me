@@ -22,4 +22,8 @@ Now, I'm working on an open source project called <a target="_blank"  href="http
 
 In addition to constantly learning new coding techniques, I'm also learning English and reading technical documents in English. I try to write some English blogs to share my life on this site and social media. You can find me on <a target="_blank" href="https://github.com/kaivanwong">Github</a>, <a target="_blank" href="https://twitter.com/kaivanwong">X (Twitter)</a>, <a target="_blank" href="https://www.instagram.com/hikaivanwong">Instagram</a>, <a target="_blank" href="https://www.zhihu.com/people/kaivanwong">知乎</a>, <a target="_blank" href="https://space.bilibili.com/190014206">哔哩哔哩 (Live streaming)</a>, <a target="_blank" href="https://weibo.com/u/5605059021">微博</a>.
 
-Outside of work, I like to participate in some outdoor activities, such as traveling, mountain climbing, football(Bayern Munich fans :D) and so on. I hope I can have the chance to see the world with my eyes instead of through TV or mobile phone. Like Snake Zhang and his wife, they have traveled all over the world themselves. They are my idols, and their willpower and ability to learn have always inspired me.
+Outside of work, I like to participate in some outdoor activities, such as traveling, mountain climbing, football(Bayern Munich fans :D) and so on. I hope I can have the chance to see the world with my eyes instead of through TV or mobile phone.
+
+If you have any questions, please email me at <a href="mailto:kaivanwong@outlook.com">kaivanwong@outlook.com</a>.
+
+![Hero Image](../../public/hero.jpg)
