@@ -23,7 +23,7 @@
 body {
   font-family: Verdana, sans-serif;
   margin: auto;
-  @apply dark:bg-slate-950
+  @apply dark:bg-[#121212];
 }
 
 a {
@@ -31,7 +31,7 @@ a {
 }
 
 main {
-  @apply mt-8;
+  @apply my-8;
 }
 
 img {
@@ -42,11 +42,12 @@ img {
 code {
   padding: 2px 5px;
   background-color: #f2f2f2;
-  @apply dark:bg-slate-800
+  @apply dark:bg-slate-800;
 }
 
 pre {
   padding: 1rem;
+  @apply dark:!bg-slate-800;
 }
 
 pre>code {
