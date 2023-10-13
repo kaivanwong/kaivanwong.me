@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-primary: #2563eb;
+  }
+
+  :root[data-theme="dark"]{
+    --color-primary: #7ba1f3;
+  }
+}
+
 @layer components {
   .btn {
-    @apply inline-block cursor-pointer rounded-md border-none bg-primary-500 px-5 py-2.5 text-base text-primary-foreground no-underline transition hover:bg-primary-600;
+    @apply inline-block cursor-pointer rounded-md border-none bg-primary px-5 py-2.5 text-base text-primary-foreground no-underline transition hover:opacity-80;
   }
 }
 
@@ -23,7 +33,7 @@
 body {
   font-family: Verdana, sans-serif;
   margin: auto;
-  @apply dark:bg-[#121212];
+  @apply dark:bg-slate-950;
 }
 
 a {
@@ -47,7 +57,7 @@ code {
 
 pre {
   padding: 1rem;
-  @apply dark:!bg-slate-800;
+  @apply dark:bg-slate-800 !important;
 }
 
 pre>code {

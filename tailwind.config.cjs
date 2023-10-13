@@ -7,11 +7,8 @@ module.exports = {
       colors: {
         'header': '#000',
         'header-foreground': '#fff',
-        'link': '#2563EB',
-        'primary': {
-          500: '#2563EB',
-          600: '#1D4ED8',
-        },
+        'link': 'var(--color-primary)',
+        'primary': 'var(--color-primary)',
         'primary-foreground': '#fff',
       },
       typography: theme => ({

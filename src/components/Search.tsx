@@ -77,7 +77,7 @@ export default function Search({ searchList }: Props) {
           </svg>
         </div>
         <input
-          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-primary-500 focus:outline-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-primary focus:outline-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary dark:focus:ring-primary"
           placeholder="Search blog posts..."
           required
           id="search"
@@ -89,7 +89,7 @@ export default function Search({ searchList }: Props) {
       <Show when={posts().length > 0}>
         <ul class="grid list-none gap-6 p-0">
           {posts().map((post, index) => (
-            <li class="p-0 animate-stagger" style={{ 
+            <li class="p-0 animate-stagger" style={{
               '--animation-order': index + 1
             }}>
               <PostListItem post={post} />
