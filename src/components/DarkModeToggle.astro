@@ -23,27 +23,41 @@
 </button>
 
 <script is:inline>
-function setDarkMode() {
-  if (localStorage.getItem('darkMode') === 'dark') {
-    document.querySelector('html').dataset.theme = 'dark'
+  function setDarkMode() {
+    if (localStorage.getItem("darkMode") === "dark") {
+      document.querySelector("html").dataset.theme = "dark";
+    }
+    if (localStorage.getItem("darkMode") === "light") {
+      document.querySelector("html").dataset.theme = "light";
+    }
+    if (!localStorage.getItem("darkMode")) {
+      let theme = window.matchMedia("(prefers-color-scheme: dark)")
+        ? "dark"
+        : "light";
+      localStorage.setItem("darkMode", theme);
+      document.querySelector("html").dataset.theme = theme;
+    }
   }
-  if (localStorage.getItem('darkMode') === 'light') {
-    document.querySelector('html').dataset.theme = 'light'
+  
+  function setupDarkModeButtons() {
+    document.querySelector("#light-btn").addEventListener("click", () => {
+      localStorage.setItem("darkMode", "light");
+      setDarkMode();
+    });
+    document.querySelector("#dark-btn").addEventListener("click", () => {
+      localStorage.setItem("darkMode", "dark");
+      setDarkMode();
+    });
   }
-  if (!localStorage.getItem('darkMode')) {
-    let theme = window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light'
-    localStorage.setItem('darkMode', theme)
-    document.querySelector('html').dataset.theme = theme
-  }
-}
-document.addEventListener('astro:after-swap', setDarkMode)
-setDarkMode()
-document.querySelector('#light-btn').addEventListener('click', () => {
-  localStorage.setItem('darkMode', 'light')
-  setDarkMode()
-})
-document.querySelector('#dark-btn').addEventListener('click', () => {
-  localStorage.setItem('darkMode', 'dark')
-  setDarkMode()
-})
+  
+  setDarkMode();
+  setupDarkModeButtons();
+  
+  // When Astro navigates pages using <ViewTransitions /> the click event needs to be added again
+  // See: https://docs.astro.build/en/guides/view-transitions/#astropage-load
+  document.addEventListener("astro:after-swap", () => {
+    setDarkMode();
+    setupDarkModeButtons();
+  });
+  </script>
 </script>
