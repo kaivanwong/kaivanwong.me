@@ -7,7 +7,7 @@ export const PAGINATION_POSTS_PER_PAGE = 5;
 export const SOCIAL_MEDIA_LINKS = {
   GITHUB: 'https://github.com/kaivanwong',
   X: 'https://twitter.com/kaivanwong',
-  LINKEDIN: '',
+  LINKEDIN: 'https://www.linkedin.com/in/kaivan-wong-a42441291/',
   INSTAGRAM: 'https://www.instagram.com/hikaivanwong',
   ZHIHU: 'https://www.zhihu.com/people/kaivanwong',
   BILIBILI: 'https://space.bilibili.com/190014206',
