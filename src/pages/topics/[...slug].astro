@@ -30,7 +30,7 @@ const description = `All posts about ${title}`
   <section>
     <h1>{topic.data.title}</h1>
     <Content />
-    {topicPosts.length === 0 && <p>No posts yet.</p>}
+    {topicPosts.length === 0 && <p class="text-black/50 dark:text-white/50">No posts yet.</p>}
     {
       topicPosts.length > 0 && (
         <>
