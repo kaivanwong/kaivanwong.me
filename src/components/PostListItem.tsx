@@ -1,4 +1,5 @@
 import { type CollectionEntry, getCollection } from "astro:content";
+import { LangTag } from './LangTag'
 
 const topicsEnums: Record<string, string> = {};
 (await getCollection("topics")).forEach(topic => {
@@ -18,15 +19,7 @@ export const PostListItem = ({ post }: { post: CollectionEntry<"blog"> }) => {
         >
           {title}
         </a>
-        {
-          lang === 'zh-cn' && (
-            <>
-              <span class="ml-2 text-xs border px-2 py-1 rounded-md">
-                中文
-              </span>
-            </>
-          )
-        }
+        <LangTag lang={lang} />
       </h2>
       <p class="text-sm italic py-1">{description}</p>
       <div class="info dot-separated flex items-center text-sm text-gray-600 dark:text-white/50">
