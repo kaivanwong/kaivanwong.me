@@ -16,4 +16,4 @@ Words and images are licensed under <a href='https://creativecommons.org/license
 
 ## License
 
-[MIT licensed](./LICENSE) © 2022-PRESENT [Kaivan Wong](https://github.com/kaivanwong)
+[MIT License](./LICENSE) © 2022-PRESENT [Kaivan Wong](https://github.com/kaivanwong)
