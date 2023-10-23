@@ -2,7 +2,12 @@
   "name": "kaivanwong.me",
   "type": "module",
   "version": "0.0.0",
+  "packageManager": "pnpm@8.8.0",
+  "engines": {
+    "node": ">=18.14.1"
+  },
   "scripts": {
+    "postinstall": "simple-git-hooks",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -11,21 +16,28 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@astrojs/mdx": "^1.1.0",
+    "@astrojs/mdx": "^1.1.2",
     "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/solid-js": "^3.0.1",
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.2.0",
+    "@astrojs/sitemap": "^3.0.2",
+    "@astrojs/solid-js": "^3.0.2",
+    "@astrojs/tailwind": "^5.0.2",
+    "astro": "^3.3.2",
     "fuse.js": "^6.6.2",
-    "solid-js": "^1.7.3",
-    "tailwindcss": "^3.3.1"
+    "solid-js": "^1.8.3",
+    "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.21",
-    "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.10",
     "eslint": "8.51.0",
-    "prettier-plugin-tailwindcss": "^0.2.7",
-    "sharp": "^0.32.6"
+    "lint-staged": "^15.0.2",
+    "sharp": "^0.32.6",
+    "simple-git-hooks": "^2.9.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
