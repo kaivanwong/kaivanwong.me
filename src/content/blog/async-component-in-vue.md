@@ -1,6 +1,6 @@
 ---
 title: "Async Component in Vue"
-topics: ["notes"]
+topics: ["front-end","notes"]
 duration: "5min"
 pubDate: "October 08 2023"
 updatedDate: 'October 11 2023'
@@ -29,16 +29,17 @@ After testing, the following methods work and have been validated in production 
 
 ```js
 function renderComponent(el) {
-  if (!el) return
+  if (!el)
+    return
   return defineAsyncComponent({
     loader: () => {
       return new Promise((resolve) => {
         getComponent(el).then((Component) => {
-          resolve(Component);
-        });
-      });
+          resolve(Component)
+        })
+      })
     },
-  });
+  })
 }
 ```
 
@@ -49,11 +50,11 @@ function getComponent(el) {
   // eslint-disable-next-line no-async-promise-executor
   return new Promise(async (resolve) => {
     let El = null
-    if (!window[el.name]) 
-      await load( /* a url of the component file */ )
+    if (!window[el.name])
+      await load(/* a url of the component file */)
     El = markRaw(window[el.name])
-    resolve(El?.Component);
-  });
+    resolve(El?.Component)
+  })
 }
 ```
 
