@@ -40,6 +40,17 @@ a {
   @apply text-link;
 }
 
+.prose a{
+  /* text-decoration: none !important;
+  background: linear-gradient(var(--color-primary),var(--color-primary));
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-bottom: 2px;
+  color: #222;
+  font-weight: bold; */
+}
+
 main {
   @apply my-8;
 }
