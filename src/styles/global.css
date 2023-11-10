@@ -5,10 +5,12 @@
 @layer base {
   :root {
     --color-primary: #2563eb;
+    --background-color: #ffffff;
   }
 
-  :root[data-theme="dark"]{
-    --color-primary: #7ba1f3;
+  :root[data-theme="dark"] {
+    --color-primary: #2f81f7;
+    --background-color: #0d1117;
   }
 }
 
@@ -33,14 +35,14 @@
 body {
   font-family: Verdana, sans-serif;
   margin: auto;
-  @apply dark:bg-slate-950;
+  background-color: var(--background-color);
 }
 
 a {
   @apply text-link;
 }
 
-.prose a{
+.prose a {
   /* text-decoration: none !important;
   background: linear-gradient(var(--color-primary),var(--color-primary));
   background-size: 100% 8px;
