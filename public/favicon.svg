@@ -172,5 +172,6 @@ KIIVQhGsEIpghVAEK4QiWCEUwQqhCFYIRbBCKIIVQhGsEPr/wGKzFWPJB4EAAAAldEVYdGRhdGU6
 Y3JlYXRlADIwMjQtMDEtMDhUMDI6MDk6NDIrMDA6MDB7UGu3AAAAJXRFWHRkYXRlOm1vZGlmeQAy
 MDI0LTAxLTA4VDAyOjA5OjQzKzAwOjAwrHrYvwAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNC0w
 MS0wOFQwMjowOTo0MyswMDowMPtv+WAAAAAASUVORK5CYII="></image>
-</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: contrast(1) brightness(1); } }
+@media (prefers-color-scheme: dark) { :root { filter: invert(100%); } }
 </style></svg>

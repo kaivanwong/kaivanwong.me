@@ -6,8 +6,8 @@ import tailwind from '@astrojs/tailwind';
 // For more information on configuration options, see:
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://example.com',
-    server:{
+    site: 'https://kaivanwong.me',
+    server: {
         port: 1977
     },
     integrations: [
