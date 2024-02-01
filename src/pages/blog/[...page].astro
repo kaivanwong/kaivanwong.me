@@ -1,57 +1,32 @@
 ---
-import Layout from '../../layouts/TransitionContent.astro'
-import { type CollectionEntry, getCollection } from 'astro:content'
-import type { GetStaticPaths, Page } from 'astro'
-import PostList from '../../components/PostList.astro'
-import { SITE_TITLE, PAGINATION_POSTS_PER_PAGE } from '../../consts'
+import type { GetStaticPathsOptions, Page } from 'astro';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Pagination from '../../components/Pagination.astro';
+import PostPreview from '../../components/PostPreview.astro';
+import Subscribe from '../../components/Subscribe.astro';
+import siteConfig from '../../data/site-config';
+import { sortItemsByDateDesc } from '../../utils/data-utils';
 
-export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
-  const posts = (await getCollection('blog')).filter((post) => post.data.draft === false).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  return paginate(posts, {
-    pageSize: PAGINATION_POSTS_PER_PAGE,
-  })
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+    const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
+    return paginate(posts, { pageSize: siteConfig.postsPerPage || 4 });
 }
 
-export type Props = {
-  page: Page<CollectionEntry<'blog'>>
-}
+type Props = { page: Page<CollectionEntry<'blog'>> };
 
-const { page } = Astro.props
-
-const title = 'Blog'
-const description = 'Here is the full blog, including front-end, notes, etc.'
+const { page } = Astro.props;
+const blog = page.data;
 ---
 
-<Layout title={title + ' - ' + SITE_TITLE} description={description}>
-  <h1>{title}</h1>
-  <div class="grid gap-8">
-    <PostList posts={page.data} />
-    <div class="grid w-full grid-cols-3 justify-between">
-      {
-        page.url.prev ? (
-          <a class="flex items-center gap-2 text-left" href={page.url.prev}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-            </svg>
-            Previous
-          </a>
-        ) : (
-          <span />
-        )
-      }
-      {page.url.current ? <span class="text-center">Page {page.currentPage}</span> : <span />}
-      {
-        page.url.next ? (
-          <a class="flex items-center justify-end gap-2 text-right" href={page.url.next}>
-            Next
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
-        ) : (
-          <span />
-        )
-      }
-    </div>
-  </div>
-</Layout>
+<BaseLayout
+    title="Blog"
+    description="Embark on a journey of personal insights and experiences through my blog"
+    image={{ src: '/dante-preview.jpg', alt: 'The preview of the site' }}
+    showHeader={false}
+>
+    <h1 class="mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-4xl">Blog Archive</h1>
+    {blog.map((post) => <PostPreview post={post} class="mb-10 sm:mb-12" />)}
+    <Pagination page={page} class="my-16 sm:my-24" />
+    <Subscribe class="my-16 sm:my-24" />
+</BaseLayout>

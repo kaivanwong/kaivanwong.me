@@ -1,38 +1,44 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
 
-const projects = defineCollection({
-  schema: z.object({
-    name: z.string(),
-    logo: z.string().optional(),
-    website: z.string().optional(),
-    github: z.string().optional(),
-  }),
+const seoSchema = z.object({
+    title: z.string().min(5).max(120).optional(),
+    description: z.string().min(15).max(160).optional(),
+    image: z
+        .object({
+            src: z.string(),
+            alt: z.string().optional()
+        })
+        .optional(),
+    pageType: z.enum(['website', 'article']).default('website')
 });
 
 const blog = defineCollection({
-  schema: z.object({
-    duration: z.string(),
-    topics: z.array(z.string()).default([]),
-    title: z.string(),
-    draft: z.boolean().default(false),
-    description: z.string().optional(),
-    lang: z.string().optional().default('en-us'),
-    pubDate: z
-      .string()
-      .or(z.date())
-      .transform((val: string | number | Date) => new Date(val)),
-    updatedDate: z
-      .string()
-      .optional()
-      .transform((str: string | undefined) => (str ? new Date(str) : undefined)),
-    heroImage: z.string().optional(),
-  }),
+    schema: z.object({
+        title: z.string(),
+        excerpt: z.string().optional(),
+        publishDate: z.coerce.date(),
+        updatedDate: z.coerce.date().optional(),
+        isFeatured: z.boolean().default(false),
+        tags: z.array(z.string()).default([]),
+        seo: seoSchema.optional()
+    })
 });
 
-const topics = defineCollection({
-  schema: z.object({
-    title: z.string(),
-  }),
+const pages = defineCollection({
+    schema: z.object({
+        title: z.string(),
+        seo: seoSchema.optional()
+    })
 });
 
-export const collections = { blog, projects, topics };
+const projects = defineCollection({
+    schema: z.object({
+        title: z.string(),
+        description: z.string().optional(),
+        publishDate: z.coerce.date(),
+        isFeatured: z.boolean().default(false),
+        seo: seoSchema.optional()
+    })
+});
+
+export const collections = { blog, pages, projects };
