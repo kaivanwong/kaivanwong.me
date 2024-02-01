@@ -6,7 +6,7 @@ My personal blog and portfolio website, it's developed by astro.
 
 ## Preview
 
-![Screenshot](./preview.png)
+![Preview Image](./preview.jpg)
 
 ## CC BY-NC-SA 4.0
 
