@@ -23,7 +23,9 @@ const { showHeader = true, ...head } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="bg-main text-main min-h-screen">
-    <Nav />
+    <header>
+      <Nav />
+    </header>
     <main class="grow w-full max-w-3xl mx-auto py-20 px-6">
       <slot />
     </main>

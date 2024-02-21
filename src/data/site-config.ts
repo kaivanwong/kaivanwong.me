@@ -65,20 +65,24 @@ const siteConfig: SiteConfig = {
     ],
     footerNavLinks: [
         {
-            text: 'About',
+            text: 'About Me',
             href: '/about'
         },
         {
-            text: 'Contact',
-            href: '/contact'
+            text: 'Sponsors',
+            href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/'
         },
         {
-            text: 'Terms',
-            href: '/terms'
+            text: 'Business with me',
+            href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/'
         },
         {
-            text: 'Download theme',
-            href: 'https://github.com/JustGoodUI/dante-astro-theme'
+            text: 'Live Streaming',
+            href: 'https://space.bilibili.com/19001420'
+        },
+        {
+            text: 'Photography and Traveling',
+            href: 'https://www.instagram.com/hikaivanwong'
         }
     ],
     socialLinks: [
@@ -91,16 +95,20 @@ const siteConfig: SiteConfig = {
             href: 'https://twitter.com/kaivanwong/'
         },
         {
-            text: 'Instagram',
-            href: 'https://www.instagram.com/hikaivanwong/'
-        },
-        {
             text: 'Linkedin',
             href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/'
         },
         {
-            text: 'Bilibili',
-            href: 'https://space.bilibili.com/190014206'
+            text: 'Youtube',
+            href: 'https://www.youtube.com/channel/@kaivanwong'
+        },
+        {
+            text: '知乎',
+            href: 'https://www.zhihu.com/people/kaivanwong'
+        },
+        {
+            text: '微博',
+            href: 'https://weibo.com/u/5605059021'
         },
     ],
     hero: {
