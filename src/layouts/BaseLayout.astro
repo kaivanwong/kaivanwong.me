@@ -3,8 +3,8 @@ import { ViewTransitions } from "astro:transitions";
 import BaseHead, {
   type Props as HeadProps,
 } from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Nav from "../components/Nav.astro";
 
 export type Props = HeadProps & { showHeader?: boolean };
 
@@ -23,9 +23,7 @@ const { showHeader = true, ...head } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="bg-main text-main min-h-screen">
-    <header>
-      <Nav />
-    </header>
+    <Header />
     <main class="grow w-full max-w-3xl mx-auto py-20 px-6">
       <slot />
     </main>
