@@ -5,11 +5,9 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "simple-git-hooks",
-    "dev": "astro dev",
-    "start": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "release": "bumpp"
