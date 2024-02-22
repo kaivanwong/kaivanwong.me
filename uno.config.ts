@@ -13,7 +13,7 @@ export default defineConfig({
   shortcuts: [
     {
       'bg-main': 'bg-white dark:bg-black',
-      'text-main': 'text-black dark:text-white',
+      'text-main': 'text-dark dark:text-light',
     },
     {
       'button-link': 'color-black',
