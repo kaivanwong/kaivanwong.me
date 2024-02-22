@@ -1,29 +1,28 @@
 ---
-import NavLink from "./NavLink.astro";
-import ThemeToggle from "./ThemeToggle.astro";
+import ThemeToggle from "./ThemeToggle.vue";
 import siteConfig from "../data/site-config";
 
 const navLinks = siteConfig.headerNavLinks || [];
 ---
 
 <header>
-  <nav class="h-16 px-6 flex justify-between items-center w-full">
+  <nav class="h-18 px-6 flex justify-between items-center w-full">
     {
       navLinks.length > 0 && (
         <ul class="flex gap-4 md:gap-6">
           {navLinks.map((link) => (
             <li>
-              <NavLink
-                class="text-base font-sans hover:underline hover:underline-offset-2 text-main"
+              <a
+                class="text-base"
                 href={link.href}
               >
                 {link.text}
-              </NavLink>
+              </a>
             </li>
           ))}
         </ul>
       )
     }
-    <ThemeToggle />
+    <ThemeToggle client:load />
   </nav>
 </header>

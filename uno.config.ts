@@ -9,15 +9,17 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
-// UnoCSS config.
-// https://github.com/unocss/unocss
 export default defineConfig({
-  theme: {
-    'light-color': '#f2f1ec',
-    'dark-color': '#171717',
-    'primary-color': '#15803d',
-  },
-  shortcuts: [],
+  shortcuts: [
+    {
+      'bg-main': 'bg-white dark:bg-black',
+      'text-main': 'text-black dark:text-white',
+    },
+    {
+      'button-link': 'color-black',
+      'button-icon': 'cursor-pointer',
+    }
+  ],
   presets: [
     presetUno(),
     presetAttributify(),
