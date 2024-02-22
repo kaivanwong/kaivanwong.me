@@ -1,36 +1,4 @@
-export type Image = {
-    src: string;
-    alt?: string;
-    caption?: string;
-};
-
-export type Link = {
-    text: string;
-    href: string;
-};
-
-export type Hero = {
-    title?: string;
-    text?: string;
-    image?: Image;
-    actions?: Link[];
-};
-
-export type SiteConfig = {
-    logo?: Image;
-    title: string;
-    subtitle?: string;
-    description: string;
-    image?: Image;
-    headerNavLinks?: Link[];
-    footerNavLinks?: Link[];
-    socialLinks?: Link[];
-    hero?: Hero;
-    postsPerPage?: number;
-    projectsPerPage?: number;
-};
-
-const siteConfig: SiteConfig = {
+const siteConfig = {
     title: 'Kaivan Wong',
     subtitle: "My personal blog and portfolio website.",
     description: "My personal blog and portfolio website, it's developed by Astro.",
