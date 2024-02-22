@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import ArrowRight from '../../icons/ArrowRight.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Subscribe from '../../components/Subscribe.astro';
 import { sortItemsByDateDesc, getAllTags, getPostsByTag } from '../../utils/data-utils';
@@ -33,7 +32,7 @@ const tags = getAllTags(posts).sort((tagA, tagB) => {
                         </div>
                     </div>
                     <div class="hidden font-serif italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0">
-                        View Tag Archive <ArrowRight class="fill-current w-4 h-4" />
+                        View Tag Archive <i i-carbon:arrow-right button-icon />
                     </div>
                 </a>
             );
