@@ -12,10 +12,7 @@ const navLinks = siteConfig.headerNavLinks || [];
         <ul class="flex gap-4 md:gap-6">
           {navLinks.map((link) => (
             <li>
-              <a
-                class="text-base"
-                href={link.href}
-              >
+              <a button-link href={link.href}>
                 {link.text}
               </a>
             </li>
@@ -23,6 +20,12 @@ const navLinks = siteConfig.headerNavLinks || [];
         </ul>
       )
     }
-    <ThemeToggle client:load />
+
+    <div class="flex gap-4 text-xl">
+      <a href="/rss.xml">
+        <i text-lg button-icon i-carbon-rss></i>
+      </a>
+      <ThemeToggle client:load />
+    </div>
   </nav>
 </header>
