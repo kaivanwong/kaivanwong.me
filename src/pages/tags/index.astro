@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Subscribe from '../../components/Subscribe.astro';
 import { sortItemsByDateDesc, getAllTags, getPostsByTag } from '../../utils/data-utils';
 
 const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
@@ -38,5 +37,4 @@ const tags = getAllTags(posts).sort((tagA, tagB) => {
             );
         })
     }
-    <Subscribe class="my-16 sm:my-24" />
 </BaseLayout>
