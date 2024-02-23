@@ -8,14 +8,22 @@ const hero = siteConfig.hero;
 {
     (hero.title || hero.image.src || hero.text || (hero.links && hero.links.length > 0)) && (
         <section w-full !flex flex-col gap-8 mb-16 sm:mb-24>
-            {hero.title && <h1 text-4xl font-800>{hero.title}</h1>}
-            {hero.image.src && <img w-full src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || 'Hero Image'} />}
-            {hero.text && <p max-w-none !prose set:html={marked.parse(hero.text)} />}
-            {hero.links && hero.links.length > 0 && <p !flex flex-wrap gap-x-4>
+            {hero.title && (
+                <h1 text-4xl font-800>{hero.title}</h1>
+            )}
+            {hero.image.src &&(
+                <img w-full src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || 'Hero Image'} />
+            )}
+            {hero.text && (
+                <div max-w-none !prose set:html={marked.parse(hero.text)} />
+            )}
+            {hero.links && hero.links.length > 0 && (
+                <div !flex flex-wrap gap-4>
                     {hero.links.map((link) => (
                         <a !flex items-center prose-link href={link.href}>{link.text} <i ml-2 i-carbon:arrow-right /></a>
                     ))}
-                </p>}
+                </div>
+            )}
         </section>
     )
 }

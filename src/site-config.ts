@@ -25,6 +25,21 @@ const siteConfig = {
             href: '/tags'
         }
     ],
+    hero: {
+        title: 'Kaivan Wong',
+        text: `<p>My name is Kaivan Wong. I'm a front-end engineer with perfectionism (it's not always good :p).I'm working on an open source project called <a target="_blank" prose-link href="https://stacknax.com">Stack Nax 💚</a>, and often using the JavaScript, TypeScript, Rust to develop software.</p>
+        <p>If you have any questions, please email me at <a prose-link href="mailto:kaivanwong@outlook.com">kaivanwong@outlook.com</a>.</p>`,
+        image: {
+            src: '',
+            alt: 'A person sitting at a desk in front of a computer',
+        },
+        links: [
+            {
+                text: 'About Me',
+                href: '/about'
+            }
+        ]
+    },
     footerNavLinks: [
         {
             text: 'About',
@@ -69,21 +84,6 @@ const siteConfig = {
             href: 'https://weibo.com/u/5605059021'
         },
     ],
-    hero: {
-        title: 'Kaivan Wong',
-        text: `My name is Kaivan Wong. I'm a front-end engineer with perfectionism (it's not always good :p).
-         I'm working on an open source project called <a target="_blank" prose-link href="https://stacknax.com">Stack Nax 💚</a>, and often using the JavaScript, TypeScript, Rust to develop software.`,
-        image: {
-            src: '/hero.jpeg',
-            alt: 'A person sitting at a desk in front of a computer',
-        },
-        links: [
-            {
-                text: 'About Me',
-                href: '/about'
-            }
-        ]
-    },
     postsPerPage: 8,
     projectsPerPage: 8
 };
