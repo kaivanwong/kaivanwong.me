@@ -31,7 +31,7 @@ const siteConfig = {
         <p>If you have any questions, please email me at <a prose-link href="mailto:kaivanwong@outlook.com">kaivanwong@outlook.com</a>.</p>`,
         image: {
             src: '',
-            alt: 'A person sitting at a desk in front of a computer',
+            alt: '',
         },
         links: [
             {
