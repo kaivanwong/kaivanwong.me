@@ -6,5 +6,5 @@ const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <i button-icon dark:i-carbon-moon i-carbon-sun @click="toggleDark()" />
+  <i button-link dark:i-carbon-moon i-carbon-sun @click="toggleDark()" />
 </template>

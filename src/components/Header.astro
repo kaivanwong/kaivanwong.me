@@ -20,6 +20,9 @@ const navLinks = siteConfig.headerNavLinks || [];
         </ul>
       )
     }
-    <ThemeToggle client:load />
+    <div text-lg !flex gap-4>
+      <ThemeToggle client:load />
+      <a button-link href="rss.xml" i-carbon-rss />
+    </div>
   </nav>
 </header>

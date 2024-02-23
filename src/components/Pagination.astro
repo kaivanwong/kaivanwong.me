@@ -6,9 +6,9 @@ const { page, class: className } = Astro.props;
   aria-label="Pagination"
   class:list={["px-12 py-2 relative text-center", className]}
 >
-  {page.url.prev && <i i-carbon:arrow-left button-icon />}
+  {page.url.prev && <i i-carbon:arrow-left  />}
   <span class="text-sm" aria-current="page">
     Page {page.currentPage} of {page.lastPage}
   </span>
-  {page.url.next && <i i-carbon:arrow-right button-icon />}
+  {page.url.next && <i i-carbon:arrow-right  />}
 </nav>
