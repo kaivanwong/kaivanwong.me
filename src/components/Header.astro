@@ -9,7 +9,7 @@ const navLinks = siteConfig.headerNavLinks || [];
   <nav class="h-18 px-6 flex justify-between items-center w-full">
     {
       navLinks.length > 0 && (
-        <ul class="flex gap-4 md:gap-6">
+        <ul class="flex gap-4 md:gap-6 max-w-3xl">
           {navLinks.map((link) => (
             <li>
               <a button-link href={link.href}>
@@ -20,9 +20,9 @@ const navLinks = siteConfig.headerNavLinks || [];
         </ul>
       )
     }
-    <div text-lg !flex gap-4>
+    <div text-lg !flex gap-4 sm:gap-6>
+      <a button-link href="rss.xml" i-ri-rss-line></a>
       <ThemeToggle client:load />
-      <a button-link href="rss.xml" i-carbon-rss />
     </div>
   </nav>
 </header>

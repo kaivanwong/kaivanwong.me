@@ -35,7 +35,7 @@ const siteConfig = {
             href: '/sponsors'
         },
         {
-            text: 'Business with me',
+            text: 'Business Cooperation',
             href: 'mailto:kaivanwong@outlook.me'
         },
     ],
@@ -57,7 +57,7 @@ const siteConfig = {
             href: 'https://www.instagram.com/hikaivanwong'
         },
         {
-            text: '哔哩哔哩',
+            text: 'Bilibili',
             href: 'https://space.bilibili.com/19001420'
         },
         {
