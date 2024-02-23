@@ -1,0 +1,22 @@
+---
+import siteConfig from "../site-config";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ListProjects from "../components/ListProjects.vue";
+---
+
+<BaseLayout
+  title={"Projects" + siteConfig.title}
+  description="List of projects that I am proud of"
+>
+  <h1 class="mb-8 text-4xl font-800">Projects</h1>
+  {
+    siteConfig.projects.length > 0 && (
+      <div>
+        {siteConfig.projects.map((group) => (
+          <h2 mb-4 mt-15 font-bold opacity-75>{group.title}</h2>
+          <ListProjects list={group.projects} />
+        ))}
+      </div>
+    )
+  }
+</BaseLayout>

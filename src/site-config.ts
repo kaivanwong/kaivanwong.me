@@ -42,17 +42,39 @@ const siteConfig = {
     },
     projects: [
         {
-            title: 'Opuntia',
-            description: 'Vite + Vue 3 SPA web starter template.',
-            icon: 'i-icon-park-outline-cactus',
-            link: 'https://github.com/opuntia-dev/opuntia'
+            title: 'Opuntia Dev',
+            projects:[
+                {
+                    title: 'Opuntia',
+                    description: 'Vite + Vue 3 SPA web starter template.',
+                    icon: 'i-icon-park-outline-cactus',
+                    link: 'https://github.com/opuntia-dev/opuntia'
+                },
+                {
+                    title: 'Opuntia Pro',
+                    description: 'An enterprise web application based on Opuntia + Element Plus.',
+                    icon: 'i-icon-park-outline-cactus',
+                    link: 'https://github.com/opuntia-dev/opuntia-pro'
+                }
+            ]
         },
         {
-            title: 'Opuntia Pro',
-            description: 'An enterprise web application based on Opuntia + Element Plus.',
-            icon: 'i-icon-park-outline-cactus',
-            link: 'https://github.com/opuntia-dev/opuntia-pro'
-        }
+            title: 'Others',
+            projects:[
+                {
+                    title: '小友优选',
+                    description: '基于 Uniapp + uView UI 开发的社区电商微信小程序。',
+                    icon: '',
+                    link: 'https://github.com/kaivanwong/ushop'
+                },
+                {
+                    title: '扫码自助洗车',
+                    description: '基于 TypeScript 的自助洗车微信小程序。',
+                    icon: '',
+                    link: 'https://github.com/kaivanwong/washer'
+                }
+            ]
+        },
     ],
     footerNavLinks: [
         {
