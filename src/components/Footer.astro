@@ -10,7 +10,7 @@ const navLinks = siteConfig.footerNavLinks || [];
     navLinks.length > 0 && (
       <div class="mb-4 flex flex-wrap gap-6 gap-y-1">
         {navLinks.map((link) => (
-          <a button-link href={link.href}>
+          <a nav-link href={link.href}>
             {link.text}
           </a>
         ))}
@@ -30,14 +30,14 @@ const navLinks = siteConfig.footerNavLinks || [];
       socialLinks.length > 0 && (
         <div class="flex flex-wrap gap-4 gap-y-1">
           {socialLinks.map((link) => (
-            <a button-link href={link.href} target="_blank">
+            <a nav-link href={link.href} target="_blank">
               {link.text && <span>{link.text}</span>}
             </a>
           ))}
         </div>
       )
     }
-    <div opacity-60>
+    <div>
       &copy; {new Date().getFullYear()}&nbsp;
       <a href="/">{siteConfig.author}</a>. All rights reserved.
     </div>

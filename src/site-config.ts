@@ -70,13 +70,13 @@ const siteConfig = {
         },
     ],
     hero: {
-        title: 'Hi There & Welcome to My Corner of the Web!',
+        title: 'Kaivan Wong',
         text: "I am a Front-end engineer with product-oriented, adept at utilizing technology to create web software with outstanding user experiences. Currently, I focus on researching frontend technologies in the realm of application software and establishing an engineering system for frontend teams. Feel free to follow my social media for updates, and if you have any questions, you can email me at <a href='mailto:kaivanwong@outlook.com'>kaivanwong@outlook.com</a>.",
         image: {
             src: '/hero.jpeg',
-            alt: 'A person sitting at a desk in front of a computer'
+            alt: 'A person sitting at a desk in front of a computer',
         },
-        actions: [
+        links: [
             {
                 text: 'About Me',
                 href: '/about'
