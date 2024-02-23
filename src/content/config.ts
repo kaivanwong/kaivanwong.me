@@ -24,21 +24,4 @@ const blog = defineCollection({
     })
 });
 
-const pages = defineCollection({
-    schema: z.object({
-        title: z.string(),
-        seo: seoSchema.optional()
-    })
-});
-
-const projects = defineCollection({
-    schema: z.object({
-        title: z.string(),
-        description: z.string().optional(),
-        publishDate: z.coerce.date(),
-        isFeatured: z.boolean().default(false),
-        seo: seoSchema.optional()
-    })
-});
-
-export const collections = { blog, pages, projects };
+export const collections = { blog };

@@ -27,10 +27,10 @@ const siteConfig = {
     ],
     hero: {
         title: 'Kaivan Wong',
-        text: `<p>My name is Kaivan Wong. I'm a front-end engineer with perfectionism (it's not always good :p).I'm working on an open source project called <a target="_blank" prose-link href="https://stacknax.com">Stack Nax 💚</a>, and often using the JavaScript, TypeScript, Rust to develop software.</p>
+        text: `<p>I'm a front-end engineer with perfectionism (it's not always good :p).I'm working on an open source project called <a target="_blank" prose-link href="https://stacknax.com">Stack Nax 💚</a>, and often using the JavaScript, TypeScript, Rust to develop software.</p>
         <p>If you have any questions, please email me at <a prose-link href="mailto:kaivanwong@outlook.com">kaivanwong@outlook.com</a>.</p>`,
         image: {
-            src: '',
+            src: 'hero.jpg',
             alt: '',
         },
         links: [
@@ -40,6 +40,20 @@ const siteConfig = {
             }
         ]
     },
+    projects: [
+        {
+            title: 'Opuntia',
+            description: 'Vite + Vue 3 SPA web starter template.',
+            icon: 'i-icon-park-outline-cactus',
+            link: 'https://github.com/opuntia-dev/opuntia'
+        },
+        {
+            title: 'Opuntia Pro',
+            description: 'An enterprise web application based on Opuntia + Element Plus.',
+            icon: 'i-icon-park-outline-cactus',
+            link: 'https://github.com/opuntia-dev/opuntia-pro'
+        }
+    ],
     footerNavLinks: [
         {
             text: 'About',
