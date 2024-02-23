@@ -1,7 +1,8 @@
 const siteConfig = {
+    author: 'Kaivan Wong',
     title: 'Kaivan Wong',
-    subtitle: "My personal blog and portfolio website.",
-    description: "My personal blog and portfolio website, it's developed by Astro.",
+    subtitle: "My personal blog and portfolio.",
+    description: "My personal blog and portfolio, it's developed by Astro.",
     image: {
         src: '/dante-preview.jpg',
         alt: 'Dante - Astro.js and Tailwind CSS theme'
@@ -31,20 +32,12 @@ const siteConfig = {
         },
         {
             text: 'Sponsors',
-            href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/'
+            href: '/sponsors'
         },
         {
             text: 'Business with me',
-            href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/'
+            href: 'mailto:kaivanwong@outlook.me'
         },
-        {
-            text: 'Live Streaming',
-            href: 'https://space.bilibili.com/19001420'
-        },
-        {
-            text: 'Photography and Traveling',
-            href: 'https://www.instagram.com/hikaivanwong'
-        }
     ],
     socialLinks: [
         {
@@ -52,7 +45,7 @@ const siteConfig = {
             href: 'https://github.com/kaivanwong'
         },
         {
-            text: 'X / Twitter',
+            text: 'X',
             href: 'https://twitter.com/kaivanwong/'
         },
         {
@@ -60,8 +53,12 @@ const siteConfig = {
             href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/'
         },
         {
-            text: 'Youtube',
-            href: 'https://www.youtube.com/channel/@kaivanwong'
+            text: 'Instagram',
+            href: 'https://www.instagram.com/hikaivanwong'
+        },
+        {
+            text: '哔哩哔哩',
+            href: 'https://space.bilibili.com/19001420'
         },
         {
             text: '知乎',

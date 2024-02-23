@@ -16,8 +16,7 @@ export default defineConfig({
       'text-main': 'text-dark dark:text-light',
     },
     {
-      'button-link': 'text-base opacity-60 hover:opacity-100 transition-opacity duration-200',
-      'button-icon': 'cursor-pointer',
+      'button-link': 'opacity-60 hover:opacity-100 transition-opacity duration-200 cursor-pointer',
     }
   ],
   presets: [

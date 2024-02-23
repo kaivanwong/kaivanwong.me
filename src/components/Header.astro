@@ -20,12 +20,6 @@ const navLinks = siteConfig.headerNavLinks || [];
         </ul>
       )
     }
-
-    <div class="flex gap-4 text-xl">
-      <a href="/rss.xml">
-        <i text-lg button-icon i-carbon-rss></i>
-      </a>
-      <ThemeToggle client:load />
-    </div>
+    <ThemeToggle client:load />
   </nav>
 </header>
