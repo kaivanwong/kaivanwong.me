@@ -71,7 +71,8 @@ const siteConfig = {
     ],
     hero: {
         title: 'Kaivan Wong',
-        text: "I am a Front-end engineer with product-oriented, adept at utilizing technology to create web software with outstanding user experiences. Currently, I focus on researching frontend technologies in the realm of application software and establishing an engineering system for frontend teams. Feel free to follow my social media for updates, and if you have any questions, you can email me at <a href='mailto:kaivanwong@outlook.com'>kaivanwong@outlook.com</a>.",
+        text: `My name is Kaivan Wong. I'm a front-end engineer with perfectionism (it's not always good :p).
+         I'm working on an open source project called <a target="_blank" prose-link href="https://stacknax.com">Stack Nax 💚</a>, and often using the JavaScript, TypeScript, Rust to develop software.`,
         image: {
             src: '/hero.jpeg',
             alt: 'A person sitting at a desk in front of a computer',
