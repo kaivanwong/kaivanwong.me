@@ -9,7 +9,7 @@ const hero = siteConfig.hero;
     (hero.title || hero.image.src || hero.text || (hero.links && hero.links.length > 0)) && (
         <section w-full !flex flex-col gap-8 mb-16 sm:mb-24>
             {hero.title && (
-                <h1 text-4xl font-800>{hero.title}</h1>
+                <h1 text-title>{hero.title}</h1>
             )}
             {hero.image.src &&(
                 <img w-full src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || 'Hero Image'} />

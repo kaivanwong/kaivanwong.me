@@ -14,6 +14,7 @@ export default defineConfig({
     {
       'bg-main': 'bg-white dark:bg-black',
       'text-main': 'text-truegray-600 dark:text-truegray-400',
+      'text-title': 'text-dark dark:text-white text-4xl font-800',
     },
     {
       'nav-link': 'text-dark dark:text-white opacity-60 hover:opacity-100 transition-opacity duration-200 cursor-pointer',
