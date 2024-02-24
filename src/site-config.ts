@@ -83,6 +83,12 @@ const siteConfig = {
                     description: '基于 TypeScript 的自助洗车微信小程序。',
                     icon: 'i-mdi-car-wash',
                     link: 'https://github.com/kaivanwong/washer'
+                },
+                {
+                    title: 'Vitesse Astro Theme',
+                    description: 'Vitesse blog and portfolio theme for Astro.',
+                    icon: 'i-carbon-campsite',
+                    link: 'https://github.com/kaivanwong/vitesse-astro-theme'
                 }
             ]
         },

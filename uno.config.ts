@@ -47,6 +47,7 @@ export default defineConfig({
     'i-mdi-car-wash',
     'i-ant-design-ant-design-outlined',
     'i-tabler-cactus-filled',
-    'i-ri-file-list-2-line'
+    'i-ri-file-list-2-line',
+    'i-carbon-campsite'
   ]
 })
