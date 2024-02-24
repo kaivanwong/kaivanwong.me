@@ -38,8 +38,9 @@ const navLinks = siteConfig.footerNavLinks || [];
       )
     }
     <div>
-      &copy; {new Date().getFullYear()}&nbsp;
-      <a href="/">{siteConfig.author}</a>. All rights reserved.
+      <span opacity-60>&copy; {new Date().getFullYear()}&nbsp;</span>
+      <a nav-link href="/">{siteConfig.author}</a>
+      <span opacity-60>. All rights reserved.</span>
     </div>
   </div>
 </footer>

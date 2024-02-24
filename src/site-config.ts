@@ -42,39 +42,61 @@ const siteConfig = {
     },
     projects: [
         {
-            title: 'Opuntia Dev',
-            projects:[
+            title: 'Ant Design Ecosystem',
+            projects: [
+                {
+                    title: 'Antdv Pro',
+                    description: 'An antdv-based middle and background management system.',
+                    icon: 'i-ant-design-ant-design-outlined',
+                    link: 'https://github.com/antdv-pro/antdv-pro'
+                }
+            ]
+        },
+        {
+            title: 'Opuntia Ecosystem',
+            projects: [
                 {
                     title: 'Opuntia',
                     description: 'Vite + Vue 3 SPA web starter template.',
-                    icon: 'i-icon-park-outline-cactus',
+                    icon: 'i-mdi-cactus',
                     link: 'https://github.com/opuntia-dev/opuntia'
                 },
                 {
                     title: 'Opuntia Pro',
                     description: 'An enterprise web application based on Opuntia + Element Plus.',
-                    icon: 'i-icon-park-outline-cactus',
+                    icon: 'i-tabler-cactus-filled',
                     link: 'https://github.com/opuntia-dev/opuntia-pro'
                 }
             ]
         },
         {
-            title: 'Others',
-            projects:[
+            title: 'Product Templates',
+            projects: [
                 {
                     title: '小友优选',
                     description: '基于 Uniapp + uView UI 开发的社区电商微信小程序。',
-                    icon: '',
+                    icon: 'i-ri-shopping-bag-line',
                     link: 'https://github.com/kaivanwong/ushop'
                 },
                 {
                     title: '扫码自助洗车',
                     description: '基于 TypeScript 的自助洗车微信小程序。',
-                    icon: '',
+                    icon: 'i-mdi-car-wash',
                     link: 'https://github.com/kaivanwong/washer'
                 }
             ]
         },
+        {
+            title: 'CLI',
+            projects: [
+                {
+                    title: 'changelogiter',
+                    description: "Generate changelog in anywhere, it's look like changelogithub.",
+                    icon: 'i-ri-file-list-2-line',
+                    link: 'https://github.com/kaivanwong/changelogiter'
+                }
+            ]
+        }
     ],
     footerNavLinks: [
         {

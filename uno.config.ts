@@ -41,6 +41,11 @@ export default defineConfig({
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: [
-    'i-icon-park-outline-cactus'
+    'i-mdi-cactus',
+    'i-ri-shopping-bag-line',
+    'i-mdi-car-wash',
+    'i-ant-design-ant-design-outlined',
+    'i-tabler-cactus-filled',
+    'i-ri-file-list-2-line'
   ]
 })
