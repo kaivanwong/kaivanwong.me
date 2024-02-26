@@ -1,29 +1,38 @@
 ---
-import { marked } from 'marked';
-import siteConfig from '../site-config';
+import { marked } from "marked";
+import siteConfig from "../site-config";
 
 const hero = siteConfig.hero;
 ---
 
 {
-    (hero.title || hero.image.src || hero.text || (hero.links && hero.links.length > 0)) && (
-        <section w-full !flex flex-col gap-8 mb-16 sm:mb-24>
-            {hero.title && (
-                <h1 text-title>{hero.title}</h1>
-            )}
-            {hero.image.src &&(
-                <img w-full src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || 'Hero Image'} />
-            )}
-            {hero.text && (
-                <div max-w-none !prose set:html={marked.parse(hero.text)} />
-            )}
-            {hero.links && hero.links.length > 0 && (
-                <div !flex flex-wrap gap-4>
-                    {hero.links.map((link) => (
-                        <a !flex items-center prose-link href={link.href}>{link.text} <i ml-2 i-carbon:arrow-right /></a>
-                    ))}
-                </div>
-            )}
-        </section>
-    )
+  (hero.title ||
+    hero.image.src ||
+    hero.text ||
+    (hero.links && hero.links.length > 0)) && (
+    <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
+      {hero.title && <h1 class="text-title">{hero.title}</h1>}
+      {hero.image.src && (
+        <img
+          class="w-full"
+          src={hero.image.src}
+          loading="lazy"
+          decoding="async"
+          alt={hero.image.alt || "Hero Image"}
+        />
+      )}
+      {hero.text && (
+        <div class="max-w-none prose" set:html={marked.parse(hero.text)} />
+      )}
+      {hero.links && hero.links.length > 0 && (
+        <div class="flex flex-wrap gap-4">
+          {hero.links.map((link) => (
+            <a class="flex items-center prose-link" href={link.href}>
+              {link.text} <i class="ml-2 i-carbon:arrow-right" />
+            </a>
+          ))}
+        </div>
+      )}
+    </section>
+  )
 }

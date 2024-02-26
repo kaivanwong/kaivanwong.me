@@ -64,7 +64,7 @@
     "json",
     "jsonc",
     "yaml",
-    "toml"
+    "toml",
   ],
   // Enable the i18n-ally extension
   "i18n-ally.localesPaths": [
