@@ -5,41 +5,20 @@ const socialLinks = siteConfig.socialLinks || [];
 const navLinks = siteConfig.footerNavLinks || [];
 ---
 
-<footer class="w-full px-6 pt-4 pb-12 max-w-3xl mx-auto text-sm">
+<footer class="w-full px-6 pt-4 pb-12 max-w-3xl mx-auto text-sm opacity-60">
   {
     navLinks.length > 0 && (
-      <div class="mb-4 flex flex-wrap gap-6 gap-y-1">
+      <div class="mb-4 flex flex-wrap justify-center gap-4 gap-y-1">
         {navLinks.map((link) => (
-          <a nav-link href={link.href}>
+          <a class="nav-link" href={link.href}>
             {link.text}
           </a>
         ))}
       </div>
     )
   }
-  <div
-    class:list={[
-      "pt-4 flex flex-col gap-4 border-t border-dashed !border-opacity-60 border-dark dark:border-light border-opacity-60",
-      {
-        "sm:flex-row-reverse sm:justify-between sm:items-center":
-          socialLinks.length > 0,
-      },
-    ]}
-  >
-    {
-      socialLinks.length > 0 && (
-        <div class="flex flex-wrap gap-4 gap-y-1">
-          {socialLinks.map((link) => (
-            <a nav-link href={link.href} target="_blank">
-              {link.text && <span>{link.text}</span>}
-            </a>
-          ))}
-        </div>
-      )
-    }
-    <div>
-      <span text-dark dark:text-white opacity-60>2023-PRESENT &copy;</span>
-      <a nav-link href="/">{siteConfig.author}</a>
-    </div>
+  <div class="flex flex-wrap justify-center text-dark dark:text-white">
+    <span class="opacity-60">2023-PRESENT ©</span>
+    <a class="!nav-link opacity-100 ml-1" href="/">{siteConfig.author}</a>
   </div>
 </footer>

@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <ul grid="~ cols-1 md:cols-2 gap-4">
+  <ul grid="~ cols-1 sm:cols-2 gap-4">
     <li container-link w-full flex items-center v-for="project in list" :key="project.title">
       <a flex items-center>
         <div ml-2 mr-4 pt-2>

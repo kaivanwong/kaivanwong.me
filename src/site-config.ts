@@ -40,6 +40,36 @@ const siteConfig = {
             }
         ]
     },
+    socialLinks: [
+        {
+            text: 'Github',
+            href: 'https://github.com/kaivanwong'
+        },
+        {
+            text: 'X',
+            href: 'https://twitter.com/kaivanwong/'
+        },
+        {
+            text: 'Linkedin',
+            href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/'
+        },
+        {
+            text: 'Instagram',
+            href: 'https://www.instagram.com/hikaivanwong'
+        },
+        {
+            text: 'Bilibili',
+            href: 'https://space.bilibili.com/19001420'
+        },
+        {
+            text: '知乎',
+            href: 'https://www.zhihu.com/people/kaivanwong'
+        },
+        {
+            text: '微博',
+            href: 'https://weibo.com/u/5605059021'
+        },
+    ],
     projects: [
         {
             title: 'Ant Design Ecosystem',
@@ -116,36 +146,6 @@ const siteConfig = {
         {
             text: 'Business Cooperation',
             href: 'mailto:kaivanwong@outlook.me'
-        },
-    ],
-    socialLinks: [
-        {
-            text: 'Github',
-            href: 'https://github.com/kaivanwong'
-        },
-        {
-            text: 'X',
-            href: 'https://twitter.com/kaivanwong/'
-        },
-        {
-            text: 'Linkedin',
-            href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/'
-        },
-        {
-            text: 'Instagram',
-            href: 'https://www.instagram.com/hikaivanwong'
-        },
-        {
-            text: 'Bilibili',
-            href: 'https://space.bilibili.com/19001420'
-        },
-        {
-            text: '知乎',
-            href: 'https://www.zhihu.com/people/kaivanwong'
-        },
-        {
-            text: '微博',
-            href: 'https://weibo.com/u/5605059021'
         },
     ],
     postsPerPage: 8,
