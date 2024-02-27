@@ -20,10 +20,6 @@ const siteConfig = {
       text: 'Blog',
       href: '/blog',
     },
-    {
-      text: 'Tags',
-      href: '/tags',
-    },
   ],
   hero: {
     title: 'Kaivan Wong',
