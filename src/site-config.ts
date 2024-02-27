@@ -116,7 +116,7 @@ const siteConfig = {
         },
         {
           title: 'Vitesse Astro Theme',
-          description: 'Vitesse blog and portfolio theme for Astro.',
+          description: 'Vitesse for Astro blog theme, supports Vue and UnoCSS.',
           icon: 'i-carbon-campsite',
           link: 'https://github.com/kaivanwong/vitesse-astro-theme',
         },
