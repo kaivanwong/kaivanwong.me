@@ -13,12 +13,12 @@ const siteConfig = {
       href: '/',
     },
     {
-      text: 'Projects',
-      href: '/projects',
-    },
-    {
       text: 'Blog',
       href: '/blog',
+    },
+    {
+      text: 'Projects',
+      href: '/projects',
     },
   ],
   hero: {
@@ -66,15 +66,25 @@ const siteConfig = {
       href: 'https://weibo.com/u/5605059021',
     },
   ],
+  blogNavLinks: [
+    {
+      text: 'Blog',
+      href: '/blog',
+    },
+    {
+      text: 'Notes',
+      href: '/notes',
+    },
+  ],
   projects: [
     {
       title: 'Ant Design Ecosystem',
       projects: [
         {
-          title: 'Antdv Pro',
+          text: 'Antdv Pro',
           description: 'An antdv-based middle and background management system.',
           icon: 'i-ant-design-ant-design-outlined',
-          link: 'https://github.com/antdv-pro/antdv-pro',
+          href: 'https://github.com/antdv-pro/antdv-pro',
         },
       ],
     },
@@ -82,16 +92,16 @@ const siteConfig = {
       title: 'Opuntia Ecosystem',
       projects: [
         {
-          title: 'Opuntia',
+          text: 'Opuntia',
           description: 'Vite + Vue 3 SPA web starter template.',
           icon: 'i-mdi-cactus',
-          link: 'https://github.com/opuntia-dev/opuntia',
+          href: 'https://github.com/opuntia-dev/opuntia',
         },
         {
-          title: 'Opuntia Pro',
+          text: 'Opuntia Pro',
           description: 'An enterprise web application based on Opuntia + Element Plus.',
           icon: 'i-tabler-cactus-filled',
-          link: 'https://github.com/opuntia-dev/opuntia-pro',
+          href: 'https://github.com/opuntia-dev/opuntia-pro',
         },
       ],
     },
@@ -99,22 +109,22 @@ const siteConfig = {
       title: 'Product Templates',
       projects: [
         {
-          title: '小友优选',
+          text: '小友优选',
           description: '基于 Uniapp + uView UI 开发的社区电商微信小程序。',
           icon: 'i-ri-shopping-bag-line',
-          link: 'https://github.com/kaivanwong/ushop',
+          href: 'https://github.com/kaivanwong/ushop',
         },
         {
-          title: '扫码自助洗车',
+          text: '扫码自助洗车',
           description: '基于 TypeScript 的自助洗车微信小程序。',
           icon: 'i-mdi-car-wash',
-          link: 'https://github.com/kaivanwong/washer',
+          href: 'https://github.com/kaivanwong/washer',
         },
         {
-          title: 'Vitesse Astro Theme',
+          text: 'Vitesse Astro Theme',
           description: 'Vitesse for Astro blog theme, supports Vue and UnoCSS.',
           icon: 'i-carbon-campsite',
-          link: 'https://github.com/kaivanwong/vitesse-astro-theme',
+          href: 'https://github.com/kaivanwong/vitesse-astro-theme',
         },
       ],
     },
@@ -122,10 +132,10 @@ const siteConfig = {
       title: 'CLI',
       projects: [
         {
-          title: 'changelogiter',
+          text: 'changelogiter',
           description: 'Generate changelog in anywhere, it\'s look like changelogithub.',
           icon: 'i-ri-file-list-2-line',
-          link: 'https://github.com/kaivanwong/changelogiter',
+          href: 'https://github.com/kaivanwong/changelogiter',
         },
       ],
     },
