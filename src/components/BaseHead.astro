@@ -1,35 +1,39 @@
 ---
-import siteConfig from '../site-config';
+import siteConfig from "../site-config";
 
 export type Props = {
-    title?: string;
-    description?: string;
-    image?: { src: string; alt?: string };
-    pageType?: 'website' | 'article';
+  title?: string;
+  description?: string;
+  image?: { src: string; alt?: string };
+  pageType?: "website" | "article";
 };
 
-const { description = '', image = siteConfig.image, pageType = 'website' } = Astro.props;
-const title = [Astro.props.title, siteConfig.title].filter(Boolean).join(' | ');
+const {
+  description = "",
+  image = siteConfig.image,
+  pageType = "website",
+} = Astro.props;
+const title = [Astro.props.title, siteConfig.title].filter(Boolean).join(" | ");
 const resolvedImage = image?.src
-    ? {
-          src: new URL(image.src, Astro.site).toString(),
-          alt: image.alt
-      }
-    : undefined;
+  ? {
+      src: new URL(image.src, Astro.site).toString(),
+      alt: image.alt,
+    }
+  : undefined;
 const canonicalURL = new URL(Astro.request.url, Astro.site);
 
 /**
  * Enforce some standard canonical URL formatting across the site.
  */
 function formatCanonicalURL(url: string | URL) {
-    const path = url.toString();
-    const hasQueryParams = path.includes('?');
-    // If there are query params, make sure the URL has no trailing slash
-    if (hasQueryParams) {
-        path.replace(/\/?$/, '');
-    }
-    // otherwise, canonical URL always has a trailing slash
-    return path.replace(/\/?$/, hasQueryParams ? '' : '/');
+  const path = url.toString();
+  const hasQueryParams = path.includes("?");
+  // If there are query params, make sure the URL has no trailing slash
+  if (hasQueryParams) {
+    path.replace(/\/?$/, "");
+  }
+  // otherwise, canonical URL always has a trailing slash
+  return path.replace(/\/?$/, hasQueryParams ? "" : "/");
 }
 ---
 
@@ -43,8 +47,8 @@ function formatCanonicalURL(url: string | URL) {
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap"
-    rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap"
+  rel="stylesheet"
 />
 
 <!-- Low Priority Global Metadata -->
@@ -62,12 +66,24 @@ function formatCanonicalURL(url: string | URL) {
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 {resolvedImage?.src && <meta property="og:image" content={resolvedImage.src} />}
-{resolvedImage?.alt && <meta property="og:image:alt" content={resolvedImage.alt} />}
+{
+  resolvedImage?.alt && (
+    <meta property="og:image:alt" content={resolvedImage.alt} />
+  )
+}
 
 <!-- X/Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={formatCanonicalURL(canonicalURL)} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-{resolvedImage?.src && <meta property="twitter:image" content={resolvedImage.src} />}
-{resolvedImage?.alt && <meta name="twitter:image:alt" content={resolvedImage?.alt} />}
+{
+  resolvedImage?.src && (
+    <meta property="twitter:image" content={resolvedImage.src} />
+  )
+}
+{
+  resolvedImage?.alt && (
+    <meta name="twitter:image:alt" content={resolvedImage?.alt} />
+  )
+}

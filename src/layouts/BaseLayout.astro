@@ -24,7 +24,9 @@ const { showHeader = true, ...head } = Astro.props;
   </head>
   <body class="bg-main text-main min-h-screen font-sans">
     <Header />
-    <main class="grow w-full max-w-3xl mx-auto pt-12 pb-18 sm:pt-18 sm:pb-24 px-6">
+    <main
+      class="grow w-full max-w-3xl mx-auto pt-12 pb-18 sm:pt-18 sm:pb-24 px-6"
+    >
       <slot />
     </main>
     <Footer />
