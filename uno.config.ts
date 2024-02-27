@@ -20,7 +20,7 @@ export default defineConfig({
       'nav-link': 'text-dark dark:text-white opacity-60 hover:opacity-100 transition-opacity duration-200 cursor-pointer',
       'prose-link': 'text-dark dark:text-white text-nowrap cursor-pointer border-b-1 !border-opacity-30 hover:!border-opacity-100 border-neutral-500 hover:border-truegray-600 dark:border-neutral-500 hover:dark:border-truegray-400 transition-border-color duration-200 decoration-none',
       'container-link': 'rd p-2 opacity-60 hover:opacity-100 cursor-pointer hover:bg-truegray-500 !bg-opacity-10 transition-colors transition-opacity duration-200',
-    }
+    },
   ],
   presets: [
     presetUno(),
@@ -48,6 +48,6 @@ export default defineConfig({
     'i-ant-design-ant-design-outlined',
     'i-tabler-cactus-filled',
     'i-ri-file-list-2-line',
-    'i-carbon-campsite'
-  ]
+    'i-carbon-campsite',
+  ],
 })
