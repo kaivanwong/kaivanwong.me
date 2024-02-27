@@ -1,16 +1,16 @@
 <script lang="ts" setup>
 defineProps<{
   list: {
-    title: string;
-    description: string;
-    icon?: string;
-  }[];
+    title: string
+    description: string
+    icon?: string
+  }[]
 }>()
 </script>
 
 <template>
   <ul grid="~ cols-1 sm:cols-2 gap-4">
-    <li container-link w-full flex items-center v-for="project in list" :key="project.title">
+    <li v-for="project in list" :key="project.title" container-link w-full flex items-center>
       <a flex items-center>
         <div ml-2 mr-4 pt-2>
           <i text-4xl inline-block :class="project.icon || 'i-carbon-unknown'" />
