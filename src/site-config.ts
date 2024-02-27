@@ -75,6 +75,10 @@ const siteConfig = {
       text: 'Notes',
       href: '/notes',
     },
+    {
+      text: 'Reading',
+      href: '/reading',
+    },
   ],
   projects: [
     {
