@@ -23,49 +23,43 @@ const siteConfig = {
   ],
   hero: {
     title: 'Kaivan Wong',
-    text: `<p>I'm a front-end engineer with perfectionism (it's not always good :p).I'm working on an open source project called <a target="_blank" prose-link href="https://stacknax.com">Stack Nax 💚</a>, and often using the JavaScript, TypeScript, Rust to develop software.</p>
-        <p>If you have any questions, please email me at <a prose-link href="mailto:kaivanwong@outlook.com">kaivanwong@outlook.com</a>.</p>`,
+    text: `I'm a front-end engineer with perfectionism (it's not always good :p).I'm working on an open source project called <a target="_blank" prose-link href="https://stacknax.com">Stack Nax 💚</a>, and often using the JavaScript, TypeScript, Rust to develop software.`,
     image: {
       src: 'hero.jpg',
       alt: '',
     },
-    links: [
+    email: 'kaivanwong@outlook.com',
+    socialLinks: [
       {
-        text: 'About Me',
-        href: '/about',
+        text: 'Github',
+        href: 'https://github.com/kaivanwong',
+      },
+      {
+        text: 'X',
+        href: 'https://twitter.com/kaivanwong/',
+      },
+      {
+        text: 'Linkedin',
+        href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/',
+      },
+      {
+        text: 'Instagram',
+        href: 'https://www.instagram.com/hikaivanwong',
+      },
+      {
+        text: 'Bilibili',
+        href: 'https://space.bilibili.com/19001420',
+      },
+      {
+        text: '知乎',
+        href: 'https://www.zhihu.com/people/kaivanwong',
+      },
+      {
+        text: '微博',
+        href: 'https://weibo.com/u/5605059021',
       },
     ],
   },
-  socialLinks: [
-    {
-      text: 'Github',
-      href: 'https://github.com/kaivanwong',
-    },
-    {
-      text: 'X',
-      href: 'https://twitter.com/kaivanwong/',
-    },
-    {
-      text: 'Linkedin',
-      href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/',
-    },
-    {
-      text: 'Instagram',
-      href: 'https://www.instagram.com/hikaivanwong',
-    },
-    {
-      text: 'Bilibili',
-      href: 'https://space.bilibili.com/19001420',
-    },
-    {
-      text: '知乎',
-      href: 'https://www.zhihu.com/people/kaivanwong',
-    },
-    {
-      text: '微博',
-      href: 'https://weibo.com/u/5605059021',
-    },
-  ],
   blogNavLinks: [
     {
       text: 'Blog',

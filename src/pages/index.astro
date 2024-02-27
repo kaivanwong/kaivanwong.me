@@ -8,11 +8,8 @@ const hero = siteConfig.hero;
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
   {
-    (hero.title ||
-      hero.image.src ||
-      hero.text ||
-      (hero.links && hero.links.length > 0)) && (
-      <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
+    (hero.title || hero.image.src || hero.text || hero.socialLinks) && (
+      <section class="w-full">
         {hero.title && <h1 class="text-title">{hero.title}</h1>}
         {hero.image.src && (
           <img
@@ -26,15 +23,26 @@ const hero = siteConfig.hero;
         {hero.text && (
           <div class="max-w-none prose" set:html={marked.parse(hero.text)} />
         )}
-        {hero.links && hero.links.length > 0 && (
-          <div class="flex flex-wrap gap-4">
-            {hero.links.map((link) => (
-              <a class="flex items-center prose-link" href={link.href}>
-                {link.text} <i class="ml-2 i-carbon:arrow-right" />
-              </a>
-            ))}
-          </div>
-        )}
+        {
+          hero.socialLinks && (
+            <p mt-8>Find me on</p>
+            <p class="flex gap-x-4 gap-y-2 flex-wrap">
+              {
+                hero.socialLinks.map((link) => (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="prose-link"
+                  >
+                    {link.text}
+                  </a>
+                ))
+              }
+            </p>
+            <p>If you have any questions, please email me at <a prose-link href={'mailto:' + hero.email}>{hero.email}</a>.</p>
+          )
+        }
       </section>
     )
   }

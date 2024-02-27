@@ -15,17 +15,12 @@ const { showHeader = true, ...head } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead {...head} />
-    <script>
-      if (localStorage.theme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    </script>
     <ViewTransitions />
   </head>
-  <body class="bg-main text-main min-h-screen font-sans">
+  <body class="bg-main text-main min-h-screen font-sans w-full">
     <Header />
     <main
-      class="grow w-full max-w-3xl mx-auto pt-12 pb-18 sm:pt-18 sm:pb-24 px-6"
+      class="prose grow max-w-3xl mx-auto py-4 sm:py-8 px-6"
     >
       <slot />
     </main>
