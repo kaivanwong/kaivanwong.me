@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
+import Header from "../components/Header.vue";
 import Footer from "../components/Footer.astro";
 
 const { ...head } = Astro.props;
@@ -14,7 +14,7 @@ const { ...head } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="bg-main text-main min-h-screen font-sans w-full">
-    <Header />
+    <Header client:load />
     <main class="grow max-w-3xl mx-auto py-4 sm:py-8 px-6">
       <slot />
     </main>
