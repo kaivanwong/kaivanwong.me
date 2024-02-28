@@ -49,5 +49,13 @@ export default defineConfig({
     'i-tabler-cactus-filled',
     'i-ri-file-list-2-line',
     'i-carbon-campsite',
+    'i-simple-icons-github',
+    'i-simple-icons-x',
+    'i-simple-icons-linkedin',
+    'i-simple-icons-instagram',
+    'i-simple-icons-youtube',
+    'i-simple-icons-bilibili',
+    'i-simple-icons-zhihu',
+    'i-simple-icons-sinaweibo',
   ],
 })

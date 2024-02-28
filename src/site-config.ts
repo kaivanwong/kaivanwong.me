@@ -33,30 +33,42 @@ const siteConfig = {
       {
         text: 'Github',
         href: 'https://github.com/kaivanwong',
+        icon: 'i-simple-icons-github',
       },
       {
-        text: 'X',
+        text: 'Twitter',
         href: 'https://twitter.com/kaivanwong/',
+        icon: 'i-simple-icons-x',
       },
       {
         text: 'Linkedin',
         href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/',
+        icon: 'i-simple-icons-linkedin',
       },
       {
         text: 'Instagram',
         href: 'https://www.instagram.com/hikaivanwong',
+        icon: 'i-simple-icons-instagram',
+      },
+      {
+        text: 'Youtube',
+        href: 'https://youtube.com/@kaivanwong',
+        icon: 'i-simple-icons-youtube',
       },
       {
         text: 'Bilibili',
         href: 'https://space.bilibili.com/19001420',
+        icon: 'i-simple-icons-bilibili',
       },
       {
         text: '知乎',
         href: 'https://www.zhihu.com/people/kaivanwong',
+        icon: 'i-simple-icons-zhihu',
       },
       {
         text: '微博',
         href: 'https://weibo.com/u/5605059021',
+        icon: 'i-simple-icons-sinaweibo',
       },
     ],
   },

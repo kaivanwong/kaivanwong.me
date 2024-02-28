@@ -33,9 +33,10 @@ const hero = siteConfig.hero;
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="prose-link"
+                    class="prose-link flex items-center"
                   >
-                    {link.text}
+                    <i class:list={[link.icon, 'text-sm mr-1']}></i>
+                    <span>{link.text}</span>
                   </a>
                 ))
               }
