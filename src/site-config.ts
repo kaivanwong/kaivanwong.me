@@ -160,8 +160,8 @@ const siteConfig = {
       href: '/about',
     },
     {
-      text: 'Sponsors',
-      href: '/sponsors',
+      text: 'Sponsor',
+      href: '/sponsor',
     },
     {
       text: 'Business Cooperation',
