@@ -24,9 +24,9 @@ const siteConfig = {
   hero: {
     title: 'Kaivan Wong',
     text: `<p>Hi there</p>
-    <p>I'm Kaivan Wong, a software engineer with perfectionism (it's not always good :p)</p>
-    <p>Currently focus on Web and mobile app development, including <a prose-link href="">Vue</a>, <a prose-link href="">React</a>, <a prose-link href="">Vite</a>, <a prose-link href="">Nuxt</a>, <a prose-link href="">Next</a>, <a prose-link href="">UnoCSS</a>, <a prose-link href="">Tailwind CSS</a>, <a prose-link href="">UniAPP</a>, <a prose-link href="">Flutter</a> and others.</p>
-    <p></p>
+    <p>I am Kaivan Wong, a software engineer with perfectionism (it's not always good :p)</p>
+    <p>Currently focus on Web and mobile app development, including <a prose-link href="">Vue</a>, <a prose-link href="">Vite</a>, <a prose-link href="">Nuxt</a>, <a prose-link href="">React</a>, <a prose-link href="">Next</a>, <a prose-link href="">UnoCSS</a>, <a prose-link href="">Tailwind CSS</a>, <a prose-link href="">UniAPP</a>, <a prose-link href="">Flutter</a> and others.</p>
+    <p>I'm passionate about using technology to realize ideas, and technology ultimately has to serve the product. Expect to create excellent products and services and excellent user experience.</p>
      `,
     image: {
       src: 'hero.jpg',
