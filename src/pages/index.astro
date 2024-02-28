@@ -9,7 +9,7 @@ const hero = siteConfig.hero;
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
   {
     (hero.title || hero.image.src || hero.text || hero.socialLinks) && (
-      <section class="w-full">
+      <div class="prose max-w-3xl w-full">
         {hero.title && <h1 class="text-title">{hero.title}</h1>}
         {hero.image.src && (
           <img
@@ -21,10 +21,9 @@ const hero = siteConfig.hero;
           />
         )}
         {hero.text && (
-          <div class="max-w-none prose" set:html={marked.parse(hero.text)} />
+          <div set:html={marked.parse(hero.text)} />
         )}
-        {
-          hero.socialLinks && (
+        {hero.socialLinks && (
             <p mt-8>Find me on</p>
             <p class="flex gap-x-4 gap-y-2 flex-wrap">
               {
@@ -42,9 +41,8 @@ const hero = siteConfig.hero;
               }
             </p>
             <p>If you have any questions, please email me at <a prose-link href={'mailto:' + hero.email}>{hero.email}</a>.</p>
-          )
-        }
-      </section>
+        )}
+      </div>
     )
   }
 </BaseLayout>

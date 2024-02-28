@@ -23,7 +23,11 @@ const siteConfig = {
   ],
   hero: {
     title: 'Kaivan Wong',
-    text: `I'm a front-end engineer with perfectionism (it's not always good :p).I'm working on an open source project called <a target="_blank" prose-link href="https://stacknax.com">Stack Nax 💚</a>, and often using the JavaScript, TypeScript, Rust to develop software.`,
+    text: `<p>Hi there</p>
+    <p>I'm Kaivan Wong, a software engineer with perfectionism (it's not always good :p)</p>
+    <p>Currently focus on Web and mobile app development, including <a prose-link href="">Vue</a>, <a prose-link href="">React</a>, <a prose-link href="">Vite</a>, <a prose-link href="">Nuxt</a>, <a prose-link href="">Next</a>, <a prose-link href="">UnoCSS</a>, <a prose-link href="">Tailwind CSS</a>, <a prose-link href="">UniAPP</a>, <a prose-link href="">Flutter</a> and others.</p>
+    <p></p>
+     `,
     image: {
       src: 'hero.jpg',
       alt: '',
