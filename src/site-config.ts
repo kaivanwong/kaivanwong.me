@@ -135,8 +135,8 @@ const siteConfig = {
           href: 'https://github.com/kaivanwong/washer',
         },
         {
-          text: 'Vitesse Astro Theme',
-          description: 'Vitesse for Astro blog theme, supports Vue and UnoCSS.',
+          text: 'Vitesse Theme for Astro',
+          description: 'Vitesse theme for Astro blog, supports Vue and UnoCSS.',
           icon: 'i-carbon-campsite',
           href: 'https://github.com/kaivanwong/vitesse-astro-theme',
         },
