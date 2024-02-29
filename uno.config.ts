@@ -13,13 +13,14 @@ export default defineConfig({
   shortcuts: [
     {
       'bg-main': 'bg-white dark:bg-black',
-      'text-main': 'text-truegray-600 dark:text-truegray-400',
+      'text-main': 'text-hex-555 dark:text-hex-bbb',
+      'text-link': 'text-dark dark:text-white ',
       'border-main': 'border-truegray-300 dark:border-truegray-600',
     },
     {
-      'text-title': 'text-dark dark:text-white text-4xl font-800',
-      'nav-link': 'text-dark dark:text-white opacity-70 hover:opacity-100 transition-opacity duration-200 cursor-pointer',
-      'prose-link': 'text-dark dark:text-white text-nowrap cursor-pointer border-b-1 !border-opacity-30 hover:!border-opacity-100 border-neutral-500 hover:border-truegray-600 dark:border-neutral-500 hover:dark:border-truegray-400 transition-border-color duration-200 decoration-none',
+      'text-title': 'text-link text-4xl font-800',
+      'nav-link': 'text-link opacity-70 hover:opacity-100 transition-opacity duration-200 cursor-pointer',
+      'prose-link': 'text-link text-nowrap cursor-pointer border-b-1 !border-opacity-30 hover:!border-opacity-100 border-neutral-500 hover:border-truegray-600 dark:border-neutral-500 hover:dark:border-truegray-400 transition-border-color duration-200 decoration-none',
       'container-link': 'p-2 opacity-60 hover:opacity-100 cursor-pointer hover:bg-truegray-500 !bg-opacity-10 transition-colors transition-opacity duration-200',
     },
   ],
