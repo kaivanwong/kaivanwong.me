@@ -112,10 +112,10 @@ const siteConfig = {
           href: 'https://github.com/opuntia-dev/opuntia',
         },
         {
-          text: 'Opuntia Pro',
+          text: 'Opuntia Enterprise',
           description: 'An enterprise web application based on Opuntia + Element Plus.',
           icon: 'i-tabler-cactus-filled',
-          href: 'https://github.com/opuntia-dev/opuntia-pro',
+          href: 'https://github.com/opuntia-dev/opuntia-enterprise',
         },
       ],
     },
