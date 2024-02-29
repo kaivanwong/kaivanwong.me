@@ -14,6 +14,7 @@ export default defineConfig({
     {
       'bg-main': 'bg-white dark:bg-black',
       'text-main': 'text-truegray-600 dark:text-truegray-400',
+      'border-main': 'border-truegray-300 dark:border-truegray-600',
       'text-title': 'text-dark dark:text-white text-4xl font-800',
     },
     {
