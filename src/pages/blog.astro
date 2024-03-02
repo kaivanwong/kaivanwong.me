@@ -3,7 +3,9 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ListPosts from "../components/ListPosts.vue";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blog", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
 ---
 
 <BaseLayout

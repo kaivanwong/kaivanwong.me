@@ -2,17 +2,17 @@ import { defineCollection, z } from 'astro:content'
 
 const postsSchema = z.object({
   title: z.string(),
+  date: z
+    .string()
+    .or(z.date())
+    .transform((val: string | number | Date) => new Date(val).toLocaleDateString('en-us', {
+      month: 'short',
+      day: 'numeric',
+    })),
   description: z.string().optional(),
   draft: z.boolean().optional().default(false),
   duration: z.string().optional(),
-  publishDate: z
-    .string()
-    .or(z.date())
-    .transform((val: string | number | Date) => new Date(val)),
-  updatedDate: z
-    .string()
-    .optional()
-    .transform((str: string | undefined) => (str ? new Date(str) : undefined)),
+  tag: z.string().optional(),
   lang: z.string().optional().default('en-US'),
   image: z
     .object({

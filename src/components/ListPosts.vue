@@ -9,6 +9,10 @@ defineProps<{
     render: any
   }[]
 }>()
+
+function getDate(date: string) {
+  return new Date(date).toISOString()
+}
 </script>
 
 <template>
@@ -18,10 +22,17 @@ defineProps<{
         nothing here yet.
       </div>
     </template>
-    <li v-for="post in list" :key="post.data.title" nav-link w-full flex items-center>
-      <a text-lg lh-tight :href="`/posts/${post.slug}`">
-        <div>{{ post.data.title }}</div>
-        <div opacity-50 text-sm>{{ post.data.excerpt }}</div>
+    <li v-for="posts in list " :key="posts.data.title" nav-link w-full flex items-center>
+      <a text-lg lh-tight flex="~ col gap-2" :href="`/posts/${posts.slug}`">
+        <div flex="~ col md:row gap-2 md:items-center">
+          <div>{{ posts.data.title }}</div>
+          <div opacity-50 text-sm ws-nowrap flex="~ gap-1 items-center">
+            <time :datetime="getDate(posts.data.date)">{{ posts.data.date }}</time>
+            <span v-if="posts.data.duration">· {{ posts.data.duration }}</span>
+            <span v-if="posts.data.tag">· {{ posts.data.tag }}</span>
+          </div>
+        </div>
+        <div opacity-50 text-sm>{{ posts.data.description }}</div>
       </a>
     </li>
   </ul>

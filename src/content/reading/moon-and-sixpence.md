@@ -1,7 +1,7 @@
 ---
 title: "月亮与六便士"
 duration: "12min"
-publishDate: "October 05 2023"
+date: "2023-09-22"
 lang: "zh-cn"
 draft: true
 ---

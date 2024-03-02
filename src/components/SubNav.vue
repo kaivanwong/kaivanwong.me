@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div flex="~ col gap-2 sm:row sm:gap-4 wrap">
+  <div flex="~ col gap-2 sm:row sm:gap-4 wrap" mb-8>
     <a
       v-for="nav in siteConfig.blogNavLinks" :key="nav.text" nav-link text-3xl font-bold
       :class="pathname === nav.href ? 'opacity-80' : 'opacity-30  hover:opacity-50'" :href="nav.href"
