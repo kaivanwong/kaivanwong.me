@@ -27,7 +27,7 @@ function getDate(date: string) {
         <div flex="~ col md:row gap-2 md:items-center">
           <div>{{ posts.data.title }}</div>
           <div opacity-50 text-sm ws-nowrap flex="~ gap-1 items-center">
-            <time :datetime="getDate(posts.data.date)">{{ posts.data.date }}</time>
+            <time :datetime="getDate(posts.data.date)">{{ posts.data.date.split(',')[0] }}</time>
             <span v-if="posts.data.duration">· {{ posts.data.duration }}</span>
             <span v-if="posts.data.tag">· {{ posts.data.tag }}</span>
           </div>
