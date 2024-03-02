@@ -120,6 +120,10 @@ const siteConfig = {
       ],
     },
     {
+      title: 'Stack Nax Ecosystem',
+      projects: [],
+    },
+    {
       title: 'Product Templates',
       projects: [
         {

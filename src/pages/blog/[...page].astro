@@ -1,22 +1,15 @@
 ---
-import type { GetStaticPathsOptions, Page } from "astro";
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Pagination from "../../components/Pagination.astro";
-import PostPreview from "../../components/PostPreview.astro";
+import ListPosts from "../../components/ListPosts.vue";
 import BlogNav from "../../components/BlogNav.vue";
-import siteConfig from "../../site-config";
 import { sortItemsByDateDesc } from "../../utils/data-utils";
 
-export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const posts = (await getCollection("blog")).sort(sortItemsByDateDesc);
-  return paginate(posts, { pageSize: siteConfig.postsPerPage || 4 });
-}
-
-type Props = { page: Page<CollectionEntry<"blog">> };
-
-const { page } = Astro.props;
-const blog = page.data;
+const posts = (
+  await getCollection("blog", ({ data }) => {
+    return data.draft === false && data.tag === Astro.url.pathname;
+  })
+).sort(sortItemsByDateDesc);
 ---
 
 <BaseLayout
@@ -26,6 +19,5 @@ const blog = page.data;
   showHeader={false}
 >
   <BlogNav pathname={Astro.url.pathname} />
-  {blog.map((post) => <PostPreview post={post} class="mt-16 mb-10 sm:mb-12" />)}
-  <Pagination page={page} class="my-16 sm:my-24" />
+  <ListPosts list={posts} />
 </BaseLayout>
