@@ -1,4 +1,4 @@
-const siteConfig = {
+export const siteConfig = {
   author: 'Kaivan Wong',
   title: 'Kaivan Wong',
   subtitle: 'My personal blog and portfolio.',
@@ -7,6 +7,7 @@ const siteConfig = {
     src: '/dante-preview.jpg',
     alt: 'Dante - Astro.js and Tailwind CSS theme',
   },
+  email: 'kaivanwong@outlook.com',
   headerNavLinks: [
     {
       text: 'Home',
@@ -36,7 +37,6 @@ const siteConfig = {
       src: 'hero.jpg',
       alt: '',
     },
-    email: 'kaivanwong@outlook.com',
     socialLinks: [
       {
         text: 'Github',

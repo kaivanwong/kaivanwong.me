@@ -6,6 +6,7 @@ const postsSchema = z.object({
     .string()
     .or(z.date())
     .transform((val: string | number | Date) => new Date(val).toLocaleDateString('en-us', {
+      year: 'numeric',
       month: 'short',
       day: 'numeric',
     })),

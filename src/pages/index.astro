@@ -40,8 +40,8 @@ const hero = siteConfig.hero;
             ))}
           </p>
         )}
-        {hero.email && (
-          <p>If you have any questions, please email me at <a prose-link href={'mailto:' + hero.email}>{hero.email}</a>.</p>
+        {siteConfig.email && (
+          <p>If you have any questions, please email me at <a prose-link href={'mailto:' + siteConfig.email}>{siteConfig.email}</a>.</p>
         )}
       </div>
     )
