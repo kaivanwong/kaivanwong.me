@@ -10,18 +10,45 @@ const seoSchema = z.object({
     })
     .optional(),
   pageType: z.enum(['website', 'article']).default('website'),
+  lang: z.string().optional().default('en-US'),
 })
 
-const blog = defineCollection({
+const postsSchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  draft: z.boolean().optional().default(false),
+  publishDate: z
+    .string()
+    .or(z.date())
+    .transform((val: string | number | Date) => new Date(val)),
+  updatedDate: z
+    .string()
+    .optional()
+    .transform((str: string | undefined) => (str ? new Date(str) : undefined)),
+  seo: seoSchema.optional(),
+})
+
+const pages = defineCollection({
   schema: z.object({
     title: z.string(),
-    excerpt: z.string().optional(),
-    publishDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    isFeatured: z.boolean().default(false),
-    tags: z.array(z.string()).default([]),
     seo: seoSchema.optional(),
   }),
 })
 
-export const collections = { blog }
+const blog = defineCollection({
+  schema: postsSchema,
+})
+
+const notes = defineCollection({
+  schema: postsSchema,
+})
+
+const reading = defineCollection({
+  schema: postsSchema,
+})
+
+const talks = defineCollection({
+  schema: postsSchema,
+})
+
+export const collections = { pages, blog, notes, reading, talks }

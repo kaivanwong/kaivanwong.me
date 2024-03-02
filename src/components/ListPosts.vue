@@ -18,7 +18,7 @@ defineProps<{
         nothing here yet.
       </div>
     </template>
-    <li v-for="post in list" :key="post.data.title" container-link w-full flex items-center>
+    <li v-for="post in list" :key="post.data.title" nav-link w-full flex items-center>
       <a text-lg lh-tight :href="post.slug">
         <div>{{ post.data.title }}</div>
         <div opacity-50 text-sm>{{ post.data.excerpt }}</div>

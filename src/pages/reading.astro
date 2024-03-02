@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ListPosts from "../components/ListPosts.vue";
+
+const posts = await getCollection("reading");
+---
+
+<BaseLayout
+  title="Reading"
+  description="List of all the reading posts."
+  showSubNav={true}
+>
+  <ListPosts list={posts} />
+</BaseLayout>

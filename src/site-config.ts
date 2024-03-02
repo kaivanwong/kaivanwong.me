@@ -20,6 +20,10 @@ const siteConfig = {
       text: 'Projects',
       href: '/projects',
     },
+    {
+      text: 'Talks',
+      href: '/talks',
+    },
   ],
   hero: {
     title: 'Kaivan Wong',
@@ -80,6 +84,10 @@ const siteConfig = {
     {
       text: 'Blog',
       href: '/blog',
+    },
+    {
+      text: 'Talks',
+      href: '/talks',
     },
     {
       text: 'Notes',
@@ -172,8 +180,6 @@ const siteConfig = {
       href: 'mailto:kaivanwong@outlook.me',
     },
   ],
-  postsPerPage: 8,
-  projectsPerPage: 8,
 }
 
 export default siteConfig
