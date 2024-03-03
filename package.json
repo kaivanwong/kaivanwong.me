@@ -14,23 +14,22 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^2.1.1",
-    "@astrojs/rss": "^4.0.4",
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.1.1",
     "@astrojs/vue": "^4.0.8",
     "@unocss/reset": "^0.58.5",
-    "astro": "^4.2.8",
+    "astro": "^4.4.9",
     "marked": "^11.2.0",
     "unocss": "^0.58.5",
-    "vue": "^3.4.19"
+    "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.3",
-    "@iconify/json": "^2.2.185",
-    "@vueuse/core": "^10.8.0",
+    "@antfu/eslint-config": "^2.7.0",
+    "@iconify/json": "^2.2.188",
+    "@vueuse/core": "^10.9.0",
     "bumpp": "^9.3.0",
-    "eslint": "npm:eslint-ts-patch@^8.56.0-0",
-    "eslint-ts-patch": "^8.56.0-0",
-    "lint-staged": "^15.2.0",
+    "eslint": "^8.57.0",
+    "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.9.0"
   },
   "simple-git-hooks": {
