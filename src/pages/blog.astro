@@ -13,5 +13,5 @@ const posts = await getCollection("blog", ({ data }) => {
   description="List of all the blog posts."
   showSubNav={true}
 >
-  <ListPosts list={posts} />
+  <ListPosts showBack list={posts} />
 </BaseLayout>

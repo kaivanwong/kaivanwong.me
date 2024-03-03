@@ -13,5 +13,5 @@ const posts = await getCollection("notes", ({ data }) => {
   description="List of all the note posts."
   showSubNav={true}
 >
-  <ListPosts list={posts} />
+  <ListPosts showBack list={posts} />
 </BaseLayout>
