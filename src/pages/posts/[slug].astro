@@ -1,11 +1,11 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { slugify } from "../../utils/common-utils";
+import { type CollectionEntry, getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { slugify } from '../../utils/common-utils'
 
 export async function getStaticPaths() {
-  const posts = (await getCollection("blog"));
-  const postCount = posts.length;
+  const posts = await getCollection('blog')
+  const postCount = posts.length
   return posts.map((post, index) => ({
     params: { slug: post.slug },
     props: {
@@ -13,19 +13,18 @@ export async function getStaticPaths() {
       prevPost: index + 1 !== postCount ? posts[index + 1] : null,
       nextPost: index !== 0 ? posts[index - 1] : null,
     },
-  }));
+  }))
 }
 
 type Props = {
-  post: CollectionEntry<"blog">;
-  prevPost: CollectionEntry<"blog">;
-  nextPost: CollectionEntry<"blog">;
-};
+  post: CollectionEntry<'blog'>
+  prevPost: CollectionEntry<'blog'>
+  nextPost: CollectionEntry<'blog'>
+}
 
-const { href } = Astro.url;
-const { post, prevPost, nextPost } = Astro.props;
-const { title, publishDate, updatedDate, excerpt, tags = [], seo } = post.data;
-const { Content } = await post.render();
+const { post } = Astro.props
+const { title, excerpt, tags = [], seo } = post.data
+const { Content } = await post.render()
 ---
 
 <BaseLayout
@@ -68,25 +67,25 @@ const { Content } = await post.render();
 </BaseLayout>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener('astro:page-load', () => {
     const copyUrlButton = document.querySelector(
-      ".copy-url-button"
-    ) as HTMLButtonElement;
-    copyUrlButton?.addEventListener("click", async () => {
-      await copyUrl(copyUrlButton);
-    });
+      '.copy-url-button',
+    ) as HTMLButtonElement
+    copyUrlButton?.addEventListener('click', async () => {
+      await copyUrl(copyUrlButton)
+    })
 
     async function copyUrl(button: HTMLButtonElement) {
-      let url = button.getAttribute("data-url") || "";
-      let label = button.innerText;
+      let url = button.getAttribute('data-url') || ''
+      let label = button.innerText
 
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(url)
 
-      button.innerText = "Copied";
+      button.innerText = 'Copied'
 
       setTimeout(() => {
-        button.innerText = label;
-      }, 2500);
+        button.innerText = label
+      }, 2500)
     }
-  });
+  })
 </script>
