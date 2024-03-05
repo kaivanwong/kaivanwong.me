@@ -18,22 +18,22 @@
     "@astrojs/sitemap": "^3.1.1",
     "@astrojs/vue": "^4.0.8",
     "@unocss/reset": "^0.58.5",
-    "astro": "^4.4.9",
+    "astro": "^4.4.11",
     "marked": "^11.2.0",
     "unocss": "^0.58.5",
     "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.7.0",
-    "@iconify/json": "^2.2.188",
+    "@antfu/eslint-config": "^2.8.0",
+    "@iconify/json": "^2.2.189",
     "@vueuse/core": "^10.9.0",
-    "bumpp": "^9.3.0",
+    "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-format": "^0.1.0",
     "lint-staged": "^15.2.2",
     "prettier-plugin-astro": "^0.13.0",
-    "simple-git-hooks": "^2.9.0"
+    "simple-git-hooks": "^2.10.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
