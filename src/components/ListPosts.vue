@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import SubFooter from './SubFooter.vue'
-
 interface Posts {
   id: string
   slug: string
@@ -12,10 +10,8 @@ interface Posts {
 
 withDefaults(defineProps<{
   list: Posts[]
-  showFooter?: boolean
 }>(), {
   list: () => [],
-  showFooter: true,
 })
 
 function getDate(date: string) {
@@ -27,6 +23,12 @@ function getHref(posts: Posts) {
     return posts.data.redirect
   return `/posts/${posts.slug}`
 }
+
+function getTarget(posts: Posts) {
+  if (posts.data.redirect)
+    return '_blank'
+  return '_self'
+}
 </script>
 
 <template>
@@ -37,7 +39,7 @@ function getHref(posts: Posts) {
       </div>
     </template>
     <li v-for="posts in list " :key="posts.data.title" nav-link w-full flex items-center mb-6>
-      <a text-lg lh-tight flex="~ col gap-2" :href="getHref(posts)">
+      <a text-lg lh-tight flex="~ col gap-2" :target="getTarget(posts)" :href="getHref(posts)">
         <div flex="~ col md:row gap-2 md:items-center">
           <div flex="~ gap-2 items-center">
             <i v-if="posts.data.draft" text-base i-ri-draft-line />
@@ -57,6 +59,4 @@ function getHref(posts: Posts) {
       </a>
     </li>
   </ul>
-
-  <SubFooter v-if="showFooter" />
 </template>

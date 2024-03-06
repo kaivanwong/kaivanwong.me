@@ -11,7 +11,8 @@ const posts = await getCollection('reading', ({ data }) => {
 <BaseLayout
   title="Reading"
   description="List of all the reading posts."
-  showSubNav={true}
+  pageNav={true}
+  pageOperate={true}
 >
   <ListPosts list={posts} />
 </BaseLayout>
