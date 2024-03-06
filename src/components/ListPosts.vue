@@ -1,15 +1,17 @@
 <script lang="ts" setup>
 import SubFooter from './SubFooter.vue'
 
+interface Posts {
+  id: string
+  slug: string
+  body: string
+  data: Record<string, any>
+  collection: string
+  render: any
+}
+
 withDefaults(defineProps<{
-  list: {
-    id: string
-    slug: string
-    body: string
-    data: Record<string, any>
-    collection: string
-    render: any
-  }[]
+  list: Posts[]
   showFooter?: boolean
 }>(), {
   list: () => [],
@@ -18,6 +20,12 @@ withDefaults(defineProps<{
 
 function getDate(date: string) {
   return new Date(date).toISOString()
+}
+
+function getHref(posts: Posts) {
+  if (posts.data.redirect)
+    return posts.data.redirect
+  return `/posts/${posts.slug}`
 }
 </script>
 
@@ -29,14 +37,20 @@ function getDate(date: string) {
       </div>
     </template>
     <li v-for="posts in list " :key="posts.data.title" nav-link w-full flex items-center mb-6>
-      <a text-lg lh-tight flex="~ col gap-2" :href="`/posts/${posts.slug}`">
+      <a text-lg lh-tight flex="~ col gap-2" :href="getHref(posts)">
         <div flex="~ col md:row gap-2 md:items-center">
-          <div flex="~ items-center"><i v-if="posts.data.draft" mr-1 i-carbon-rule-draft />{{ posts.data.title }}</div>
-          <div opacity-50 text-sm ws-nowrap flex="~ gap-1 items-center">
+          <div flex="~ gap-2 items-center">
+            <i v-if="posts.data.draft" text-base i-ri-draft-line />
+            {{ posts.data.title }}
+          </div>
+          <div opacity-50 text-sm ws-nowrap flex="~ gap-2 items-center">
+            <i v-if="posts.data.redirect" text-base i-ri-external-link-line />
+            <i v-if="posts.data.recording || posts.data.video" text-base i-ri:film-line />
             <time :datetime="getDate(posts.data.date)">{{ posts.data.date.split(',')[0] }}</time>
             <span v-if="posts.data.duration">· {{ posts.data.duration }}</span>
             <span v-if="posts.data.tag">· {{ posts.data.tag }}</span>
             <span v-if="posts.data.lang.includes('zh')">· 中文</span>
+            <span v-if="posts.data.link">· 中文</span>
           </div>
         </div>
         <div opacity-50 text-sm>{{ posts.data.description }}</div>
