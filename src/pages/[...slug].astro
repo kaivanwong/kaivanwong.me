@@ -15,14 +15,14 @@ export async function getStaticPaths() {
 type Props = { page: CollectionEntry<'pages'> }
 
 const { page } = Astro.props
-const { title, seo } = page.data
+const { title, description, image } = page.data
 const { Content } = await page.render()
 ---
 
 <BaseLayout
-  title={seo?.title ?? title}
-  description={seo?.description}
-  image={seo?.image}
+  title={title}
+  description={description}
+  image={image}
   showHeader={false}
 >
   <article class="mb-16 sm:mb-24">

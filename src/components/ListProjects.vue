@@ -12,7 +12,7 @@ defineProps<{
 <template>
   <ul grid="~ cols-1 sm:cols-2 gap-4">
     <template v-if="!list || list.length === 0">
-      <div p-6 opacity-50>
+      <div py2 opacity-50>
         nothing here yet.
       </div>
     </template>

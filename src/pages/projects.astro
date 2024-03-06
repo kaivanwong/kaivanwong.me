@@ -4,10 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import ListProjects from '../components/ListProjects.vue'
 ---
 
-<BaseLayout
-  title={`Projects${siteConfig.title}`}
-  description="List of projects that I am proud of"
->
+<BaseLayout title="Projects" description="List of projects that I am proud of">
   <h1 class="mb-8 text-title">Projects</h1>
   {
     siteConfig.projects.length > 0 && (
