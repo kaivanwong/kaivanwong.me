@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-defineProps<{
+import SubFooter from './SubFooter.vue'
+
+withDefaults(defineProps<{
   list: {
     id: string
     slug: string
@@ -8,26 +10,25 @@ defineProps<{
     collection: string
     render: any
   }[]
-  showBack?: boolean
-}>()
+  showFooter?: boolean
+}>(), {
+  list: () => [],
+  showFooter: true,
+})
 
 function getDate(date: string) {
   return new Date(date).toISOString()
-}
-
-function back() {
-  window.history.back()
 }
 </script>
 
 <template>
   <ul py-10>
     <template v-if="!list || list.length === 0">
-      <div p-6 opacity-50>
+      <div py2 opacity-50>
         nothing here yet.
       </div>
     </template>
-    <li v-for="posts in list " :key="posts.data.title" nav-link w-full flex items-center>
+    <li v-for="posts in list " :key="posts.data.title" nav-link w-full flex items-center mb-6>
       <a text-lg lh-tight flex="~ col gap-2" :href="`/posts/${posts.slug}`">
         <div flex="~ col md:row gap-2 md:items-center">
           <div flex="~ items-center"><i v-if="posts.data.draft" mr-1 i-carbon-rule-draft />{{ posts.data.title }}</div>
@@ -43,9 +44,5 @@ function back() {
     </li>
   </ul>
 
-  <template v-if="showBack">
-    <div flex="~ items-center">
-      <a prose-link text-main @click="back"><i i-carbon-arrow-left vertical-mid mr-1 />Back to home</a>
-    </div>
-  </template>
+  <SubFooter v-if="showFooter" />
 </template>
