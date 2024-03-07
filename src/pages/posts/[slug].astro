@@ -7,8 +7,8 @@ export async function getStaticPaths() {
   const talks = await getCollection('talks')
   const reading = await getCollection('reading')
   const notes = await getCollection('notes')
-  const posts = [...blog, ...talks, ...reading, ...notes].filter(
-    (post) => post.data.draft === false,
+  const posts = [...blog, ...talks, ...reading, ...notes].filter((post) =>
+    import.meta.env.PROD ? post.data.draft !== true : true,
   )
 
   return posts.map((post) => ({
