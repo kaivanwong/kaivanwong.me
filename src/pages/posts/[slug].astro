@@ -3,22 +3,24 @@ import { type CollectionEntry, getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog')
-  const postCount = posts.length
-  return posts.map((post, index) => ({
+  const blog = await getCollection('blog')
+  const talks = await getCollection('talks')
+  const reading = await getCollection('reading')
+  const notes = await getCollection('notes')
+  const posts = [...blog, ...talks, ...reading, ...notes].filter(
+    (post) => post.data.draft === false,
+  )
+
+  return posts.map((post) => ({
     params: { slug: post.slug },
     props: {
       post,
-      prevPost: index + 1 !== postCount ? posts[index + 1] : null,
-      nextPost: index !== 0 ? posts[index - 1] : null,
     },
   }))
 }
 
 type Props = {
-  post: CollectionEntry<'blog'>
-  prevPost: CollectionEntry<'blog'>
-  nextPost: CollectionEntry<'blog'>
+  post: CollectionEntry<'blog' | 'notes' | 'reading' | 'talks'>
 }
 
 const { post } = Astro.props
@@ -39,7 +41,7 @@ const { Content } = await post.render()
         {title}
       </h1>
     </header>
-    <div class="max-w-none prose prose-dante sm:prose-lg">
+    <div class="max-w-none prose">
       <Content />
     </div>
   </article>
