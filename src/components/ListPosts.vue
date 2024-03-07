@@ -41,9 +41,11 @@ function getTarget(posts: Posts) {
     <li v-for="posts in list " :key="posts.data.title" nav-link w-full flex items-center mb-6>
       <a text-lg lh-tight flex="~ col gap-2" :target="getTarget(posts)" :href="getHref(posts)">
         <div flex="~ col md:row gap-2 md:items-center">
-          <div flex="~ gap-2 items-center">
-            <i v-if="posts.data.draft" text-base i-ri-draft-line />
-            {{ posts.data.title }}
+          <div flex="~ gap-2 items-center text-wrap">
+            <span lh-tight>
+              <i v-if="posts.data.draft" text-base vertical-mid i-ri-draft-line />
+              {{ posts.data.title }}
+            </span>
           </div>
           <div opacity-50 text-sm ws-nowrap flex="~ gap-2 items-center">
             <i v-if="posts.data.redirect" text-base i-ri-external-link-line />

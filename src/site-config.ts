@@ -80,7 +80,7 @@ export const siteConfig = {
       },
     ],
   },
-  blogNavLinks: [
+  pageNavLinks: [
     {
       text: 'Blog',
       href: '/blog',
@@ -172,7 +172,7 @@ export const siteConfig = {
       href: '/about',
     },
     {
-      text: 'Sponsor',
+      text: 'Sponsor to Me',
       href: '/sponsor',
     },
     {
