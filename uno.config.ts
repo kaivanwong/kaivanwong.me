@@ -24,6 +24,11 @@ export default defineConfig({
       'container-link': 'p-2 opacity-60 hover:opacity-100 cursor-pointer hover:bg-truegray-500 !bg-opacity-10 transition-colors transition-opacity duration-200',
     },
   ],
+  rules: [
+    [/^slide-enter-(\d+)$/, ([_, n]) => ({
+      '--enter-stage': n,
+    })],
+  ],
   presets: [
     presetUno(),
     presetAttributify(),

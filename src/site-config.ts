@@ -172,11 +172,11 @@ export const siteConfig = {
       href: '/about',
     },
     {
-      text: 'Sponsor to Me',
+      text: 'Sponsor',
       href: '/sponsor',
     },
     {
-      text: 'Business Cooperation',
+      text: 'Mail to Me',
       href: 'mailto:kaivanwong@outlook.me',
     },
   ],

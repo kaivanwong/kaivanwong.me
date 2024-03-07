@@ -13,12 +13,14 @@ function back() {
 </script>
 
 <template>
-  <div v-if="showSourceLink" flex="~ items-center" text-main opacity-50 font-mono>
-    <span mr-2 text-lg>></span>
-    <a prose-link @click="back">Open Source in GitHub</a>
-  </div>
-  <div v-if="showBack" flex="~ items-center" text-main opacity-50 font-mono>
-    <span mr-2 text-lg>></span>
-    <a prose-link @click="back">cd ..</a>
+  <div mt-8>
+    <div v-if="showSourceLink" flex="~ items-center" text-main opacity-50 font-mono>
+      <span mr-2 text-lg>></span>
+      <a prose-link @click="back">Open Source in GitHub</a>
+    </div>
+    <div v-if="showBack" flex="~ items-center" text-main opacity-50 font-mono>
+      <span mr-2 text-lg>></span>
+      <a prose-link @click="back">cd ..</a>
+    </div>
   </div>
 </template>

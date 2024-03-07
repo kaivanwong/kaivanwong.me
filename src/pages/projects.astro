@@ -9,17 +9,17 @@ import ListProjects from '../components/ListProjects.vue'
   description="List of projects that I am proud of"
   pageOperate={true}
 >
-  <h1 class="mb-8 text-title">Projects</h1>
+  <h1 class="mb-10 text-title">Projects</h1>
   {
     siteConfig.projects.length > 0 && (
       <div>
         {siteConfig.projects.map((group) => (
-          <>
-            <h2 mb-4 mt-15 font-bold>
+          <div mb-10>
+            <h2 mb-4 font-bold>
               {group.title}
             </h2>
             <ListProjects list={group.projects} />
-          </>
+          </div>
         ))}
       </div>
     )

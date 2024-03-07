@@ -55,10 +55,8 @@ function toTop() {
     </div>
   </header>
   <button
-    title="Scroll to top"
-    fixed right-3 bottom-3 w-10 h-10 hover:opacity-100 rounded-full
-    hover-bg-hex-8883 transition duration-300 z-99 print:hidden
-    :class="scroll > 300 ? 'opacity-30' : '!opacity-0 pointer-events-none'"
+    title="Scroll to top" fixed right-3 bottom-3 w-10 h-10 hover:opacity-100 rounded-full hover-bg-hex-8883
+    transition duration-300 z-99 print:hidden :class="scroll > 300 ? 'opacity-30' : '!opacity-0 pointer-events-none'"
     @click="toTop()"
   >
     <i vertical-mid i-ri-arrow-up-line />

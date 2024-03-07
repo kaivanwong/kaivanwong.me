@@ -29,20 +29,33 @@ function getTarget(posts: Posts) {
     return '_blank'
   return '_self'
 }
+
+function isSameYear(a: Date | string | number, b: Date | string | number) {
+  return a && b && getYear(a) === getYear(b)
+}
+
+function getYear(date: Date | string | number) {
+  return new Date(date).getFullYear()
+}
 </script>
 
 <template>
-  <ul py-10>
+  <ul>
     <template v-if="!list || list.length === 0">
       <div py2 opacity-50>
         nothing here yet.
       </div>
     </template>
-    <li v-for="posts in list " :key="posts.data.title" nav-link w-full flex items-center mb-6>
-      <a text-lg lh-tight flex="~ col gap-2" :target="getTarget(posts)" :href="getHref(posts)">
+    <li v-for="(posts, index) in list " :key="posts.data.title" mb-6>
+      <div v-if="!isSameYear(posts.data.date, list[index - 1]?.data.date)" select-none relative h14 pointer-events-none>
+        <span text-7em color-transparent font-bold text-stroke-2 text-stroke-hex-aaa op14 absolute top--0.36em>
+          {{ getYear(posts.data.date) }}
+        </span>
+      </div>
+      <a text-lg lh-tight nav-link flex="~ col gap-2" :target="getTarget(posts)" :href="getHref(posts)">
         <div flex="~ col md:row gap-2 md:items-center">
           <div flex="~ gap-2 items-center text-wrap">
-            <span lh-tight>
+            <span lh-normal>
               <i v-if="posts.data.draft" text-base vertical-mid i-ri-draft-line />
               {{ posts.data.title }}
             </span>
