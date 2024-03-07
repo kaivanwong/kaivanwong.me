@@ -35,9 +35,7 @@ const { Content } = await post.render()
 >
   <article class="mb-16 sm:mb-24">
     <header class="mb-8">
-      <h1
-        class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight"
-      >
+      <h1 class="text-title">
         {title}
       </h1>
     </header>
@@ -46,27 +44,3 @@ const { Content } = await post.render()
     </div>
   </article>
 </BaseLayout>
-
-<script>
-  document.addEventListener('astro:page-load', () => {
-    const copyUrlButton = document.querySelector(
-      '.copy-url-button',
-    ) as HTMLButtonElement
-    copyUrlButton?.addEventListener('click', async () => {
-      await copyUrl(copyUrlButton)
-    })
-
-    async function copyUrl(button: HTMLButtonElement) {
-      let url = button.getAttribute('data-url') || ''
-      let label = button.innerText
-
-      await navigator.clipboard.writeText(url)
-
-      button.innerText = 'Copied'
-
-      setTimeout(() => {
-        button.innerText = label
-      }, 2500)
-    }
-  })
-</script>

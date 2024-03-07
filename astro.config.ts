@@ -9,7 +9,21 @@ export default defineConfig({
   server: {
     port: 1977,
   },
-  integrations: [mdx(), sitemap(), UnoCSS({
-    injectReset: true,
-  }), vue()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    UnoCSS({
+      injectReset: true,
+    }),
+    vue(),
+  ],
+  markdown: {
+    shikiConfig: {
+      experimentalThemes: {
+        light: 'vitesse-light',
+        dark: 'vitesse-dark',
+      },
+      wrap: true,
+    },
+  },
 })

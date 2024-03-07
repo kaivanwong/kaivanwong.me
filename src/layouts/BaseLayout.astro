@@ -17,12 +17,15 @@ const { pageNav = false, pageOperate = false, ...head } = Astro.props
   </head>
   <body class="bg-main text-main min-h-screen font-sans w-full">
     <Header client:load />
-    <main class="grow max-w-3xl mx-auto py-8 px-6">
+    <main class="grow max-w-3xl mx-auto py-10 px-6">
       {pageNav && <PageNav pathname={Astro.url.pathname} />}
       <slot />
       {
         pageOperate && (
-          <PageOperate showSourceLink={Astro.url.pathname.includes('posts/')} />
+          <PageOperate
+            page={Astro.url.pathname}
+            showSourceLink={Astro.url.pathname.includes('posts/')}
+          />
         )
       }
     </main>
