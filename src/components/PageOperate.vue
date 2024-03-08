@@ -23,10 +23,10 @@ const shareLinks = [
 
 <template>
   <div>
-    <div v-if="showShare" flex="~ gap-4 items-start flex-wrap" text-main opacity-50 font-mono>
+    <div v-if="showShare" flex="~ gap-4 items-center flex-wrap" text-main opacity-50 font-mono>
       <span text-lg>></span>
       <span>share to</span>
-      <a v-for="link in shareLinks" :key="link.text" prose-link :href="link.href + url">
+      <a v-for="link in shareLinks" :key="link.text" prose-link lh-tight :href="link.href + url">
         <i v-if="link.icon" text-2.8 :class="link.icon" mr-0.8 />{{ link.text }}
       </a>
     </div>
