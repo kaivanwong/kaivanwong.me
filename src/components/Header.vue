@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, watchEffect } from 'vue'
-import { onClickOutside, useWindowScroll, useWindowSize } from '@vueuse/core'
+import { onClickOutside, useWindowSize } from '@vueuse/core'
 import siteConfig from '../site-config'
 import ThemeToggle from './ThemeToggle.vue'
 
@@ -27,15 +27,6 @@ watchEffect(() => {
   else
     menu.value = false
 })
-
-const { y: scroll } = useWindowScroll()
-
-function toTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  })
-}
 </script>
 
 <template>
@@ -54,11 +45,4 @@ function toTop() {
       <ThemeToggle />
     </div>
   </header>
-  <button
-    title="Scroll to top" fixed right-3 bottom-3 w-10 h-10 hover:opacity-100 rounded-full hover-bg-hex-8883
-    transition duration-300 z-99 print:hidden :class="scroll > 300 ? 'opacity-30' : '!opacity-0 pointer-events-none'"
-    @click="toTop()"
-  >
-    <i vertical-mid i-ri-arrow-up-line />
-  </button>
 </template>

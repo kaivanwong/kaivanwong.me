@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useWindowScroll } from '@vueuse/core'
+
 withDefaults(defineProps<{
   showShare?: boolean
   showBack?: boolean
@@ -19,20 +21,35 @@ const shareLinks = [
     href: 'mailto:?subject=See%20this%20post&body=',
   },
 ]
+
+const { y: scroll } = useWindowScroll()
+
+function toTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+}
 </script>
 
 <template>
-  <div>
-    <div v-if="showShare" flex="~ gap-4 items-center flex-wrap" text-main opacity-50 font-mono>
-      <span text-lg>></span>
-      <span>share to</span>
-      <a v-for="link in shareLinks" :key="link.text" prose-link lh-tight :href="link.href + url">
-        <i v-if="link.icon" text-2.8 :class="link.icon" mr-0.8 />{{ link.text }}
-      </a>
+  <div sm:flex="~ flex-row items-start justify-between" w-full font-mono opacity-50 text-main>
+    <div>
+      <div v-if="showShare" flex="~ gap-4 items-center flex-wrap">
+        <i i-ri-arrow-right-s-line />
+        <span>share to</span>
+        <a v-for="link in shareLinks" :key="link.text" prose-link lh-tight :href="link.href + url">
+          <i v-if="link.icon" text-2.8 :class="link.icon" mr-0.8 />{{ link.text }}
+        </a>
+      </div>
+      <div v-if="showBack" flex="~ gap-4 items-center">
+        <i i-ri-arrow-right-s-line />
+        <a prose-link href="javascript:history.back(-1)">cd ..</a>
+      </div>
     </div>
-    <div v-if="showBack" flex="~ gap-4 items-center " text-main opacity-50 font-mono>
-      <span text-lg>></span>
-      <a prose-link href="javascript:history.back(-1)">cd ..</a>
+    <div v-show="scroll > 300" cursor-pointer sm:m-0 mt-6 flex="~ gap-4 items-center" sm:gap-2>
+      <i vertical-mid i-ri-arrow-up-line />
+      <span prose-link @click="toTop()">Scroll to top</span>
     </div>
   </div>
 </template>
