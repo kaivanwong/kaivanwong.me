@@ -2,6 +2,10 @@
   "name": "kaivanwong.me",
   "type": "module",
   "version": "2.0.0-beta.0",
+  "packageManager": "pnpm@8.11.0",
+  "engines": {
+    "node": ">=18.0"
+  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "simple-git-hooks",
