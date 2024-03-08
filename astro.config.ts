@@ -1,19 +1,29 @@
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
-import solidJs from '@astrojs/solid-js'
-import tailwind from '@astrojs/tailwind'
-import { SITE_URL } from './src/consts.js'
+import UnoCSS from 'unocss/astro'
+import vue from '@astrojs/vue'
 
-// https://astro.build/config
 export default defineConfig({
-  site: SITE_URL,
+  site: 'https://kaivanwong.me',
+  server: {
+    port: 1977,
+  },
   integrations: [
     mdx(),
     sitemap(),
-    solidJs({
-      include: '**.tsx',
+    UnoCSS({
+      injectReset: true,
     }),
-    tailwind(),
+    vue(),
   ],
+  markdown: {
+    shikiConfig: {
+      experimentalThemes: {
+        light: 'vitesse-light',
+        dark: 'vitesse-dark',
+      },
+      wrap: true,
+    },
+  },
 })

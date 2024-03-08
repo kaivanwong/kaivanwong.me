@@ -1,18 +1,26 @@
 import rss from '@astrojs/rss'
 import { getCollection } from 'astro:content'
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
+import siteConfig from '../site-config'
 
 export async function GET(context) {
-  const posts = await getCollection('blog')
+  const blog = (await getCollection('blog'))
+  const talks = (await getCollection('talks'))
+  const reading = (await getCollection('reading'))
+  const notes = (await getCollection('notes'))
+  const posts = [...blog, ...talks, ...reading, ...notes].filter(post => post.data.draft === false)
+
   return rss({
-    title: SITE_TITLE,
-    description: SITE_DESCRIPTION,
+    title: siteConfig.title,
+    description: siteConfig.description,
     site: context.site,
-    items: posts
-      .filter(post => post.data.draft === false)
-      .map(post => ({
-        ...post.data,
-        link: `/blog/${post.slug}/`,
-      })),
+    items: posts.map((item) => {
+      return {
+        ...item.data,
+        link: `${context.site}/posts/${item.slug}/`,
+        pubDate: new Date(item.data.date),
+        content: item.body,
+        author: `${siteConfig.author} <${siteConfig.email}>`,
+      }
+    }),
   })
 }

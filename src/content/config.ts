@@ -1,38 +1,58 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content'
 
-const projects = defineCollection({
+const postsSchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  duration: z.string().optional(),
+  image: z
+    .object({
+      src: z.string(),
+      alt: z.string().optional(),
+    })
+    .optional(),
+  date: z
+    .string()
+    .or(z.date())
+    .transform((val: string | number | Date) => new Date(val).toLocaleDateString('en-us', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    })),
+  draft: z.boolean().optional().default(false),
+  lang: z.string().optional().default('en-US'),
+  tag: z.string().optional(),
+  redirect: z.string().optional(),
+  video: z.boolean().optional(),
+  recording: z.boolean().optional(),
+})
+
+const pages = defineCollection({
   schema: z.object({
-    name: z.string(),
-    logo: z.string().optional(),
-    website: z.string().optional(),
-    github: z.string().optional(),
+    title: z.string(),
+    description: z.string().optional(),
+    image: z
+      .object({
+        src: z.string(),
+        alt: z.string().optional(),
+      })
+      .optional(),
   }),
-});
+})
 
 const blog = defineCollection({
-  schema: z.object({
-    duration: z.string(),
-    topics: z.array(z.string()).default([]),
-    title: z.string(),
-    draft: z.boolean().default(false),
-    description: z.string().optional(),
-    lang: z.string().optional().default('en-us'),
-    pubDate: z
-      .string()
-      .or(z.date())
-      .transform((val: string | number | Date) => new Date(val)),
-    updatedDate: z
-      .string()
-      .optional()
-      .transform((str: string | undefined) => (str ? new Date(str) : undefined)),
-    heroImage: z.string().optional(),
-  }),
-});
+  schema: postsSchema,
+})
 
-const topics = defineCollection({
-  schema: z.object({
-    title: z.string(),
-  }),
-});
+const notes = defineCollection({
+  schema: postsSchema,
+})
 
-export const collections = { blog, projects, topics };
+const reading = defineCollection({
+  schema: postsSchema,
+})
+
+const talks = defineCollection({
+  schema: postsSchema,
+})
+
+export const collections = { pages, blog, notes, reading, talks }
