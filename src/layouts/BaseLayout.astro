@@ -24,8 +24,8 @@ const { pageNav = false, pageOperate = false, ...head } = Astro.props
         pageOperate && (
           <PageOperate
             client:load
-            pathname={Astro.url.pathname}
-            showSourceLink={Astro.url.pathname.includes('posts/')}
+            showShare={head.pageType === 'article'}
+            url={Astro.url}
           />
         )
       }
