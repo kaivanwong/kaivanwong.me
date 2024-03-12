@@ -17,19 +17,19 @@
     "release": "bumpp"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/mdx": "^2.2.0",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.1",
     "@astrojs/vue": "^4.0.8",
     "@unocss/reset": "^0.58.5",
-    "astro": "^4.4.13",
+    "astro": "^4.5.0",
     "marked": "^11.2.0",
     "unocss": "^0.58.5",
     "vue": "^3.4.21"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.0",
-    "@iconify/json": "^2.2.189",
+    "@iconify/json": "^2.2.191",
     "@vueuse/core": "^10.9.0",
     "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
