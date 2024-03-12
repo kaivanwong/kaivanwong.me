@@ -1,15 +1,10 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import { type CollectionPosts } from '../../types'
+import { getAllPosts } from '../../utils/posts'
 
 export async function getStaticPaths() {
-  const blog = await getCollection('blog')
-  const talks = await getCollection('talks')
-  const reading = await getCollection('reading')
-  const notes = await getCollection('notes')
-  const posts = [...blog, ...talks, ...reading, ...notes].filter((post) =>
-    import.meta.env.PROD ? post.data.draft !== true : true,
-  )
+  const posts = await getAllPosts()
 
   return posts.map((post) => ({
     params: { slug: post.slug },
@@ -19,9 +14,7 @@ export async function getStaticPaths() {
   }))
 }
 
-type Props = {
-  post: CollectionEntry<'blog' | 'notes' | 'reading' | 'talks'>
-}
+type Props = { post: CollectionPosts }
 
 const { post } = Astro.props
 const { title, image, description } = post.data
@@ -46,3 +39,4 @@ const { Content } = await post.render()
     </div>
   </article>
 </BaseLayout>
+../../utils/content ../../utils/posts

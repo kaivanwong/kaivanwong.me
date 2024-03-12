@@ -1,13 +1,9 @@
 import rss from '@astrojs/rss'
-import { getCollection } from 'astro:content'
 import siteConfig from '../site-config'
+import { getAllPosts } from '../../utils/posts'
 
 export async function GET(context) {
-  const blog = (await getCollection('blog'))
-  const talks = (await getCollection('talks'))
-  const reading = (await getCollection('reading'))
-  const notes = (await getCollection('notes'))
-  const posts = [...blog, ...talks, ...reading, ...notes].filter(post => post.data.draft === false)
+  const posts = await getAllPosts()
 
   return rss({
     title: siteConfig.title,
