@@ -4,8 +4,8 @@ export const siteConfig = {
   subtitle: 'My personal blog and portfolio.',
   description: 'My personal blog and portfolio, it\'s developed by Astro.',
   image: {
-    src: '/dante-preview.jpg',
-    alt: 'Dante - Astro.js and Tailwind CSS theme',
+    src: '/hero.jpg',
+    alt: 'Kaivan Wong',
   },
   email: 'kaivanwong@outlook.com',
   headerNavLinks: [
