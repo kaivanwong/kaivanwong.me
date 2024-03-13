@@ -45,12 +45,12 @@ export const siteConfig = {
       },
       {
         text: 'Twitter',
-        href: 'https://twitter.com/kaivanwong/',
+        href: 'https://twitter.com/kaivanwong',
         icon: 'i-simple-icons-x',
       },
       {
         text: 'Linkedin',
-        href: 'https://www.linkedin.com/in/kaivan-wong-a42441291/',
+        href: 'https://www.linkedin.com/in/kaivan-wong-a42441291',
         icon: 'i-simple-icons-linkedin',
       },
       {
@@ -176,8 +176,12 @@ export const siteConfig = {
       href: '/sponsor',
     },
     {
-      text: 'Mail to Me',
+      text: 'Contact Me',
       href: 'mailto:kaivanwong@outlook.me',
+    },
+    {
+      text: 'Current Blog Theme',
+      href: 'https://github.com/kaivanwong/vitesse-astro-theme',
     },
   ],
 }
