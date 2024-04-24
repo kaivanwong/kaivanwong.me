@@ -34,7 +34,7 @@ export const siteConfig = {
     <p>I'm passionate about using technology to realize ideas, and technology ultimately has to serve the product. Expect to create excellent products and services and excellent user experience.</p>
      `,
     image: {
-      src: 'hero.jpg',
+      src: '/hero.png',
       alt: '',
     },
     socialLinks: [
