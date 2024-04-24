@@ -2,9 +2,9 @@ export const siteConfig = {
   author: 'Kaivan Wong',
   title: 'Kaivan Wong',
   subtitle: 'My personal blog and portfolio.',
-  description: 'My personal blog and portfolio, it\'s developed by Astro.',
+  description: 'My personal blog and portfolio, it\'s developed by Vitesse Theme for Astro.',
   image: {
-    src: '/hero.jpg',
+    src: '/hero.png',
     alt: 'Kaivan Wong',
   },
   email: 'kaivanwong@outlook.com',
