@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useWindowScroll } from '@vueuse/core'
+import { computed } from 'vue'
 
 withDefaults(defineProps<{
   showShare?: boolean
@@ -24,6 +25,10 @@ const shareLinks = [
 
 const { y: scroll } = useWindowScroll()
 
+const scrollTopPosition = computed(() => {
+  return scroll.value > 0 ? 'footer' : 'none'
+})
+
 function toTop() {
   window.scrollTo({
     top: 0,
@@ -34,7 +39,7 @@ function toTop() {
 
 <template>
   <div w-full font-mono opacity-50 text-main>
-    <div v-if="scroll" flex="~ gap-2 items-center" mb-2>
+    <div v-if="scrollTopPosition === 'footer'" flex="~ gap-2 items-center" mb-2>
       <i i-ri-arrow-right-s-line />
       <span prose-link @click="toTop()">Scroll to top</span>
     </div>

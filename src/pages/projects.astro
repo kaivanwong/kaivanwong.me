@@ -10,18 +10,20 @@ import ListProjects from '../components/ListProjects.vue'
   pageOperate={true}
 >
   <h1 class="mb-10 text-title">Projects</h1>
-  {
-    siteConfig.projects.length > 0 && (
-      <div>
-        {siteConfig.projects.map((group) => (
-          <div mb-10>
-            <h2 mb-4 font-bold>
-              {group.title}
-            </h2>
-            <ListProjects list={group.projects} />
-          </div>
-        ))}
-      </div>
-    )
-  }
+  <div mb-16 sm:mb-24>
+    {
+      siteConfig.projects.length > 0 && (
+        <div>
+          {siteConfig.projects.map((group) => (
+            <div mb-10>
+              <h2 mb-4 font-bold>
+                {group.title}
+              </h2>
+              <ListProjects list={group.projects} />
+            </div>
+          ))}
+        </div>
+      )
+    }
+  </div>
 </BaseLayout>
