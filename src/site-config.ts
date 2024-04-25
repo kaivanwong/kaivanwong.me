@@ -168,20 +168,20 @@ export const siteConfig = {
   ],
   footerNavLinks: [
     {
-      text: 'About',
-      href: '/about',
+      text: 'Contact',
+      href: 'mailto:kaivanwong@outlook.me',
     },
     {
       text: 'Sponsor',
       href: '/sponsor',
     },
     {
-      text: 'Contact Me',
-      href: 'mailto:kaivanwong@outlook.me',
+      text: 'Blog Theme',
+      href: 'https://github.com/kaivanwong/vitesse-astro-theme',
     },
     {
-      text: 'Current Blog Theme',
-      href: 'https://github.com/kaivanwong/vitesse-astro-theme',
+      text: 'About Me',
+      href: '/about',
     },
   ],
 }

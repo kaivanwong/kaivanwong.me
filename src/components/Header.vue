@@ -30,7 +30,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <header text-lg max-w-3xl mx-auto h-18 px-6 flex justify-between items-center relative>
+  <header text-lg max-w-3xl mx-auto h-22 px-6 flex justify-between items-center relative>
     <nav
       v-show="menu" ref="menuRef" flex flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-199 top-15 sm:flex-row
       flex-col sm:p0 p-4 bg-main border-1 border-main sm:border-none
