@@ -6,7 +6,7 @@ My personal website, incliuding blog and portfolio, it's developed by Vitesse Th
 
 ## Preview
 
-![Preview Image](./preview.jpg)
+![Preview Image](https://github.com/kaivanwong/astro-theme-vitesse/blob/main/preview.jpg)
 
 ## CC BY-NC-SA 4.0
 
