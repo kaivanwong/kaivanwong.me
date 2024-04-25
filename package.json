@@ -30,12 +30,14 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.15.0",
     "@iconify/json": "^2.2.203",
+    "@types/lodash": "^4.17.0",
     "@vueuse/core": "^10.9.0",
     "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-format": "^0.1.1",
     "lint-staged": "^15.2.2",
+    "lodash": "^4.17.21",
     "prettier-plugin-astro": "^0.13.0",
     "simple-git-hooks": "^2.11.1"
   },
