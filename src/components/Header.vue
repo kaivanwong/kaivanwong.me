@@ -1,10 +1,25 @@
 <script lang="ts" setup>
-import { ref, watchEffect } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 import { onClickOutside, useWindowSize } from '@vueuse/core'
 import siteConfig from '../site-config'
 import ThemeToggle from './ThemeToggle.vue'
 
 const navLinks = siteConfig.headerNavLinks || []
+
+const socialLinks = computed(() => {
+  return siteConfig.hero.socialLinks.filter((link: Record<string, any>) => {
+    if (link.header && typeof link.header === 'boolean') {
+      return link
+    }
+    else if (link.header && typeof link.header === 'string') {
+      link.icon = link.header.includes('i-') ? link.header : link.icon
+      return link
+    }
+    else {
+      return false
+    }
+  })
+})
 
 const menuRef = ref(null)
 
@@ -40,7 +55,9 @@ watchEffect(() => {
       </a>
     </nav>
     <menu sm:hidden inline-block i-ri-menu-2-fill @click="toggleMenu" />
-    <div flex gap-4 sm:gap-6>
+    <div flex gap-6>
+      <a v-for="link in socialLinks" :key="link.text" :class="link.icon" nav-link :href="link.href" />
+
       <a nav-link href="rss.xml" i-ri-rss-line />
       <ThemeToggle />
     </div>

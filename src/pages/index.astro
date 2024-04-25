@@ -13,6 +13,7 @@ const hero = siteConfig.hero
         {hero.title && <h1 class="text-title">{hero.title}</h1>}
         {hero.image.src && (
           <img
+            id="hero-image"
             class="w-full"
             src={hero.image.src}
             loading="lazy"

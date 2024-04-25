@@ -1,7 +1,7 @@
 ---
-import siteConfig from '../site-config'
-import BaseLayout from '../layouts/BaseLayout.astro'
-import ListProjects from '../components/ListProjects.vue'
+import { projectData } from './data'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import ListProjects from '../../components/ListProjects.vue'
 ---
 
 <BaseLayout
@@ -12,14 +12,14 @@ import ListProjects from '../components/ListProjects.vue'
   <h1 class="mb-10 text-title">Projects</h1>
   <div mb-16 sm:mb-24>
     {
-      siteConfig.projects.length > 0 && (
+      projectData.length > 0 && (
         <div>
-          {siteConfig.projects.map((group) => (
+          {projectData.map((i) => (
             <div mb-10>
               <h2 mb-4 font-bold>
-                {group.title}
+                {i.title}
               </h2>
-              <ListProjects list={group.projects} />
+              <ListProjects list={i.projects} />
             </div>
           ))}
         </div>

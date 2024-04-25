@@ -2,7 +2,7 @@
 defineProps<{
   list: {
     text: string
-    description: string
+    description?: string
     icon?: string
     href: string
   }[]
