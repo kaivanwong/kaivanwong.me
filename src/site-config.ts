@@ -29,9 +29,7 @@ export const siteConfig = {
   hero: {
     title: 'Kaivan Wong',
     text: `<p>Hi there</p>
-    <p>I am Kaivan Wong, a software engineer with perfectionism (it's not always good :p)</p>
-    <p>Currently focus on Web and mobile app development, including <a href="">Vue</a>, <a href="">Vite</a>, <a href="">Nuxt</a>, <a href="">React</a>, <a href="">Next</a>, <a href="">UnoCSS</a>, <a href="">Tailwind CSS</a>, <a href="">UniAPP</a>, <a href="">Flutter</a> and others.</p>
-    <p>I'm passionate about using technology to realize ideas, and technology ultimately has to serve the product. Expect to create excellent products and services and excellent user experience.</p>
+    <p>I'm Kaivan Wong, a software engineer with perfectionism (it's not always good :p)</p>
      `,
     image: {
       src: '/hero.png',
