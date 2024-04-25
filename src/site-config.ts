@@ -4,7 +4,7 @@ export const siteConfig = {
   subtitle: 'My personal website, incliuding blog and portfolio.',
   description: 'My personal website, incliuding blog and portfolio, it\'s developed by Vitesse Theme for Astro.',
   image: {
-    src: '/hero.png',
+    src: '/favicon.png',
     alt: 'Kaivan Wong',
   },
   email: 'kaivanwong@outlook.com',
@@ -33,7 +33,11 @@ export const siteConfig = {
      `,
     image: {
       src: '/hero.png',
-      alt: '',
+      alt: 'Hero image',
+    },
+    imageWithDark: {
+      src: '/hero-dark.png',
+      alt: 'Hero image with dark mode',
     },
     socialLinks: [
       {
