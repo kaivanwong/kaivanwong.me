@@ -45,17 +45,20 @@ watchEffect(() => {
 </script>
 
 <template>
-  <header text-lg max-w-3xl mx-auto h-22 px-6 flex justify-between items-center relative>
-    <nav
-      v-show="menu" ref="menuRef" flex flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-199 top-15 sm:flex-row
-      flex-col sm:p0 p-4 bg-main border-1 border-main sm:border-none
-    >
-      <a v-for="link in navLinks" :key="link.text" nav-link :href="link.href">
-        {{ link.text }}
-      </a>
-    </nav>
-    <menu sm:hidden inline-block i-ri-menu-2-fill @click="toggleMenu" />
-    <div flex gap-6>
+  <header class="!fixed w-full backdrop-blur-sm text-lg h-22 px-6 flex justify-between items-center relative">
+    <div class="flex items-center">
+      <img mr-4 sm:mr-8 w-8 src="/favicon.svg" alt="">
+      <nav
+        v-show="menu" ref="menuRef" class="flex flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-199 top-15 sm:flex-row
+      flex-col sm:p0 p-4 border-1 border-main sm:border-none"
+      >
+        <a v-for="link in navLinks" :key="link.text" nav-link :href="link.href">
+          {{ link.text }}
+        </a>
+      </nav>
+      <menu class="sm:hidden inline-block i-ri-menu-2-fill" @click="toggleMenu" />
+    </div>
+    <div class="flex gap-6 sm:gap-8">
       <a v-for="link in socialLinks" :key="link.text" :class="link.icon" nav-link :href="link.href" />
 
       <a nav-link href="rss.xml" i-ri-rss-line />
