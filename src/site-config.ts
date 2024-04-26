@@ -18,12 +18,12 @@ export const siteConfig = {
       href: '/blog',
     },
     {
-      text: 'Projects',
-      href: '/projects',
-    },
-    {
       text: 'Talks',
       href: '/talks',
+    },
+    {
+      text: 'Projects',
+      href: '/projects',
     },
   ],
   hero: {
