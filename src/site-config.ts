@@ -32,12 +32,14 @@ export const siteConfig = {
     <p>I'm Kaivan Wong, a software engineer with perfectionism (it's not always good :p)</p>
      `,
     image: {
-      src: '/hero.png',
-      alt: 'Hero image',
-    },
-    imageWithDark: {
-      src: '/hero-dark.png',
-      alt: 'Hero image with dark mode',
+      light: {
+        src: '/design-light.png',
+        alt: 'Design Image with Light Theme',
+      },
+      dark: {
+        src: '/design-dark.png',
+        alt: 'Design Image with Dark Theme',
+      },
     },
     socialLinks: [
       {

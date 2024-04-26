@@ -8,18 +8,28 @@ const hero = siteConfig.hero
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
   {
-    (hero.title || hero.image.src || hero.text || hero.socialLinks) && (
+    (hero.title || hero.image || hero.text || hero.socialLinks) && (
       <div class="prose max-w-3xl w-full">
         {hero.title && <h1 class="text-title">{hero.title}</h1>}
-        {hero.image.src && (
-          <img
-            id="hero-image"
-            class="w-full inline-block rounded-lg"
-            src={hero.image.src}
-            loading="lazy"
-            decoding="async"
-            alt={hero.image.alt || 'Hero Image'}
-          />
+        {hero.image && (
+          <>
+            <img
+              class="w-full inline-block rounded-lg"
+              img-light
+              src={hero.image.light.src}
+              loading="lazy"
+              decoding="async"
+              alt={hero.image.light.alt || 'Hero Image'}
+            />
+            <img
+              class="w-full inline-block rounded-lg"
+              img-dark
+              src={hero.image.dark.src}
+              loading="lazy"
+              decoding="async"
+              alt={hero.image.dark.alt || 'Hero Image'}
+            />
+          </>
         )}
         {hero.text && <div set:html={marked.parse(hero.text)} />}
         {hero.socialLinks.length > 0 && (
