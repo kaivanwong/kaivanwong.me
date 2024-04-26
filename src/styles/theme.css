@@ -26,3 +26,7 @@ html.dark {
 html:not(.dark) {
   scrollbar-color: #eee #fff;
 }
+
+.prose-link i {
+  --at-apply: text-sm mr-1;
+}

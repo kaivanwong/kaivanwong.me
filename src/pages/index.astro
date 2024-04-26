@@ -42,11 +42,10 @@ const hero = siteConfig.hero
                   aria-label={link.text}
                   href={link.href}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  class="prose-link flex items-center"
+                  class="prose-link"
                 >
-                  <i class:list={[link.icon, 'text-sm mr-1']} />
-                  <span>{link.text}</span>
+                  <i class:list={[link.icon]} />
+                  {link.text}
                 </a>
               ))}
             </p>
