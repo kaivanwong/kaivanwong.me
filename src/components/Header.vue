@@ -2,6 +2,7 @@
 import { computed, ref, watchEffect } from 'vue'
 import { onClickOutside, useWindowSize } from '@vueuse/core'
 import siteConfig from '../site-config'
+import { getLinkTarget } from '../utils/link'
 import ThemeToggle from './ThemeToggle.vue'
 
 const navLinks = siteConfig.headerNavLinks || []
@@ -47,20 +48,22 @@ watchEffect(() => {
 <template>
   <header class="!fixed w-full backdrop-blur-sm text-lg h-22 px-6 flex justify-between items-center relative">
     <div class="flex items-center">
-      <img img-dark mr-4 sm:mr-8 w-8 src="/logo-dark.png" alt="Logo Image">
-      <img img-light mr-4 sm:mr-8 w-8 src="/logo-light.png" alt="Logo Image">
+      <div v-if="siteConfig.headerLogo" mr-4 sm:mr-8 w-8>
+        <img img-dark :src="siteConfig.headerLogo.dark.src" :alt="siteConfig.headerLogo.dark.alt">
+        <img img-light :src="siteConfig.headerLogo.light.src" :alt="siteConfig.headerLogo.light.alt">
+      </div>
       <nav
-        v-show="menu" ref="menuRef" class="flex flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-199 top-15 sm:flex-row
-      flex-col sm:p0 p-4 border-1 border-main sm:border-none"
+        v-show="menu" ref="menuRef" class="flex flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-999 top-15 sm:flex-row
+      flex-col sm:p0 p-4 border-1 border-main sm:border-none bg-main"
       >
-        <a v-for="link in navLinks" :key="link.text" nav-link :href="link.href">
+        <a v-for="link in navLinks" :key="link.text" :target="getLinkTarget(link.href)" nav-link :href="link.href">
           {{ link.text }}
         </a>
       </nav>
       <menu class="sm:hidden inline-block i-ri-menu-2-fill" @click="toggleMenu" />
     </div>
     <div class="flex gap-6 sm:gap-8">
-      <a v-for="link in socialLinks" :key="link.text" :class="link.icon" nav-link :href="link.href" />
+      <a v-for="link in socialLinks" :key="link.text" :class="link.icon" nav-link :target="getLinkTarget(link.href)" :href="link.href" />
 
       <a nav-link href="rss.xml" i-ri-rss-line />
       <ThemeToggle />

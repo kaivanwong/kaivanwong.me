@@ -4,8 +4,18 @@ export const siteConfig = {
   subtitle: 'My personal website, incliuding blog and portfolio.',
   description: 'My personal website, incliuding blog and portfolio, it\'s developed by Vitesse Theme for Astro.',
   image: {
-    src: '/favicon.png',
+    src: '/favicon.svg',
     alt: 'Kaivan Wong',
+  },
+  headerLogo: {
+    light: {
+      src: '/logo-light.png',
+      alt: 'Logo Image',
+    },
+    dark: {
+      src: '/logo-dark.png',
+      alt: 'Logo Image',
+    },
   },
   email: 'kaivanwong@outlook.com',
   headerNavLinks: [
@@ -29,7 +39,7 @@ export const siteConfig = {
   hero: {
     title: 'Kaivan Wong',
     text: `<p>Hi there</p>
-    <p>I'm Kaivan Wong, a software engineer with perfectionism (it's not always good :p)</p>
+    <p>I'm Kaivan Wong, a software engineer with perfectionism (it's not always good :p).</p>
      `,
     image: {
       light: {
@@ -106,6 +116,10 @@ export const siteConfig = {
   ],
   footerNavLinks: [
     {
+      text: 'About',
+      href: '/about',
+    },
+    {
       text: 'Contact',
       href: 'mailto:kaivanwong@outlook.me',
     },
@@ -116,10 +130,6 @@ export const siteConfig = {
     {
       text: 'Blog Theme',
       href: 'https://github.com/kaivanwong/vitesse-astro-theme',
-    },
-    {
-      text: 'About Me',
-      href: '/about',
     },
   ],
 }
