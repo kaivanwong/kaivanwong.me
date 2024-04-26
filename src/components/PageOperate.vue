@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useWindowScroll } from '@vueuse/core'
-import { computed } from 'vue'
 
 withDefaults(defineProps<{
   showShare?: boolean
