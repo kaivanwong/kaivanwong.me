@@ -38,8 +38,9 @@ export const siteConfig = {
   ],
   hero: {
     title: 'Kaivan Wong',
-    text: `<p>Hi there</p>
-    <p>I'm Kaivan Wong, a software engineer with perfectionism (it's not always good :p).</p>
+    text:
+      `<p>Hi there</p>
+      <p>I'm Kaivan Wong, a software engineer and product manager with perfectionism (it's not always good :p).</p>
      `,
     image: {
       light: {

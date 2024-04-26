@@ -52,7 +52,7 @@ function getYear(date: Date | string | number) {
           {{ getYear(posts.data.date) }}
         </span>
       </div>
-      <a text-lg lh-tight nav-link flex="~ col gap-2" :target="getTarget(posts)" :href="getHref(posts)">
+      <a text-lg lh-tight nav-link flex="~ col gap-2" :aria-label="posts.data.title" :target="getTarget(posts)" :href="getHref(posts)">
         <div flex="~ col md:row gap-2 md:items-center">
           <div flex="~ gap-2 items-center text-wrap">
             <span lh-normal>

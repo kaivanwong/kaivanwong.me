@@ -56,16 +56,16 @@ watchEffect(() => {
         v-show="menu" ref="menuRef" class="flex flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-999 top-15 sm:flex-row
       flex-col sm:p0 p-4 border-1 border-main sm:border-none bg-main"
       >
-        <a v-for="link in navLinks" :key="link.text" :target="getLinkTarget(link.href)" nav-link :href="link.href">
+        <a v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)" nav-link :href="link.href">
           {{ link.text }}
         </a>
       </nav>
-      <menu class="sm:hidden inline-block i-ri-menu-2-fill" @click="toggleMenu" />
+      <menu class="sm:hidden inline-block i-ri-menu-2-fill" aria-label="menu" @click="toggleMenu" />
     </div>
     <div class="flex gap-6 sm:gap-8">
-      <a v-for="link in socialLinks" :key="link.text" :class="link.icon" nav-link :target="getLinkTarget(link.href)" :href="link.href" />
+      <a v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="link.icon" nav-link :target="getLinkTarget(link.href)" :href="link.href" />
 
-      <a nav-link href="rss.xml" i-ri-rss-line />
+      <a nav-link href="rss.xml" i-ri-rss-line aria-label="RSS" />
       <ThemeToggle />
     </div>
   </header>

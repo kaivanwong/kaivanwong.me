@@ -39,6 +39,7 @@ const hero = siteConfig.hero
             <p class="flex gap-x-4 gap-y-2 flex-wrap">
               {hero.socialLinks.map((link) => (
                 <a
+                  aria-label={link.text}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -54,7 +55,11 @@ const hero = siteConfig.hero
         {siteConfig.email && (
           <p>
             If you have any questions, please email me at
-            <a prose-link href={`mailto:${siteConfig.email}`}>
+            <a
+              prose-link
+              aria-label={siteConfig.email}
+              href={`mailto:${siteConfig.email}`}
+            >
               {siteConfig.email}
             </a>
             .
