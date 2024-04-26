@@ -34,11 +34,11 @@ export const siteConfig = {
     image: {
       light: {
         src: '/design-light.png',
-        alt: 'Design Image with Light Theme',
+        alt: 'Design Image',
       },
       dark: {
         src: '/design-dark.png',
-        alt: 'Design Image with Dark Theme',
+        alt: 'Design Image',
       },
     },
     socialLinks: [

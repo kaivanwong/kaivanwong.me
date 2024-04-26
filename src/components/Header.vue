@@ -47,7 +47,8 @@ watchEffect(() => {
 <template>
   <header class="!fixed w-full backdrop-blur-sm text-lg h-22 px-6 flex justify-between items-center relative">
     <div class="flex items-center">
-      <img mr-4 sm:mr-8 w-8 src="/favicon.svg" alt="">
+      <img img-dark mr-4 sm:mr-8 w-8 src="/logo-dark.png" alt="Logo Image">
+      <img img-light mr-4 sm:mr-8 w-8 src="/logo-light.png" alt="Logo Image">
       <nav
         v-show="menu" ref="menuRef" class="flex flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-199 top-15 sm:flex-row
       flex-col sm:p0 p-4 border-1 border-main sm:border-none"
