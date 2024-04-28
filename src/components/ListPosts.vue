@@ -42,7 +42,7 @@ function getYear(date: Date | string | number) {
 <template>
   <ul>
     <template v-if="!list || list.length === 0">
-      <div py2 opacity-50>
+      <div mt-12 mb-20 opacity-50>
         nothing here yet.
       </div>
     </template>

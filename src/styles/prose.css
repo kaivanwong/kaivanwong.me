@@ -17,3 +17,7 @@
 .prose h3 {
   --at-apply: mt-10 mb-4 text-5;
 }
+
+article {
+  --at-apply: min-h-30;
+}
