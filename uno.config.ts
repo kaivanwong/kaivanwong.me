@@ -12,8 +12,8 @@ import {
 export default defineConfig({
   shortcuts: [
     {
-      'bg-main': 'bg-white dark:bg-black',
-      'text-main': 'text-hex-555 dark:text-hex-bbb',
+      'bg-main': 'bg-hex-eef5fc dark:bg-hex-0d1117',
+      'text-main': 'text-hex-010409 dark:text-hex-ffffff',
       'text-link': 'text-dark dark:text-white ',
       'border-main': 'border-truegray-300 dark:border-truegray-600',
     },
@@ -36,10 +36,7 @@ export default defineConfig({
     }),
     presetTypography(),
     presetWebFonts({
-      fonts: {
-        sans: 'Inter:400,600,800',
-        mono: 'DM Mono:400,600',
-      },
+      provider: 'google',
     }),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],

@@ -48,11 +48,11 @@ export const siteConfig = {
      `,
     image: {
       light: {
-        src: '/design-light.png',
+        src: '/personal/design-light.png',
         alt: 'Design Image',
       },
       dark: {
-        src: '/design-dark.png',
+        src: '/personal/design-dark.png',
         alt: 'Design Image',
       },
     },

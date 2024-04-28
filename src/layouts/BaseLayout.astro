@@ -15,9 +15,9 @@ const { pageNav = false, pageOperate = false, ...head } = Astro.props
     <BaseHead {...head} />
     <ViewTransitions />
   </head>
-  <body class="bg-main text-main min-h-screen font-sans w-full">
+  <body class="bg-main text-main min-h-screen font-sans w-full bg-dot">
     <Header client:load />
-    <main class="grow max-w-3xl mx-auto pt-36 pb-16 px-6">
+    <main class="grow max-w-3xl mx-auto pt-36 pb-16 px-6 relative">
       {pageNav && <PageNav client:load pathname={Astro.url.pathname} />}
       <slot />
       {

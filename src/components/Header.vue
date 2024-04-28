@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref, watchEffect } from 'vue'
-import { onClickOutside, useWindowSize } from '@vueuse/core'
+import { onClickOutside, useWindowScroll, useWindowSize } from '@vueuse/core'
+
 import siteConfig from '../site-config'
 import { getLinkTarget } from '../utils/link'
 import ThemeToggle from './ThemeToggle.vue'
@@ -43,18 +44,20 @@ watchEffect(() => {
   else
     menu.value = false
 })
+
+const { y: scroll } = useWindowScroll()
 </script>
 
 <template>
-  <header class="!fixed w-full backdrop-blur-sm text-lg h-22 px-6 flex justify-between items-center relative">
+  <header :class="{ 'backdrop-blur-sm': scroll > 80 }" class="!fixed z-999 w-full  text-lg h-22 px-6 flex justify-between items-center relative">
     <div class="flex items-center">
-      <div v-if="siteConfig.headerLogo" mr-4 sm:mr-8 w-8>
+      <div v-if="siteConfig.headerLogo" mr-4 sm:mr-8 class="header-logo">
         <img img-dark :src="siteConfig.headerLogo.dark.src" :alt="siteConfig.headerLogo.dark.alt">
         <img img-light :src="siteConfig.headerLogo.light.src" :alt="siteConfig.headerLogo.light.alt">
       </div>
       <nav
         v-show="menu" ref="menuRef" class="flex flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-999 top-15 sm:flex-row
-      flex-col sm:p0 p-4 border-1 border-main sm:border-none bg-main"
+      flex-col sm:p0 p-4 border-1 border-main sm:border-none"
       >
         <a v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)" nav-link :href="link.href">
           {{ link.text }}
