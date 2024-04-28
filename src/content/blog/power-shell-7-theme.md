@@ -55,7 +55,6 @@ notepad $Profile
 ```
 
 ```
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/uew.omp.json" | Invoke-Expression
 ```
 
 如果提示不存在则点击 “是” 创建。如果无法自动创建请执行 `echo $Profile` 并安装给出的目录手动创建文件夹和文件。
@@ -63,15 +62,55 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/uew.omp.json" | Invoke-Expr
 将以下内容输入到文件中。
 
 ```
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/atomic.omp.json"
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/uew.omp.json"
 ```
 
-新建一个 PowerShell 7 终端查看效果。
+新建一个 Power Shell 7 终端查看效果。
 
-在 Windows 11 上可能上述命令执行之后没有效果，在上述命令的末尾增加 | `Invoke-Expression` 即可，即使用如下命令。
+![Power Shell 7 Theme](/blog/power-shell-7-theme/no-font.png)
+
+在 Windows 11 上可能上述命令执行之后没有效果，在上述命令的末尾增加 `| Invoke-Expression` 即可，即使用如下命令。
 
 完整内容如下：
 
 ```
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/atomic.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/uew.omp.json" | Invoke-Expression
 ```
+
+## Nerd 字体
+
+配置好主题后，可以看到 Oh My Posh 的配置已经生效了，但是会有乱码的情况出现。乱码是因为当前 Windows Terminal 使用的字体不是 Nerd Fonts 字体（见[官方文档](https://www.nerdfonts.com/)），因此我们需要下载一份 Nerd Fonts 字体并配置为 Windows Terminal 使用的字体。
+
+这里下载名为 CaskaydiaCove Nerd Font 的字体并进行安装。
+
+安装完成后，重启 Windows Terminal，进入设置界面，选择 Power Shell 7 的外观选项修改字体。
+
+![CaskaydiaCove Nerd Font](/blog/power-shell-7-theme/caskaydia-cove-nerd-font.png)
+
+重新启动  Windows Terminal 发现已经正常。
+
+![UEW Theme](/blog/power-shell-7-theme/uew-theme.png)
+
+## 修改主题
+
+如果想要修改主题，可以运行如下命令查看可用主题效果。
+
+```sh
+Get-PoshThemes
+```
+
+效果如下：
+
+![Oh My Posh Themes](/blog/power-shell-7-theme/oh-my-posh-theme.png)
+
+然后运行 `notepad $Profile` 命令打开配置文件，将 `uew` 修改为你选择的主题名称，如选择了 `velvet`，则完整内容如下：
+
+```
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/velvet.omp.json" | Invoke-Expression
+```
+
+也可以通过[官方文档](https://ohmyposh.dev/docs/themes)中的主题示例进行选择。
+
+![Oh My Posh Themes](/blog/power-shell-7-theme/themes.png)
+
+其他关于 Windows Terminal 的外观修改可以直接从设置中进行修改，如毛玻璃等效果。
