@@ -46,7 +46,7 @@ function getYear(date: Date | string | number) {
         nothing here yet.
       </div>
     </template>
-    <li v-for="(posts, index) in list " :key="posts.data.title" mb-6>
+    <li v-for="(posts, index) in list " :key="posts.data.title" mb-8>
       <div v-if="!isSameYear(posts.data.date, list[index - 1]?.data.date)" select-none relative h18 pointer-events-none>
         <span text-7em color-transparent font-bold text-stroke-2 text-stroke-hex-aaa op14 absolute top--0.2em>
           {{ getYear(posts.data.date) }}
@@ -63,11 +63,10 @@ function getYear(date: Date | string | number) {
           <div opacity-50 text-sm ws-nowrap flex="~ gap-2 items-center">
             <i v-if="posts.data.redirect" text-base i-ri-external-link-line />
             <i v-if="posts.data.recording || posts.data.video" text-base i-ri:film-line />
-            <time :datetime="getDate(posts.data.date)">{{ posts.data.date.split(',')[0] }}</time>
+            <time v-if="posts.data.date" :datetime="getDate(posts.data.date)">{{ posts.data.date.split(',')[0] }}</time>
             <span v-if="posts.data.duration">· {{ posts.data.duration }}</span>
             <span v-if="posts.data.tag">· {{ posts.data.tag }}</span>
             <span v-if="posts.data.lang.includes('zh')">· 中文</span>
-            <span v-if="posts.data.link">· 中文</span>
           </div>
         </div>
         <div opacity-50 text-sm>{{ posts.data.description }}</div>

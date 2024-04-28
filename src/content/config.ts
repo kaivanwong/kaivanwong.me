@@ -27,16 +27,7 @@ const postsSchema = z.object({
 })
 
 const pages = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    image: z
-      .object({
-        src: z.string(),
-        alt: z.string().optional(),
-      })
-      .optional(),
-  }),
+  schema: postsSchema,
 })
 
 const blog = defineCollection({

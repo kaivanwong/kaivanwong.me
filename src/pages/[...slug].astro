@@ -17,6 +17,7 @@ type Props = { page: CollectionPages }
 
 const { page } = Astro.props
 const { title, description, image } = page.data
+
 const { Content } = await page.render()
 ---
 

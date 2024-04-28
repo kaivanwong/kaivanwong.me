@@ -27,14 +27,6 @@ html:not(.dark) [img-dark] {
   display: none;
 }
 
-.prose-link i {
-  --at-apply: text-sm mr-1;
-}
-
-.prose a {
-  --at-apply: prose-link;
-}
-
 .bg-dot::before {
   content: '';
   position: absolute;

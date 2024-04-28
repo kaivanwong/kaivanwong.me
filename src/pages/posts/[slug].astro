@@ -17,8 +17,12 @@ export async function getStaticPaths() {
 type Props = { post: CollectionPosts }
 
 const { post } = Astro.props
-const { title, image, description } = post.data
+const { title, image, description, date, duration } = post.data
 const { Content } = await post.render()
+
+function getDate(date: string) {
+  return new Date(date).toISOString()
+}
 ---
 
 <BaseLayout
@@ -28,12 +32,14 @@ const { Content } = await post.render()
   pageType="article"
   pageOperate={true}
 >
-  <article class="mb-16 sm:mb-24">
-    <h1 class="text-title mb-12">
+  <article class="mb-16 sm:mb-24 max-w-none prose">
+    <h1 class="text-title mb-5">
       {title}
     </h1>
-    <div class="max-w-none prose">
-      <Content />
+    <div op-50 mb-10>
+      {date && <time datetime={getDate(date)}>{date.split(',')[0]}</time>}
+      {duration && <span>· {duration}</span>}
     </div>
+    <Content />
   </article>
 </BaseLayout>
