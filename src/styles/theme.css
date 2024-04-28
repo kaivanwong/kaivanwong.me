@@ -1,19 +1,23 @@
 html.dark .astro-code,
 html.dark .astro-code span {
   color: var(--shiki-dark) !important;
-  background-color: var(--shiki-dark-bg) !important;
+  background-color: #161b22 !important;
   font-style: var(--shiki-dark-font-style) !important;
   font-weight: var(--shiki-dark-font-weight) !important;
   text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 
 html.dark {
+  color-scheme: dark;
+
   --dot-bg-color: #0d1117;
   --dot-color: #2f353c;
   --dot-mask-color: #000000;
 }
 
 html:not(.dark) {
+  color-scheme: light;
+
   --dot-bg-color: #ffffff;
   --dot-color: #a5aeb850;
   --dot-mask-color: #ffffff;
