@@ -34,12 +34,12 @@ function toggleMenu() {
 const { width } = useWindowSize()
 
 onClickOutside(menuRef, () => {
-  if (width.value < 640)
+  if (width.value < 800)
     menu.value = false
 })
 
 watchEffect(() => {
-  if (width.value > 640)
+  if (width.value > 800)
     menu.value = true
   else
     menu.value = false
@@ -49,24 +49,33 @@ const { y: scroll } = useWindowScroll()
 </script>
 
 <template>
-  <header :class="{ 'backdrop-blur-sm': scroll > 80 }" class="!fixed z-999 w-full  text-lg h-22 px-6 flex justify-between items-center relative">
+  <header
+    :class="{ 'backdrop-blur-sm': scroll > 80 }"
+    class="!fixed z-899 w-screen text-lg h-22 px-6 flex justify-between items-center relative"
+  >
     <div class="flex items-center">
       <div v-if="siteConfig.headerLogo" mr-4 sm:mr-8 class="header-logo">
         <img img-dark :src="siteConfig.headerLogo.dark.src" :alt="siteConfig.headerLogo.dark.alt">
         <img img-light :src="siteConfig.headerLogo.light.src" :alt="siteConfig.headerLogo.light.alt">
       </div>
       <nav
-        v-show="menu" ref="menuRef" class="flex flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-999 top-15 sm:flex-row
+        v-show="menu" ref="menuRef" class="flex bg-main sm:bg-transparent sm:dark:bg-transparent flex-wrap gap-4 sm:gap-6 sm:position-initial absolute z-999 top-15 sm:flex-row
       flex-col sm:p0 p-4 border-1 border-main sm:border-none"
       >
-        <a v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)" nav-link :href="link.href">
+        <a
+          v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
+          nav-link :href="link.href"
+        >
           {{ link.text }}
         </a>
       </nav>
       <menu class="sm:hidden inline-block i-ri-menu-2-fill" aria-label="menu" @click="toggleMenu" />
     </div>
     <div class="flex gap-6 sm:gap-8">
-      <a v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="link.icon" nav-link :target="getLinkTarget(link.href)" :href="link.href" />
+      <a
+        v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="link.icon" nav-link
+        :target="getLinkTarget(link.href)" :href="link.href"
+      />
 
       <a nav-link href="rss.xml" i-ri-rss-line aria-label="RSS" />
       <ThemeToggle />

@@ -33,7 +33,7 @@ function toTop() {
 </script>
 
 <template>
-  <div w-full opacity-50 text-main>
+  <div w-full opacity-75 text-main>
     <div v-if="showShare" flex="~ gap-2 items-center flex-wrap" mb-2>
       <i i-ri-arrow-right-s-line />
       <span mr-1>Share to</span>
@@ -53,7 +53,7 @@ function toTop() {
     </div>
     <div v-if="showBack" flex="~ gap-2 items-center">
       <i i-ri-arrow-right-s-line />
-      <a font-mono prose-link href="javascript:history.back(-1)" aria-label="cd ..">cd ..</a>
+      <a prose-link href="javascript:history.back(-1)" aria-label="cd ..">cd ..</a>
     </div>
   </div>
 </template>

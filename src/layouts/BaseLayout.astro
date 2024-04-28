@@ -22,16 +22,14 @@ const { pageNav = false, pageOperate = false, ...head } = Astro.props
       <slot />
       {
         pageOperate && (
-          <div mt-12>
-            <PageOperate
-              client:load
-              showShare={head.pageType === 'article'}
-              url={Astro.url}
-            />
-          </div>
+          <PageOperate
+            client:load
+            showShare={head.pageType === 'article'}
+            url={Astro.url}
+          />
         )
       }
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>
