@@ -20,16 +20,16 @@ export const siteConfig = {
   email: 'kaivanwong@outlook.com',
   headerNavLinks: [
     {
-      text: 'Home',
-      href: '/',
-    },
-    {
       text: 'Blog',
       href: '/blog',
     },
     {
       text: 'Talks',
       href: '/talks',
+    },
+    {
+      text: 'Notes',
+      href: '/notes',
     },
     {
       text: 'Projects',

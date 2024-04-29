@@ -40,7 +40,7 @@ function getYear(date: Date | string | number) {
 </script>
 
 <template>
-  <ul>
+  <ul min-h-38>
     <template v-if="!list || list.length === 0">
       <div mt-12 mb-20 opacity-50>
         nothing here yet.
