@@ -19,5 +19,5 @@
 }
 
 article {
-  --at-apply: min-h-xs;
+  --at-apply: sm: min-h-38 min-h-28;
 }

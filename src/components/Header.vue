@@ -27,6 +27,12 @@ const { y: scroll } = useWindowScroll()
 const oldScroll = ref(unref(scroll))
 
 onMounted(() => {
+  const navMask = document.querySelector('.nav-drawer-mask') as HTMLElement
+
+  navMask?.addEventListener('touchmove', (event) => {
+    event.preventDefault()
+  })
+
   const headerEl = document.querySelector('#header') as HTMLElement
   if (!headerEl)
     return
@@ -74,7 +80,7 @@ function toggleNavDrawer() {
     id="header" :class="{ 'header-bg-blur': scroll > 20 }"
     class="!fixed bg-transparent z-899 w-screen text-lg h-22 px-6 flex justify-between items-center relative"
   >
-    <div class="flex items-center gap-6">
+    <div class="flex items-center h-full">
       <a v-if="siteConfig.headerLogo" href="/" aria-label="Header Logo Image" class="header-logo">
         <img img-dark :src="siteConfig.headerLogo.dark.src" :alt="siteConfig.headerLogo.dark.alt">
         <img img-light :src="siteConfig.headerLogo.light.src" :alt="siteConfig.headerLogo.light.alt">
@@ -88,7 +94,9 @@ function toggleNavDrawer() {
           {{ link.text }}
         </a>
       </nav>
-      <menu sm:hidden i-ri-menu-2-fill @click="toggleNavDrawer" />
+      <button h-full px-2 mx-2 flex items-center @click="toggleNavDrawer">
+        <menu sm:hidden i-ri-menu-2-fill />
+      </button>
     </div>
     <div class="flex gap-6 sm:gap-8">
       <a
