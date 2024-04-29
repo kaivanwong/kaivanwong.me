@@ -54,9 +54,6 @@ $env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
 notepad $Profile
 ```
 
-```
-```
-
 如果提示不存在则点击 “是” 创建。如果无法自动创建请执行 `echo $Profile` 并安装给出的目录手动创建文件夹和文件。
 
 将以下内容输入到文件中。
