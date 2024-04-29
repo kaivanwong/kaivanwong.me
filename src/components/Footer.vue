@@ -6,14 +6,16 @@ import { getLinkTarget } from '../utils/link'
 <template>
   <footer class="w-full mt-18 max-w-3xl px-1.5 op-75 text-sm">
     <hr class="hr-line mx-0 w-full">
-    <div class="flex flex-wrap gap-x-4 gap-y-2 mb-4">
-      <a v-for="link in siteConfig.footerNavLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)" class="nav-link" :href="link.href">
-        {{ link.text }}
-      </a>
+    <div v-if="siteConfig.footerNavLinks && siteConfig.footerNavLinks.length > 0" class="flex flex-wrap gap-4 mb-4">
+      <template v-for="(link, index) in siteConfig.footerNavLinks" :key="link.text">
+        <a :aria-label="`${link.text}`" :target="getLinkTarget(link.href)" class="nav-link" :href="link.href">
+          {{ link.text }}
+        </a>
+        <span v-if="index < siteConfig.footerNavLinks.length - 1"> / </span>
+      </template>
     </div>
     <div class="flex flex-wrap text-dark dark:text-white">
-      <span class="opacity-70">2023-PRESENT ©</span>
-      <a class="!nav-link opacity-100 ml-1" href="/" :aria-label="`${siteConfig.author}`">{{ siteConfig.author }}</a>.
+      <span class="opacity-70">2023-PRESENT © {{ siteConfig.author }}.</span>
     </div>
   </footer>
 </template>

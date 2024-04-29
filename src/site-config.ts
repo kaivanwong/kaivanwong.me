@@ -43,8 +43,7 @@ export const siteConfig = {
       <p>I'm Kaivan, a front-end engineer with perfectionism (it's not always good :p).</p>
       <p>Creator of <a class="prose-link" target="_blank" href="https://github.com/opuntia-dev"><i class="i-mdi-cactus"></i>Opuntia</a>, <a class="prose-link" target="_blank" href="https://github.com/stack-nax"><i class="i-ri-infinity-line"></i>Infinite</a>.</p>
       <p>Member of <a class="prose-link" target="_blank" href="https://github.com/antdv-pro"><i class="i-ant-design-ant-design-outlined"></i>Andtv Pro</a>.</p>
-      <p>I am learning in order to make my own products. As a developer and designer, my philosophy is that software should be a clear, easy path that removes unnecessary complexity. As the same time, technology is just a tool that must ultimately serve the product.</p>
-      <p>Currently, I focus on enterprise software solutions and visual low code directions. It is committed to creating software services that can provide low cost and high efficiency for small and medium-sized entrepreneurial teams.</p>
+      <p>This is my personal website where you can read my blog and notes.</p>
      `,
     image: {
       light: {
@@ -125,16 +124,20 @@ export const siteConfig = {
       href: '/about',
     },
     {
-      text: 'Contact',
-      href: 'mailto:kaivanwong@outlook.me',
-    },
-    {
-      text: 'Sponsor',
+      text: 'Sponsor to Me',
       href: '/sponsor',
     },
     {
-      text: 'Blog Theme',
+      text: 'Stack Nax',
+      href: 'https://stacknax.com',
+    },
+    {
+      text: 'Website Starter Template',
       href: 'https://github.com/kaivanwong/vitesse-astro-theme',
+    },
+    {
+      text: 'GitHub Repo',
+      href: 'https://github.com/kaivanwong/kaivanwong.me',
     },
   ],
 }
