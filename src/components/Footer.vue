@@ -4,7 +4,8 @@ import { getLinkTarget } from '../utils/link'
 </script>
 
 <template>
-  <footer class="w-full mt-18 text-base max-w-3xl px-1.5 op-75">
+  <footer class="w-full mt-18 max-w-3xl px-1.5 op-75 text-sm">
+    <hr class="hr-line mx-0 w-full">
     <div class="flex flex-wrap gap-x-4 gap-y-2 mb-4">
       <a v-for="link in siteConfig.footerNavLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)" class="nav-link" :href="link.href">
         {{ link.text }}

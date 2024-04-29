@@ -9,7 +9,7 @@ const hero = siteConfig.hero
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
   {
     (hero.title || hero.image || hero.text || hero.socialLinks) && (
-      <div class="prose max-w-3xl w-full">
+      <div class="prose max-w-3xl w-full text-base">
         {hero.title && <h1 class="text-title">{hero.title}</h1>}
         {hero.image && (
           <>
@@ -34,7 +34,7 @@ const hero = siteConfig.hero
         {hero.text && <div set:html={marked.parse(hero.text)} />}
         {hero.socialLinks.length > 0 && (
           <>
-            <hr class="w-14 mx-auto my-8 border-solid border-1px !border-truegray-200 !dark:border-truegray-800" />
+            <hr class="hr-line" />
             <p>Find me on</p>
             <p class="flex gap-x-4 gap-y-2 flex-wrap">
               {hero.socialLinks.map((link) => (
