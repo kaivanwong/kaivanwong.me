@@ -45,7 +45,7 @@ html:not(.dark) [img-dark] {
 }
 
 .header-logo {
-  --at-apply: w-10;
+  --at-apply: w-10 cursor-pointer;
 }
 
 .header-logo span {

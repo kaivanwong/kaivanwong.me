@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { onClickOutside, useWindowScroll, useWindowSize } from '@vueuse/core'
-import { computed, onMounted, ref, unref, watchEffect } from 'vue'
+import { useWindowScroll } from '@vueuse/core'
+import { computed, onMounted, ref, unref } from 'vue'
 import siteConfig from '../site-config'
 import { getLinkTarget } from '../utils/link'
 import ThemeToggle from './ThemeToggle.vue'
@@ -20,28 +20,6 @@ const socialLinks = computed(() => {
       return false
     }
   })
-})
-
-const menuRef = ref(null)
-
-const menu = ref(false)
-
-function toggleMenu() {
-  menu.value = !menu.value
-}
-
-const { width } = useWindowSize()
-
-onClickOutside(menuRef, () => {
-  if (width.value < 800)
-    menu.value = false
-})
-
-watchEffect(() => {
-  if (width.value > 800)
-    menu.value = true
-  else
-    menu.value = false
 })
 
 const { y: scroll } = useWindowScroll()
@@ -81,8 +59,8 @@ onMounted(() => {
     :class="{ 'header-bg-blur': scroll > 20 }"
     class="!fixed bg-transparent z-899 w-screen text-lg h-22 px-6 flex justify-between items-center relative"
   >
-    <div class="flex items-center">
-      <a v-if="siteConfig.headerLogo" href="/" aria-label="Header Logo Image" class="header-logo mr-4 sm:mr-8 cursor-pointer">
+    <div class="flex items-center gap-6">
+      <a v-if="siteConfig.headerLogo" href="/" aria-label="Header Logo Image" class="header-logo">
         <img img-dark :src="siteConfig.headerLogo.dark.src" :alt="siteConfig.headerLogo.dark.alt">
         <img img-light :src="siteConfig.headerLogo.light.src" :alt="siteConfig.headerLogo.light.alt">
       </a>
@@ -95,7 +73,6 @@ onMounted(() => {
           {{ link.text }}
         </a>
       </nav>
-      <menu class="sm:hidden inline-block i-ri-menu-2-fill" aria-label="menu" @click="toggleMenu" />
     </div>
     <div class="flex gap-6 sm:gap-8">
       <a
