@@ -81,11 +81,11 @@ function toggleNavDrawer() {
     class="!fixed bg-transparent z-899 w-screen text-lg h-22 px-6 flex justify-between items-center relative"
   >
     <div class="flex items-center h-full">
-      <a v-if="siteConfig.headerLogo" href="/" aria-label="Header Logo Image" class="header-logo">
+      <a v-if="siteConfig.headerLogo" mr-6 href="/" aria-label="Header Logo Image" class="header-logo">
         <img img-dark :src="siteConfig.headerLogo.dark.src" :alt="siteConfig.headerLogo.dark.alt">
         <img img-light :src="siteConfig.headerLogo.light.src" :alt="siteConfig.headerLogo.light.alt">
       </a>
-      <a v-else href="/" aria-label="Home">Home</a>
+      <a v-else mr-6 href="/" aria-label="Home">Home</a>
       <nav class="sm:flex hidden flex-wrap gap-6 position-initial flex-row">
         <a
           v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
