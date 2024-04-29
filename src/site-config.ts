@@ -43,7 +43,8 @@ export const siteConfig = {
       <p>I'm Kaivan, a front-end engineer with perfectionism (it's not always good :p).</p>
       <p>Creator of <a class="prose-link" target="_blank" href="https://github.com/opuntia-dev"><i class="i-mdi-cactus"></i>Opuntia</a>, <a class="prose-link" target="_blank" href="https://github.com/stack-nax"><i class="i-ri-infinity-line"></i>Infinite</a>.</p>
       <p>Member of <a class="prose-link" target="_blank" href="https://github.com/antdv-pro"><i class="i-ant-design-ant-design-outlined"></i>Andtv Pro</a>.</p>
-      <p>This is my personal website where you can read my blog and notes.</p>
+      <p>I love technology. At present, I focus on the all front-end application technology stack, developing web applications, mobile apps and desktop applications. My goal is to be able to make excellent products, so I am studying hard.</p>
+      <p>This is my personal website where you can read my blog and notes. If you like this, please visit my social media page and follow me.</p>
      `,
     image: {
       light: {
