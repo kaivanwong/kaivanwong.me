@@ -81,11 +81,11 @@ function toggleNavDrawer() {
     class="!fixed bg-transparent z-899 w-screen text-lg h-22 px-6 flex justify-between items-center relative"
   >
     <div class="flex items-center h-full">
-      <a v-if="siteConfig.headerLogo" mr-6 href="/" aria-label="Header Logo Image" class="header-logo">
+      <a v-if="siteConfig.headerLogo" sm:mr-6 href="/" aria-label="Header Logo Image" class="header-logo">
         <img img-dark :src="siteConfig.headerLogo.dark.src" :alt="siteConfig.headerLogo.dark.alt">
         <img img-light :src="siteConfig.headerLogo.light.src" :alt="siteConfig.headerLogo.light.alt">
       </a>
-      <a v-else mr-6 href="/" aria-label="Home">Home</a>
+      <a v-else sm:mr-6 href="/" aria-label="Home">Home</a>
       <nav class="sm:flex hidden flex-wrap gap-6 position-initial flex-row">
         <a
           v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
@@ -94,8 +94,8 @@ function toggleNavDrawer() {
           {{ link.text }}
         </a>
       </nav>
-      <button h-full px-2 mx-2 flex items-center @click="toggleNavDrawer">
-        <menu sm:hidden i-ri-menu-2-fill />
+      <button sm:hidden h-full px-2 ml-4 flex items-center @click="toggleNavDrawer">
+        <menu i-ri-menu-2-fill />
       </button>
     </div>
     <div class="flex gap-6 sm:gap-8">
@@ -109,7 +109,7 @@ function toggleNavDrawer() {
     </div>
   </header>
   <nav
-    class="nav-drawer"
+    class="nav-drawer sm:hidden"
   >
     <i i-ri-menu-2-fill />
     <a
