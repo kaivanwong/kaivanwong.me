@@ -2,8 +2,9 @@
 import siteConfig from '../site-config'
 import '../styles/prose.css'
 import '../styles/theme.css'
+import { ViewTransitions } from 'astro:transitions'
 
-export type Props = {
+interface Props {
   title?: string
   description?: string
   image?: { src: string; alt?: string }
@@ -15,13 +16,16 @@ const {
   image = siteConfig.image,
   pageType = 'website',
 } = Astro.props
+
 const title = [Astro.props.title, siteConfig.title].filter(Boolean).join(' | ')
+
 const resolvedImage = image?.src
   ? {
       src: new URL(image.src, Astro.site).toString(),
       alt: image.alt,
     }
   : undefined
+
 const canonicalURL = new URL(Astro.request.url, Astro.site)
 
 /**
@@ -73,7 +77,7 @@ function formatCanonicalURL(url: string | URL) {
   )
 }
 
-<!-- X/Twitter -->
+<!-- X / Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={formatCanonicalURL(canonicalURL)} />
 <meta property="twitter:title" content={title} />
@@ -88,3 +92,5 @@ function formatCanonicalURL(url: string | URL) {
     <meta name="twitter:image:alt" content={resolvedImage?.alt} />
   )
 }
+
+<ViewTransitions />

@@ -3,7 +3,7 @@ title: "Node.js 版本控制"
 description: "通过为 Windows 和 MAC 系统安装 NVM 工具进行 Node.js 版本管理。"
 duration: "15min"
 lang: "zh-CN"
-date: "2024-04-28"
+date: "2023-12-02"
 ---
 
 本文章介绍如何使用 [NVM](https://github.com/nvm-sh/nvm)（Node Version Manager 即 Node 版本管理工具）。
