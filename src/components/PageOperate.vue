@@ -17,7 +17,7 @@ const shareLinks = [
     href: 'https://twitter.com/intent/tweet?url=',
   },
   {
-    text: 'Mail',
+    text: 'Email',
     href: 'mailto:?subject=See%20this%20post&body=',
   },
 ]
@@ -36,19 +36,18 @@ function toTop() {
   <div w-full opacity-75 text-main>
     <div v-if="showShare" flex="~ gap-2 items-center flex-wrap" mb-2>
       <i i-ri-arrow-right-s-line />
-      <span mr-1>Share to</span>
       <template v-for="(link, index) in shareLinks" :key="link.text">
         <a prose-link lh-tight :href="link.href + url" :aria-label="`Share to ${link.text}`">
-          <i v-if="link.icon" text-2.5 :class="link.icon" mr-0.8 />
+          <i v-if="link.icon" text-2.8 :class="link.icon" mr-0.8 />
           <span>{{ link.text }}</span>
         </a>
-        <span v-if="index < shareLinks.length - 1">/</span>
+        <span v-if="index < shareLinks.length - 1">, </span>
       </template>
     </div>
     <div v-if="scroll > 1000" flex="~ gap-2 items-center" mb-2>
       <i i-ri-arrow-right-s-line />
       <button prose-link aria-label="Scroll to Top" @click="toTop()">
-        Scroll to top
+        Back to top
       </button>
     </div>
     <div v-if="showBack" flex="~ gap-2 items-center">
