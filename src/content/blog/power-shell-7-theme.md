@@ -111,3 +111,20 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/velvet.omp.json" | Invoke-E
 ![Oh My Posh Themes](/blog/power-shell-7-theme/themes.png)
 
 其他关于 Windows Terminal 的外观修改可以直接从设置中进行修改，如毛玻璃等效果。
+
+## 为 VS Code 配置默认终端
+
+如果想要将 VS Code 的默认终端设置为 Power Shell 7，打开设置，进入 `settings.json`，将如下配置复制到您的配置文件中。
+
+```json
+{
+  "terminal.integrated.profiles.windows": {
+    "PowerShell 7": {
+      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell 7"
+}
+```
+
+如果你的 Power Shell 7 安装路径不是上面的路径，则需要手动修改为您的路径。
