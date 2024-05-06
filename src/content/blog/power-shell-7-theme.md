@@ -110,7 +110,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/velvet.omp.json" | Invoke-E
 
 ## 为 VS Code 配置默认终端
 
-如果想要将 VS Code 的默认终端设置为 Power Shell 7，打开设置，进入 `settings.json`，将如下配置复制到您的配置文件中。
+如果想要将 VS Code 的默认终端设置为 Power Shell 7，打开设置，进入 `settings.json`，将如下配置复制到您的配置文件中。重启 VS Code 后生效。
 
 ```json
 {
