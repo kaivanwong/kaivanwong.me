@@ -3,7 +3,7 @@ title: "Power Shell 7 美化"
 description: "通过 Oh My Posh 和 Windows Terminal 完成终端工具的美化。"
 lang: "zh-CN"
 duration: "15min"
-date: "2024-04-28"
+date: "2024-05-06"
 ---
 
 ## 安装 Windows Terminal
@@ -48,31 +48,27 @@ $env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
 
 ## 配置 Oh My Posh
 
-打开 Power Shell 7 终端，执行下面的命令打开文本编辑。
+打开 Power Shell 7 终端，执行下面的命令创建配置文件。
+
+```sh
+New-Item -Path $PROFILE -Type File -Force
+```
+
+然后执行下面的命令打开文本编辑。
 
 ```sh
 notepad $Profile
 ```
 
-如果提示不存在则点击 “是” 创建。如果无法自动创建请执行 `echo $Profile` 并安装给出的目录手动创建文件夹和文件。
-
 将以下内容输入到文件中。
 
 ```
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/uew.omp.json"
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/uew.omp.json" | Invoke-Expression
 ```
 
 新建一个 Power Shell 7 终端查看效果。
 
 ![Power Shell 7 Theme](/blog/power-shell-7-theme/no-font.png)
-
-在 Windows 11 上可能上述命令执行之后没有效果，在上述命令的末尾增加 `| Invoke-Expression` 即可，即使用如下命令。
-
-完整内容如下：
-
-```
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/uew.omp.json" | Invoke-Expression
-```
 
 ## Nerd 字体
 
