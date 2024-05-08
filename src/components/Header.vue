@@ -78,12 +78,11 @@ function toggleNavDrawer() {
 <template>
   <header
     id="header" :class="{ 'header-bg-blur': scroll > 20 }"
-    class="!fixed bg-transparent z-899 w-screen text-lg h-22 px-8 flex justify-between items-center relative"
+    class="!fixed bg-transparent z-899 w-screen text-lg h-22 sm:px-8 px-6 flex justify-between items-center relative"
   >
     <div class="flex items-center h-full">
       <a v-if="siteConfig.header.logo" sm:mr-8 href="/" aria-label="Header Logo Image" class="header-logo">
-        <img img-dark :src="siteConfig.header.logo.dark.src" :alt="siteConfig.header.logo.dark.alt">
-        <img img-light :src="siteConfig.header.logo.light.src" :alt="siteConfig.header.logo.light.alt">
+        <img :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
       </a>
       <a v-else sm:mr-8 href="/" aria-label="Home">Home</a>
       <nav class="sm:flex hidden flex-wrap gap-x-8 position-initial flex-row">

@@ -54,14 +54,8 @@ export const siteConfig = {
   ],
   header: {
     logo: {
-      light: {
-        src: '/header-logo.png',
-        alt: 'Logo Image',
-      },
-      dark: {
-        src: '/header-logo.png',
-        alt: 'Logo Image',
-      },
+      src: '/header-logo.jpg',
+      alt: 'Logo Image',
     },
     navLinks: [
       {
