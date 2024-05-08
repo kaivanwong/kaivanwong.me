@@ -81,7 +81,7 @@ function toggleNavDrawer() {
   >
     <div class="flex items-center h-full">
       <a v-if="siteConfig.header.logo" sm:mr-8 href="/" aria-label="Header Logo Image">
-        <img width="auto" height="40px" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
+        <img width="40" height="40" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
       </a>
       <a v-else sm:mr-8 href="/" aria-label="Home">Home</a>
       <nav class="sm:flex hidden flex-wrap gap-x-8 position-initial flex-row">
