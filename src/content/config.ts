@@ -3,14 +3,13 @@ import { defineCollection, z } from 'astro:content'
 function getCollection(requiredArray: string[] = ['title', 'date']) {
   const schemaSource: Record<string, any> = {
     title: z.string(),
-    description: z.string().optional(),
-    duration: z.string().optional(),
+    description: z.string(),
+    duration: z.string(),
     image: z
       .object({
         src: z.string(),
-        alt: z.string().optional(),
-      })
-      .optional(),
+        alt: z.string(),
+      }),
     date: z
       .string()
       .or(z.date())
@@ -18,16 +17,16 @@ function getCollection(requiredArray: string[] = ['title', 'date']) {
         year: 'numeric',
         month: 'short',
         day: 'numeric',
-      })).optional(),
-    draft: z.boolean().optional().default(false),
-    lang: z.string().optional().default('en-US'),
-    tag: z.string().optional(),
-    redirect: z.string().optional(),
-    video: z.boolean().optional(),
-    recording: z.boolean().optional(),
+      })),
+    draft: z.boolean().default(false),
+    lang: z.string().default('en-US'),
+    tag: z.string(),
+    redirect: z.string(),
+    video: z.boolean(),
+    recording: z.boolean(),
   }
   Object.keys(schemaSource).forEach((key) => {
-    if (requiredArray.includes(key))
+    if (!requiredArray.includes(key))
       schemaSource[key] = schemaSource[key].optional()
   })
   return defineCollection({

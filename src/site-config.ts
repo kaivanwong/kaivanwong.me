@@ -7,35 +7,7 @@ export const siteConfig = {
     src: '/favicon.svg',
     alt: 'Kaivan Wong',
   },
-  headerLogo: {
-    light: {
-      src: '/logo-light.png',
-      alt: 'Logo Image',
-    },
-    dark: {
-      src: '/logo-dark.png',
-      alt: 'Logo Image',
-    },
-  },
   email: 'kaivanwong@outlook.com',
-  headerNavLinks: [
-    {
-      text: 'Blog',
-      href: '/blog',
-    },
-    {
-      text: 'Talks',
-      href: '/talks',
-    },
-    {
-      text: 'Notes',
-      href: '/notes',
-    },
-    {
-      text: 'Projects',
-      href: '/projects',
-    },
-  ],
   hero: {
     title: 'Kaivan Wong',
     text:
@@ -101,46 +73,80 @@ export const siteConfig = {
       },
     ],
   },
-  pageNavLinks: [
-    {
-      text: 'Blog',
-      href: '/blog',
+  header: {
+    logo: {
+      light: {
+        src: '/avatar.png',
+        alt: 'Logo Image',
+      },
+      dark: {
+        src: '/avatar.png',
+        alt: 'Logo Image',
+      },
     },
-    {
-      text: 'Talks',
-      href: '/talks',
-    },
-    {
-      text: 'Notes',
-      href: '/notes',
-    },
-    {
-      text: 'Reading',
-      href: '/reading',
-    },
-  ],
-  footerNavLinks: [
-    {
-      text: 'About',
-      href: '/about',
-    },
-    {
-      text: 'Sponsor to Me',
-      href: '/sponsor',
-    },
-    {
-      text: 'Stack Nax',
-      href: 'https://stacknax.com',
-    },
-    {
-      text: 'Website Starter Template',
-      href: 'https://github.com/kaivanwong/vitesse-astro-theme',
-    },
-    {
-      text: 'GitHub Repo',
-      href: 'https://github.com/kaivanwong/kaivanwong.me',
-    },
-  ],
+    navLinks: [
+      {
+        text: 'Blog',
+        href: '/blog',
+      },
+      {
+        text: 'Talks',
+        href: '/talks',
+      },
+      {
+        text: 'Notes',
+        href: '/notes',
+      },
+      {
+        text: 'Projects',
+        href: '/projects',
+      },
+    ],
+  },
+  page: {
+    navLinks: [
+      {
+        text: 'Blog',
+        href: '/blog',
+      },
+      {
+        text: 'Talks',
+        href: '/talks',
+      },
+      {
+        text: 'Notes',
+        href: '/notes',
+      },
+      {
+        text: 'Reading',
+        href: '/reading',
+      },
+    ],
+  },
+  footer: {
+    navLinks: [
+      {
+        text: 'About',
+        href: '/about',
+      },
+      {
+        text: 'Sponsor to Me',
+        href: '/sponsor',
+      },
+      {
+        text: 'Stack Nax',
+        href: 'https://stacknax.com',
+      },
+      {
+        text: 'Website Starter Template',
+        href: 'https://github.com/kaivanwong/vitesse-astro-theme',
+      },
+      {
+        text: 'GitHub Repo',
+        href: 'https://github.com/kaivanwong/kaivanwong.me',
+      },
+    ],
+  },
 }
 
 export default siteConfig

@@ -5,7 +5,7 @@ import siteConfig from '../site-config'
 import { getLinkTarget } from '../utils/link'
 import ThemeToggle from './ThemeToggle.vue'
 
-const navLinks = siteConfig.headerNavLinks || []
+const navLinks = siteConfig.header.navLinks || []
 
 const socialLinks = computed(() => {
   return siteConfig.hero.socialLinks.filter((link: Record<string, any>) => {
@@ -78,15 +78,15 @@ function toggleNavDrawer() {
 <template>
   <header
     id="header" :class="{ 'header-bg-blur': scroll > 20 }"
-    class="!fixed bg-transparent z-899 w-screen text-lg h-22 px-6 flex justify-between items-center relative"
+    class="!fixed bg-transparent z-899 w-screen text-lg h-22 px-8 flex justify-between items-center relative"
   >
     <div class="flex items-center h-full">
-      <a v-if="siteConfig.headerLogo" sm:mr-6 href="/" aria-label="Header Logo Image" class="header-logo">
-        <img img-dark :src="siteConfig.headerLogo.dark.src" :alt="siteConfig.headerLogo.dark.alt">
-        <img img-light :src="siteConfig.headerLogo.light.src" :alt="siteConfig.headerLogo.light.alt">
+      <a v-if="siteConfig.header.logo" sm:mr-8 href="/" aria-label="Header Logo Image" class="header-logo">
+        <img img-dark :src="siteConfig.header.logo.dark.src" :alt="siteConfig.header.logo.dark.alt">
+        <img img-light :src="siteConfig.header.logo.light.src" :alt="siteConfig.header.logo.light.alt">
       </a>
-      <a v-else sm:mr-6 href="/" aria-label="Home">Home</a>
-      <nav class="sm:flex hidden flex-wrap gap-6 position-initial flex-row">
+      <a v-else sm:mr-8 href="/" aria-label="Home">Home</a>
+      <nav class="sm:flex hidden flex-wrap gap-x-8 position-initial flex-row">
         <a
           v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
           nav-link :href="link.href"
@@ -98,7 +98,7 @@ function toggleNavDrawer() {
         <menu i-ri-menu-2-fill />
       </button>
     </div>
-    <div class="flex gap-6 sm:gap-8">
+    <div class="flex gap-x-6 sm:gap-x-8">
       <a
         v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="link.icon" nav-link
         :target="getLinkTarget(link.href)" :href="link.href"
@@ -135,7 +135,7 @@ function toggleNavDrawer() {
 .nav-drawer {
   transform: translateX(-100%);
   --at-apply: box-border fixed h-screen z-999 left-0 top-0 min-w-32vw max-w-50vw
-    bg-main p-6 text-lg flex flex-col gap-6 transition-all;
+    bg-main p-6 text-lg flex flex-col gap-5 transition-all;
 }
 
 .nav-drawer-mask {
