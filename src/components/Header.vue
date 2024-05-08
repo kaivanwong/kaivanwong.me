@@ -63,8 +63,7 @@ function toggleNavDrawer() {
   const mask = document.querySelector('.nav-drawer-mask') as HTMLElement
   if (!drawer || !mask)
     return
-
-  if (drawer.style.transform === `translateX(0%)` || !drawer.style.transform) {
+  if (drawer.style.transform === `translateX(0%)`) {
     drawer.style.transform = `translateX(-100%)`
     mask.style.display = `none`
   }
@@ -81,8 +80,8 @@ function toggleNavDrawer() {
     class="!fixed bg-transparent z-899 w-screen text-lg h-22 sm:px-8 px-6 flex justify-between items-center relative"
   >
     <div class="flex items-center h-full">
-      <a v-if="siteConfig.header.logo" sm:mr-8 href="/" aria-label="Header Logo Image" class="header-logo">
-        <img :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
+      <a v-if="siteConfig.header.logo" sm:mr-8 href="/" aria-label="Header Logo Image">
+        <img width="40px" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
       </a>
       <a v-else sm:mr-8 href="/" aria-label="Home">Home</a>
       <nav class="sm:flex hidden flex-wrap gap-x-8 position-initial flex-row">
@@ -93,7 +92,7 @@ function toggleNavDrawer() {
           {{ link.text }}
         </a>
       </nav>
-      <button sm:hidden h-full px-2 ml-4 flex items-center @click="toggleNavDrawer">
+      <button sm:hidden h-full px-2 ml-4 flex items-center @click="toggleNavDrawer()">
         <menu i-ri-menu-2-fill />
       </button>
     </div>
@@ -113,12 +112,12 @@ function toggleNavDrawer() {
     <i i-ri-menu-2-fill />
     <a
       v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
-      nav-link :href="link.href" @click="toggleNavDrawer"
+      nav-link :href="link.href" @click="toggleNavDrawer()"
     >
       {{ link.text }}
     </a>
   </nav>
-  <div class="nav-drawer-mask" @click="toggleNavDrawer" />
+  <div class="nav-drawer-mask" @click="toggleNavDrawer()" />
 </template>
 
 <style scoped>
