@@ -1,70 +1,81 @@
 ---
-import { marked } from 'marked'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import siteConfig from '../site-config'
-
-const hero = siteConfig.hero
 ---
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
-  {
-    (hero.title || hero.image || hero.text || hero.socialLinks) && (
-      <div class="prose max-w-3xl w-full text-base">
-        {hero.title && <h1 class="text-title">{hero.title}</h1>}
-        {hero.image && (
-          <>
-            <img
-              class="w-full inline-block rounded-lg"
-              img-light
-              src={hero.image.light.src}
-              loading="lazy"
-              decoding="async"
-              alt={hero.image.light.alt || 'Hero Image'}
-            />
-            <img
-              class="w-full inline-block rounded-lg"
-              img-dark
-              src={hero.image.dark.src}
-              loading="lazy"
-              decoding="async"
-              alt={hero.image.dark.alt || 'Hero Image'}
-            />
-          </>
-        )}
-        {hero.text && <div set:html={marked.parse(hero.text)} />}
-        {hero.socialLinks.length > 0 && (
-          <>
-            <hr class="hr-line" />
-            <p>Find me on</p>
-            <p class="flex gap-x-4 gap-y-2 flex-wrap">
-              {hero.socialLinks.map((link) => (
-                <a
-                  aria-label={link.text}
-                  href={link.href}
-                  target="_blank"
-                  class="prose-link"
-                >
-                  <i class:list={[link.icon]} />
-                  {link.text}
-                </a>
-              ))}
-            </p>
-          </>
-        )}
-        {siteConfig.email && (
-          <p>
-            If you have any questions, please email me at
-            <a
-              prose-link
-              aria-label={siteConfig.email}
-              href={`mailto:${siteConfig.email}`}
-            >
-              {siteConfig.email}
-            </a>
-            .
-          </p>
-        )}
-      </div>
-    )
-  }
+  <article class="prose max-w-3xl w-full text-base">
+    <h1 class="text-title">Kaivan Wong</h1>
+    <img
+      class="w-full inline-block rounded-lg"
+      src="/hero.png"
+      loading="lazy"
+      decoding="async"
+      alt="Hero Image"
+    />
+    <p>Hi there</p>
+    <p>
+      I'm Kaivan, a front-end engineer with perfectionism (it's not always good
+      :p).
+    </p>
+    <p>
+      Creator of
+      <a
+        class="prose-link"
+        target="_blank"
+        href="https://github.com/opuntia-dev"
+      >
+        <i class="i-mdi-cactus"></i>Opuntia
+      </a>,
+      <a class="prose-link" target="_blank" href="https://github.com/stack-nax">
+        <i class="i-ri-infinity-line"></i>Infinite
+      </a>.
+    </p>
+    <p>
+      Member of <a
+        class="prose-link"
+        target="_blank"
+        href="https://github.com/antdv-pro"
+      >
+        <i class="i-ant-design-ant-design-outlined"></i>Andtv Pro
+      </a>.
+    </p>
+    <p>
+      I love technology. At present, I focus on the all front-end application
+      technology stack, developing web applications, mobile apps and desktop
+      applications. My goal is to be able to make excellent products, so I am
+      studying hard.
+    </p>
+    <p>
+      This is my personal website where you can read my blog and notes. If you
+      like this, please visit my social media page and follow me.
+    </p>
+    <hr class="hr-line" />
+    <p>Find me on</p>
+    <p class="flex gap-x-4 gap-y-2 flex-wrap">
+      {
+        siteConfig.socialLinks.map((link) => (
+          <a
+            aria-label={link.text}
+            href={link.href}
+            target="_blank"
+            class="prose-link"
+          >
+            <i class:list={[link.icon]} />
+            {link.text}
+          </a>
+        ))
+      }
+    </p>
+    <p>
+      If you have any questions, please email me at
+      <a
+        prose-link
+        aria-label={siteConfig.email}
+        href={`mailto:${siteConfig.email}`}
+      >
+        {siteConfig.email}
+      </a>.
+    </p>
+  </article>
 </BaseLayout>
