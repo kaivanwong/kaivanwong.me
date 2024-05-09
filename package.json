@@ -23,6 +23,7 @@
     "@astrojs/vue": "^4.1.0",
     "@unocss/reset": "^0.58.9",
     "astro": "^4.7.0",
+    "nprogress": "^0.2.0",
     "unocss": "^0.58.9",
     "vue": "^3.4.25"
   },
@@ -30,6 +31,7 @@
     "@antfu/eslint-config": "^2.16.0",
     "@iconify/json": "^2.2.204",
     "@types/lodash": "^4.17.0",
+    "@types/nprogress": "^0.2.3",
     "@vueuse/core": "^10.9.0",
     "bumpp": "^9.4.0",
     "eslint": "^8.57.0",

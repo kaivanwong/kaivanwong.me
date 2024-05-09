@@ -123,7 +123,7 @@ function toggleNavDrawer() {
 <style scoped>
 .header-hide {
   transform: translateY(-100%);
-  transition: transform 0.5s ease;
+  transition: transform 0.4s ease;
 }
 
 .header-bg-blur {
