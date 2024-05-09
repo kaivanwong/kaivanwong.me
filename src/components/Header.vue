@@ -92,9 +92,9 @@ function toggleNavDrawer() {
           {{ link.text }}
         </a>
       </nav>
-      <button sm:hidden h-full px-2 ml-4 flex items-center @click="toggleNavDrawer()">
+      <div sm:hidden h-full px-2 ml-4 flex items-center @click="toggleNavDrawer()">
         <menu i-ri-menu-2-fill />
-      </button>
+      </div>
     </div>
     <div class="flex gap-x-6 sm:gap-x-8">
       <a
