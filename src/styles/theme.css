@@ -45,5 +45,5 @@ html:not(.dark) [img-dark] {
 }
 
 img {
-  --at-apply: rd-2;
+  --at-apply: rd-1.5;
 }
