@@ -4,8 +4,8 @@ export const siteConfig = {
   subtitle: 'My personal website, incliuding blog and portfolio.',
   description: 'My personal website, incliuding blog and portfolio, it\'s developed by Vitesse Theme for Astro.',
   image: {
-    src: '/hero.png',
-    alt: 'Hero Image',
+    src: '/logo.png',
+    alt: 'Website Image',
   },
   email: 'kaivanwong@outlook.com',
   socialLinks: [
@@ -49,7 +49,7 @@ export const siteConfig = {
   ],
   header: {
     logo: {
-      src: '/header-logo.jpg',
+      src: '/logo.png',
       alt: 'Logo Image',
     },
     navLinks: [
@@ -106,7 +106,7 @@ export const siteConfig = {
         href: 'https://stacknax.com',
       },
       {
-        text: 'Website Starter Template',
+        text: 'Blog Starter Template',
         href: 'https://github.com/kaivanwong/vitesse-astro-theme',
       },
       {
