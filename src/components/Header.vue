@@ -41,17 +41,17 @@ onMounted(() => {
     headerEl.classList.add('header-bg-blur')
 
   window.addEventListener('scroll', () => {
-    if (scroll.value < 200) {
+    if (scroll.value < 150) {
       headerEl.classList.remove('header-hide')
       return
     }
 
-    if (scroll.value - oldScroll.value > 200) {
+    if (scroll.value - oldScroll.value > 150) {
       headerEl.classList.add('header-hide')
       oldScroll.value = scroll.value
     }
 
-    if (oldScroll.value - scroll.value > 160) {
+    if (oldScroll.value - scroll.value > 150) {
       headerEl.classList.remove('header-hide')
       oldScroll.value = scroll.value
     }
