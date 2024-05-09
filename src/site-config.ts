@@ -1,6 +1,6 @@
 export const siteConfig = {
   author: 'Kaivan Wong',
-  title: 'Kaivan Wong',
+  title: 'Kaivan\'s Personal Website',
   subtitle: 'My personal website, incliuding blog and portfolio.',
   description: 'My personal website, incliuding blog and portfolio, it\'s developed by Vitesse Theme for Astro.',
   image: {
