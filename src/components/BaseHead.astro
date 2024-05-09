@@ -2,7 +2,6 @@
 import siteConfig from '../site-config'
 import '../styles/prose.css'
 import '../styles/theme.css'
-import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
   title?: string
@@ -78,5 +77,3 @@ function formatCanonicalURL(url: string | URL) {
     <meta name="twitter:image:alt" content={resolvedImage?.alt} />
   )
 }
-
-<ViewTransitions />

@@ -4,6 +4,9 @@ description: "通过 Oh My Posh 和 Windows Terminal 完成终端工具的美化
 lang: "zh-CN"
 duration: "15min"
 date: "2024-05-06"
+image:
+  src: "/blog/power-shell-7-theme/hero.png"
+  alt: "Power Shell 7 Preview"
 ---
 
 ## 安装 Windows Terminal

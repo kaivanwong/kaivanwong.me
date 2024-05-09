@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { type CollectionPosts } from '../../types'
 import { getAllPosts } from '../../utils/posts'
@@ -28,18 +29,31 @@ function getDate(date: string) {
 <BaseLayout
   title={title}
   description={description}
-  image={image}
   pageType="article"
   pageOperate={true}
 >
   <article class="mb-16 max-w-none prose">
-    <h1 class="text-title mb-5">
+    <h1 class="text-title">
       {title}
     </h1>
-    <div op-50 mb-10>
+    <p op-50>
       {date && <time datetime={getDate(date)}>{date.split(',')[0]}</time>}
       {duration && <span>· {duration}</span>}
-    </div>
+    </p>
+    {
+      image && (
+        <p>
+          <img
+            width="100%"
+            height="auto"
+            src={image.src}
+            loading="lazy"
+            decoding="async"
+            alt={image.alt || ''}
+          />
+        </p>
+      )
+    }
     <Content />
   </article>
 </BaseLayout>

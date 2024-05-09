@@ -4,8 +4,8 @@ export const siteConfig = {
   subtitle: 'My personal website, incliuding blog and portfolio.',
   description: 'My personal website, incliuding blog and portfolio, it\'s developed by Vitesse Theme for Astro.',
   image: {
-    src: '/favicon.svg',
-    alt: 'Kaivan Wong',
+    src: '/hero.png',
+    alt: 'Hero Image',
   },
   email: 'kaivanwong@outlook.com',
   socialLinks: [
@@ -40,11 +40,6 @@ export const siteConfig = {
       text: 'Bilibili',
       href: 'https://space.bilibili.com/19001420',
       icon: 'i-simple-icons-bilibili',
-    },
-    {
-      text: '知乎',
-      href: 'https://www.zhihu.com/people/kaivanwong',
-      icon: 'i-simple-icons-zhihu',
     },
     {
       text: '微博',
