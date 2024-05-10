@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 type Props = { post: CollectionPosts }
 
 const { post } = Astro.props
-const { title, image, description, date, duration } = post.data
+const { title, image, description, date, duration, tag } = post.data
 
 const { Content } = await post.render()
 
@@ -38,8 +38,9 @@ function getDate(date: string) {
       {title}
     </h1>
     <p op-50>
-      {date && <time datetime={getDate(date)}>{date.split(',')[0]}</time>}
+      {date && <time datetime={getDate(date)}>{date.split(',')}</time>}
       {duration && <span>· {duration}</span>}
+      {tag && <span>· {tag}</span>}
     </p>
     {
       image && (
