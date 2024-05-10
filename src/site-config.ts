@@ -10,7 +10,7 @@ export const siteConfig = {
   email: 'kaivanwong@outlook.com',
   socialLinks: [
     {
-      text: 'Github',
+      text: 'GitHub',
       href: 'https://github.com/kaivanwong',
       icon: 'i-simple-icons-github',
       header: 'i-ri-github-line',
@@ -90,16 +90,12 @@ export const siteConfig = {
         href: '/sponsor',
       },
       {
-        text: 'Stack Nax',
-        href: 'https://stacknax.com',
-      },
-      {
-        text: 'Blog Starter Template',
-        href: 'https://github.com/kaivanwong/vitesse-astro-theme',
-      },
-      {
         text: 'GitHub Repo',
         href: 'https://github.com/kaivanwong/kaivanwong.me',
+      },
+      {
+        text: 'Powered by Vitesse Astro Theme',
+        href: 'https://github.com/kaivanwong/vitesse-astro-theme',
       },
     ],
   },

@@ -1,10 +1,10 @@
 ---
 import { fade } from 'astro:transitions'
 import { ViewTransitions } from 'astro:transitions'
-import BaseHead from '../components/BaseHead.astro'
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
-import PageOperate from '../components/PageOperate.vue'
+import BaseHead from '@/components/BaseHead.astro'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+import ScrollToTop from '@/components/ScrollToTop.vue'
 
 const { pageOperate = false, ...head } = Astro.props
 ---
@@ -22,15 +22,7 @@ const { pageOperate = false, ...head } = Astro.props
       transition:animate={fade({ duration: '0.4s' })}
     >
       <slot />
-      {
-        pageOperate && (
-          <PageOperate
-            client:load
-            showShare={head.pageType === 'article'}
-            url={Astro.url}
-          />
-        )
-      }
+      <ScrollToTop client:load />
       <Footer />
     </main>
   </body>
