@@ -1,0 +1,25 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import ListPosts from '@/components/ListPosts.vue'
+import { getPosts } from '@/utils/posts'
+import PageNav from '@/components/PageNav.vue'
+import type { Posts } from '@/types'
+
+export async function getStaticPaths() {
+  return [{ params: { path: undefined } }, { params: { path: 'note' } }]
+}
+
+const { path } = Astro.params
+
+const posts = await getPosts((path as Posts) ?? 'blog')
+---
+
+<BaseLayout
+  title="Blog"
+  description="List of all the blog posts."
+  pageNav={true}
+  pageOperate={true}
+>
+  <PageNav client:load pathname={Astro.url.pathname} />
+  <ListPosts list={posts} />
+</BaseLayout>

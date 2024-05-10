@@ -4,10 +4,9 @@ import { ViewTransitions } from 'astro:transitions'
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
-import PageNav from '../components/PageNav.vue'
 import PageOperate from '../components/PageOperate.vue'
 
-const { pageNav = false, pageOperate = false, ...head } = Astro.props
+const { pageOperate = false, ...head } = Astro.props
 ---
 
 <!doctype html>
@@ -22,7 +21,6 @@ const { pageNav = false, pageOperate = false, ...head } = Astro.props
       class="grow max-w-3xl mx-auto sm:pt-36 pt-26 pb-16 px-6 relative"
       transition:animate={fade({ duration: '0.4s' })}
     >
-      {pageNav && <PageNav client:load pathname={Astro.url.pathname} />}
       <slot />
       {
         pageOperate && (

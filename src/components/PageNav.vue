@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import siteConfig from '../site-config'
+import siteConfig from '@/site-config'
 
 defineProps<{
   pathname: string
@@ -11,7 +11,7 @@ defineProps<{
     <a
       v-for="nav in siteConfig.page.navLinks"
       :key="nav.text" :aria-label="nav.text" nav-link text-3xl font-bold
-      :class="pathname.includes(nav.href) ? 'opacity-80' : 'opacity-30  hover:opacity-50'" :href="nav.href"
+      :class="pathname === nav.href ? 'opacity-80' : 'opacity-30  hover:opacity-50'" :href="nav.href"
     >
       {{ nav.text }}
     </a>

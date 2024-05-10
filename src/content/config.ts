@@ -38,10 +38,6 @@ const pages = getCollection(['title'])
 
 const blog = getCollection()
 
-const notes = getCollection()
+const note = getCollection()
 
-const reading = getCollection()
-
-const talks = getCollection()
-
-export const collections = { pages, blog, notes, reading, talks }
+export const collections = { pages, blog, note }

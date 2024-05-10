@@ -1,6 +1,6 @@
 import rss from '@astrojs/rss'
-import siteConfig from '../site-config'
-import { getAllPosts } from '../utils/posts'
+import siteConfig from '@/site-config'
+import { getAllPosts } from '@/utils/posts'
 
 interface Context {
   site: string

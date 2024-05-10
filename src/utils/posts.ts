@@ -14,9 +14,7 @@ export async function getPosts(type: Posts) {
 export async function getAllPosts() {
   const posts = await Promise.all([
     getPosts('blog'),
-    getPosts('notes'),
-    getPosts('reading'),
-    getPosts('talks'),
+    getPosts('note'),
   ])
   return posts.flat().sort(sortPostsByDate)
 }

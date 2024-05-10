@@ -1,8 +1,7 @@
 ---
-import { Image } from 'astro:assets'
-import BaseLayout from '../../layouts/BaseLayout.astro'
-import { type CollectionPosts } from '../../types'
-import { getAllPosts } from '../../utils/posts'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { type CollectionPosts } from '@/types'
+import { getAllPosts } from '@/utils/posts'
 
 export async function getStaticPaths() {
   const posts = await getAllPosts()
