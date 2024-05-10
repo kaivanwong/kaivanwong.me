@@ -4,9 +4,6 @@ interface Context {
 
 export function GET(context: Context) {
   const robots = `
-  User-agent: Googlebot
-  Disallow: /nogooglebot/
-  
   User-agent: *
   Allow: /
   
