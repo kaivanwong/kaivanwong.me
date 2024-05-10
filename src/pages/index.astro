@@ -3,14 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import siteConfig from '../site-config'
 ---
 
-<BaseLayout description={siteConfig.description} image={siteConfig.image}>
+<BaseLayout description={siteConfig.description}>
   <article class="prose max-w-3xl w-full">
     <h1 class="text-title">Hi, I'm Kaivan</h1>
     <p>
       <img
         width="640"
         height="360"
-        src="/hero.png"
+        src="/hero.jpg"
         loading="lazy"
         decoding="async"
         alt="Hero Image"

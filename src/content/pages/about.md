@@ -1,8 +1,8 @@
 ---
 title: About
-description: About Kaivan Wong profile.
+description: About me.
 image:
-  src: '/hero.png'
+  src: '/hero.jpg'
   alt: Hero Image
 ---
 
