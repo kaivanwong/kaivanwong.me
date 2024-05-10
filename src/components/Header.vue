@@ -77,14 +77,14 @@ function toggleNavDrawer() {
 <template>
   <header
     id="header" :class="{ 'header-bg-blur': scroll > 20 }"
-    class="!fixed bg-transparent z-899 w-screen text-lg h-22 sm:px-8 px-6 flex justify-between items-center relative"
+    class="!fixed bg-transparent z-899 w-screen h-20 px-6 flex justify-between items-center relative"
   >
     <div class="flex items-center h-full">
-      <a v-if="siteConfig.header.logo" sm:mr-8 href="/" aria-label="Header Logo Image">
-        <img width="40" height="40" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
+      <a v-if="siteConfig.header.logo" href="/" mr-6 aria-label="Header Logo Image">
+        <img width="32" height="32" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
       </a>
-      <a v-else sm:mr-8 href="/" aria-label="Home">Home</a>
-      <nav class="sm:flex hidden flex-wrap gap-x-8 position-initial flex-row">
+      <a v-else mr-6 href="/" aria-label="Home">Home</a>
+      <nav class="sm:flex hidden flex-wrap gap-x-6 position-initial flex-row">
         <a
           v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
           nav-link :href="link.href"
@@ -92,11 +92,11 @@ function toggleNavDrawer() {
           {{ link.text }}
         </a>
       </nav>
-      <div sm:hidden h-full px-2 ml-4 flex items-center @click="toggleNavDrawer()">
+      <div sm:hidden h-full flex items-center @click="toggleNavDrawer()">
         <menu i-ri-menu-2-fill />
       </div>
     </div>
-    <div class="flex gap-x-6 sm:gap-x-8">
+    <div class="flex gap-x-6">
       <a
         v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="link.icon" nav-link
         :target="getLinkTarget(link.href)" :href="link.href"
