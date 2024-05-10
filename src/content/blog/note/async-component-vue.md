@@ -1,8 +1,8 @@
 ---
-title: "Async Component in Vue"
+title: Async Component in Vue
 description: How to use async component in Vue
-duration: "6min"
-date: "2023-08-11"
+duration: 6min
+date: 2023-08-11
 ---
 
 When you need to load components from the server and render them, you can use `defineAsyncComponent` in Vue.
