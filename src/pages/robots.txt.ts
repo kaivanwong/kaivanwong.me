@@ -11,6 +11,6 @@ export function GET(context: Context) {
   `.trim()
 
   return new Response(robots, {
-    headers: { 'Content-Type': 'text/plain; charset=utf-8', 'X-Robots-Tag': 'all' },
+    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
   })
 }
