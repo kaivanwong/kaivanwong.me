@@ -59,7 +59,7 @@ export const siteConfig = {
       },
       {
         text: 'Note',
-        href: '/note',
+        href: '/blog/note',
       },
       {
         text: 'Projects',
