@@ -9,26 +9,10 @@ html.dark .astro-code span {
 
 html.dark {
   color-scheme: dark;
-
-  --dot-bg-color: #0d1117;
-  --dot-color: #2f353c;
-  --dot-mask-color: #000000;
 }
 
 html:not(.dark) {
   color-scheme: light;
-
-  --dot-bg-color: #ffffff;
-  --dot-color: #a5aeb850;
-  --dot-mask-color: #ffffff;
-}
-
-html.dark [img-light] {
-  display: none;
-}
-
-html:not(.dark) [img-dark] {
-  display: none;
 }
 
 #nprogress {
