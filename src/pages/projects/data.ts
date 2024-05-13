@@ -50,7 +50,7 @@ export const projectData: ProjectData = [
       },
       {
         text: 'Vitesse Theme for Astro',
-        description: 'Vitesse theme for Astro blog, supports Vue and UnoCSS.',
+        description: 'A minimal, SEO-friendly portfolio and blog theme, supports Vue and UnoCSS.',
         icon: 'i-carbon-campsite',
         href: 'https://github.com/kaivanwong/vitesse-astro-theme',
       },
