@@ -38,7 +38,7 @@ export const siteConfig = {
     },
     {
       text: 'Bilibili',
-      href: 'https://space.bilibili.com/19001420',
+      href: 'https://space.bilibili.com/190014206',
       icon: 'i-simple-icons-bilibili',
     },
     {
