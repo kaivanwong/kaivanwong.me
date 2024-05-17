@@ -1,6 +1,6 @@
 # [kaivanwong.me](https://kaivanwong.me)
 
-My personal website, incliuding blog and portfolio, it's developed by Vitesse Theme for Astro.
+My personal website, incliuding blog and portfolio, it's developed by [Vitesse Theme for Astro](https://github.com/kaivanwong/astro-theme-vitesse).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d5bae292-6116-4c52-af4b-05eadedccc60/deploy-status)](https://app.netlify.com/sites/kaivanwong/deploys)
 
