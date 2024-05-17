@@ -2,7 +2,7 @@
 title: About
 description: About me.
 image:
-  src: /hero.webp
+  src: /hero-2.jpg
   alt: Hero Image
 ---
 

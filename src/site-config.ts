@@ -4,7 +4,7 @@ export const siteConfig = {
   subtitle: 'My personal website, incliuding blog and portfolio.',
   description: 'My personal website, incliuding blog and portfolio, it\'s developed by Vitesse Theme for Astro.',
   image: {
-    src: '/hero.webp',
+    src: '/hero.jpg',
     alt: 'Website Main Image',
   },
   email: 'kaivanwong@outlook.com',
@@ -90,12 +90,12 @@ export const siteConfig = {
         href: '/sponsor',
       },
       {
-        text: 'GitHub Repo',
-        href: 'https://github.com/kaivanwong/kaivanwong.me',
+        text: 'GitHub',
+        href: 'https://github.com/kaivanwong',
       },
       {
-        text: 'Powered by Vitesse Astro Theme',
-        href: 'https://github.com/kaivanwong/vitesse-astro-theme',
+        text: 'Living Stream',
+        href: 'https://space.bilibili.com/190014206',
       },
     ],
   },
