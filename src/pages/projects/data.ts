@@ -22,10 +22,10 @@ export const projectData: ProjectData = [
         href: 'https://github.com/opuntia-dev/opuntia',
       },
       {
-        text: 'Opuntia Enterprise',
-        description: 'An enterprise web application based on Opuntia + Element Plus.',
+        text: 'Opuntia UI',
+        description: 'Vite + Vue 3 UI library starter template.',
         icon: 'i-tabler-cactus-filled',
-        href: 'https://github.com/opuntia-dev/opuntia-enterprise',
+        href: 'https://github.com/opuntia-dev/opuntia-ui',
       },
     ],
   },
@@ -50,7 +50,7 @@ export const projectData: ProjectData = [
       },
       {
         text: 'Vitesse Theme for Astro',
-        description: 'A minimal, SEO-friendly portfolio and blog theme, supports Vue and UnoCSS.',
+        description: 'A minimal, SEO-friendly portfolio and blog theme for Astro, supports Vue and UnoCSS.',
         icon: 'i-carbon-campsite',
         href: 'https://github.com/kaivanwong/vitesse-astro-theme',
       },
